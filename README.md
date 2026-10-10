@@ -30,7 +30,7 @@ Contributions:
 2. **Complete Lean 4 proofs of Conjectures 3 and 4.**
    (OpenAI has already formalized Conjecture 2 in Lean.)
 
-**Try it in Lean4Web:** [open the complete proof in one file](https://live.lean-lang.org/#url=https%3A%2F%2Fraw.githubusercontent.com%2FKitaKen1%2Ferdos-952-binary-form-moat-classification%2Fmain%2Flean4web%2FBinaryFormMoatLean4Web.lean)
+**Try it in Lean4Web:** [open the complete proof in one file](https://live.lean-lang.org/#url=https%3A%2F%2Fraw.githubusercontent.com%2FKitaKen1%2Ferdos-952-binary-form-moat-classification%2Fa0d2c03836009eba943fb4f709656042256b1f83%2Flean4web%2FBinaryFormMoatLean4Web.lean)
 (Lean **v4.35.0-rc4**, the same FC definitions and target statements).
 
 ## Conjecture statements

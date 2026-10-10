@@ -36,7 +36,7 @@ lake --wfail build
 [Entry-point verification](../lean/evidence/entry-points.json).
 [Original core build and kernel-check records](../lean/evidence/build_results.json).
 
-[Lean4Web: complete proofs of the same FC targets in one file](https://live.lean-lang.org/#url=https%3A%2F%2Fraw.githubusercontent.com%2FKitaKen1%2Ferdos-952-binary-form-moat-classification%2Fmain%2Flean4web%2FBinaryFormMoatLean4Web.lean)
+[Lean4Web: complete proofs of the same FC targets in one file](https://live.lean-lang.org/#url=https%3A%2F%2Fraw.githubusercontent.com%2FKitaKen1%2Ferdos-952-binary-form-moat-classification%2Fa0d2c03836009eba943fb4f709656042256b1f83%2Flean4web%2FBinaryFormMoatLean4Web.lean)
 uses Lean **v4.35.0-rc4**. The single-file and modular versions use the definitions
 and finite injective-sequence target statements from these FC files. Each final
 target theorem is followed by `#print axioms`. FC's `answer(False)` is written

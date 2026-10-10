@@ -1,5 +1,8 @@
 # Lean4Web
 
+[Open the current proof snapshot in Lean4Web](https://live.lean-lang.org/#url=https%3A%2F%2Fraw.githubusercontent.com%2FKitaKen1%2Ferdos-952-binary-form-moat-classification%2Fa0d2c03836009eba943fb4f709656042256b1f83%2Flean4web%2FBinaryFormMoatLean4Web.lean).
+This link uses an immutable commit URL to avoid loading a cached `main` file.
+
 Select **v4.35.0-rc4** at [Lean4Web](https://live.lean-lang.org/) and paste
 [BinaryFormMoatLean4Web.lean](BinaryFormMoatLean4Web.lean).
 
