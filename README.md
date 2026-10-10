@@ -79,12 +79,12 @@ Regarding Conjecture 4, this repository presents a **complete Lean 4 proof of th
 
 All forms in this table lie in $`\mathbb Z[X,Y]`$.
 
-| Conjecture | Permitted points | F | Irr | Hom | $`d`$ | Conclusion |
+| Conjecture | Permitted points | Form F | Irr | Hom | $`d`$ | Conclusion |
 |---|---|---|---|---|---|---|
-| Conjecture 1 **Gaussian moat** | Gaussian primes | X² + Y² | ✓ | ✓ | $`2`$ | Answer: **negative**. |
-| Conjecture 2 **Uniform Gaussian moat** | Gaussian primes | X² + Y² | ✓ | ✓ | $`2`$ | Answer: **negative**. |
-| Conjecture 3 **Generalized moat** | Lattice points with $`F(x,y)\ne0`$ and at most $`r`$ distinct prime divisors of $`\lvert F(x,y)\rvert`$ | F | ✓ | ✓ | $`d\ge2`$ | Answer: **negative**. |
-| Conjecture 4 **Binary-form classification** | Lattice points with $`F(x,y)\ne0`$ and at most $`r`$ distinct prime divisors of $`\lvert F(x,y)\rvert`$ | F ≠ 0 | — | ✓ | $`d\ge1`$ | Answer: **positive** if $`F=c(aX+bY)^m`$ as below; **negative** otherwise. |
+| **1. Gaussian<br>moat** | Gaussian primes | X² + Y² | ✓ | ✓ | $`2`$ | **Negative** |
+| **2. Uniform<br>Gaussian moat** | Gaussian primes | X² + Y² | ✓ | ✓ | $`2`$ | **Negative** |
+| **3. Generalized<br>moat** | Lattice points with $`F(x,y)\ne0`$ and at most $`r`$ distinct prime divisors of $`\lvert F(x,y)\rvert`$ | F ∈ ℤ[X,Y] | ✓ | ✓ | $`d\ge2`$ | **Negative** |
+| **4. Binary-form<br>classification** | Lattice points with $`F(x,y)\ne0`$ and at most $`r`$ distinct prime divisors of $`\lvert F(x,y)\rvert`$ | F ∈ ℤ[X,Y]<br>F ≠ 0 | — | ✓ | $`d\ge1`$ | **Positive** iff<br>linear power;<br>**negative**<br>otherwise. |
 
 **Irr** means irreducible in $`\mathbb Z[X,Y]`$;
 **Hom** means homogeneous of degree $`d`$.
@@ -93,7 +93,8 @@ $`F`$ records the Gaussian norm.
 
 Answers concern infinite injective walks in Conjecture 1 and arbitrarily long
 finite injective walks in Conjectures 2–4, with the applicable bounds fixed.
-The positive case requires $`c,a,b\in\mathbb Z,\;c\ne0,\;(a,b)\ne(0,0),\;m\in\mathbb N_{>0}`$.
+A **linear power** is $`F=c(aX+bY)^m`$ with
+$`c,a,b\in\mathbb Z,\;c\ne0,\;(a,b)\ne(0,0),\;m\in\mathbb N_{>0}`$.
 
 ### Implications
 
@@ -359,6 +360,18 @@ lake --wfail build
 All three proof entries were checked with Lean **v4.35.0-rc3**. Their axiom
 outputs contain only `[propext, Classical.choice, Quot.sound]`, with no
 `sorryAx`. [Verification record](lean/evidence/entry-points.json).
+
+## References
+
+1. Paul Erdős, [*Problems and results on combinatorial number theory III*](https://www.renyi.hu/~p_erdos/1977-27.pdf),
+   in *Number Theory Day*, Lecture Notes in Mathematics **626**, Springer (1977),
+   pp. 43–72. The Gaussian moat problem and its attribution to Basil Gordon and
+   Motzkin appear on [p. 69](https://www.renyi.hu/~p_erdos/1977-27.pdf#page=27).
+2. OpenAI, [*Bounded-Step Walks on Gaussian Primes*](https://github.com/openai/math/blob/main/preprints/Bounded-Step-Walks-on-Gaussian-Primes-September-26-2026/paper.pdf),
+   September 26, 2026. The uniform Gaussian moat result underlying Conjecture 2.
+3. The Formal Conjectures Authors,
+   [*Erdős Problem 952*](https://github.com/google-deepmind/formal-conjectures/blob/main/FormalConjectures/ErdosProblems/952.lean),
+   in Google DeepMind's *Formal Conjectures*. The original sequence-form Lean statement.
 
 ## AI usage disclosure
 
