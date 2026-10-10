@@ -14,7 +14,8 @@ def FewPrimeFactors (F : MvPolynomial (Fin 2) ℤ) (r : ℕ) (z : GaussianInt) :
   n ≠ 0 ∧ n.natAbs.primeFactors.card ≤ r
 
 /-- The generalized binary-form moat theorem. -/
-@[category research solved, AMS 5 11]
+@[category research solved, AMS 5 11,
+  formal_proof using lean4 at "https://github.com/KitaKen1/erdos-952-binary-form-moat-classification/blob/b0b614662c342e2610fdfe6897691f9b54d33afb/lean/GeneralizedVariant.lean#L14"]
 theorem erdos_952_openai_generalized_variant : answer(False) ↔
   ∃ (F : MvPolynomial (Fin 2) ℤ) (d r : ℕ) (C : ℤ),
     Irreducible F ∧ 2 ≤ d ∧ F.IsHomogeneous d ∧

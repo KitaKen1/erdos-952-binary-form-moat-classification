@@ -22,6 +22,9 @@ that variant implies OpenAI's uniform form.
 
 The FC-style files use `by sorry` as catalogue placeholders. The matching
 proof entries have complete proofs and each ends with `#print axioms` for its target.
+Each FC theorem also has `formal_proof using lean4 at "URL"`, pointing to its
+matching modular target theorem in an immutable GitHub snapshot. This is FC's
+[external proof attribute](https://github.com/google-deepmind/formal-conjectures/blob/main/CONTRIBUTING.md#the-formal_proof-attribute).
 
 ## Build
 
@@ -56,7 +59,8 @@ component-size bounds at every fixed step bound and prime-factor budget.
 The independent [FC-style target](BinaryFormMoatClassification.lean) is:
 
 ```lean
-@[category research solved, AMS 5 11]
+@[category research solved, AMS 5 11,
+  formal_proof using lean4 at "https://github.com/KitaKen1/erdos-952-binary-form-moat-classification/blob/b0b614662c342e2610fdfe6897691f9b54d33afb/lean/BinaryFormMoatClassification.lean#L14"]
 theorem binary_form_moat_classification :
   ∀ (F : MvPolynomial (Fin 2) ℤ) (d : ℕ),
     F ≠ 0 → 0 < d → F.IsHomogeneous d →

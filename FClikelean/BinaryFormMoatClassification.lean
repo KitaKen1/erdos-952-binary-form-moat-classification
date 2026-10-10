@@ -14,7 +14,8 @@ def FewPrimeFactors (F : MvPolynomial (Fin 2) ℤ) (r : ℕ) (z : GaussianInt) :
   n ≠ 0 ∧ n.natAbs.primeFactors.card ≤ r
 
 /-- Arbitrarily long walks exist exactly for the forms $c(aX+bY)^m$. -/
-@[category research solved, AMS 5 11]
+@[category research solved, AMS 5 11,
+  formal_proof using lean4 at "https://github.com/KitaKen1/erdos-952-binary-form-moat-classification/blob/b0b614662c342e2610fdfe6897691f9b54d33afb/lean/BinaryFormMoatClassification.lean#L14"]
 theorem binary_form_moat_classification :
   ∀ (F : MvPolynomial (Fin 2) ℤ) (d : ℕ),
     F ≠ 0 → 0 < d → F.IsHomogeneous d →

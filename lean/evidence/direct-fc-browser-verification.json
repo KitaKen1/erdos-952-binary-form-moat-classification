@@ -1,9 +1,9 @@
 {
-  "recorded_at": "2026-10-10T13:36:42.502443+00:00",
+  "recorded_at": "2026-10-10T13:56:38.998217+00:00",
   "fc_definitions_and_target_statements_match": {
     "OpenAIVariant": {
       "fc_path": "FClikelean/OpenAIVariant.lean",
-      "fc_source_sha256": "d6c5e9896e5507eeaa654425f20b99b23cba0d18f6d181cfd0757ad1f690c0fe",
+      "fc_source_sha256": "d61f6490b393a7454995558052a1bf56004891801aae0d05633c5e14dfa0e60d",
       "target": "Erdos952.erdos_952_openai",
       "statement_sha256": "ef7eeda5c7b63455a5e3320eb73a4416fb68d7a555c331dd95856e55141b2c2a",
       "definition_sha256": {},
@@ -13,7 +13,7 @@
     },
     "GeneralizedVariant": {
       "fc_path": "FClikelean/GeneralizedVariant.lean",
-      "fc_source_sha256": "32c042dfe7e245dfc029af0bef66f40d584397ce762bd4fe9cd1ca064c2f0bd3",
+      "fc_source_sha256": "2795cd8d41450472e9de6bbd24d26c0b0fa152538fb73b7671f5cb4cfc258a67",
       "target": "Erdos952.erdos_952_openai_generalized_variant",
       "statement_sha256": "8d92a89d800c7ece63b219c16966b1bd5b77cc71dadf91fcc89cc765ff91d11b",
       "definition_sha256": {
@@ -25,7 +25,7 @@
     },
     "BinaryFormMoatClassification": {
       "fc_path": "FClikelean/BinaryFormMoatClassification.lean",
-      "fc_source_sha256": "41ddc90357d4de50cdf343faa2e1825a83c796510416129b75bdceb58e934f75",
+      "fc_source_sha256": "ffc08a232a6ca26fbc3cc23376d533038c913e0ed350b1cb644013a97425ad80",
       "target": "BinaryFormMoatClassification.binary_form_moat_classification",
       "statement_sha256": "37784ac119c67fe510cf64e4ad4d96dc6fa1c4cccc4b57969e17042c12b2f332",
       "definition_sha256": {
