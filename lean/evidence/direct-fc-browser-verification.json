@@ -1,5 +1,5 @@
 {
-  "recorded_at": "2026-10-10T13:23:38.771336+00:00",
+  "recorded_at": "2026-10-10T13:33:53.717432+00:00",
   "fc_definitions_and_target_statements_match": {
     "OpenAIVariant": {
       "fc_path": "FClikelean/OpenAIVariant.lean",
@@ -38,18 +38,34 @@
   },
   "independent_kernel_replay_performed": false,
   "public_lean4web_server_checked": false,
-  "status": "interrupted_by_host_restart",
+  "status": "not_compiled_after_compatibility_fix",
   "lean": "4.35.0-rc4",
   "mathlib_commit": "021ce68bf125a049beee22b3fc7664d78728e21d",
   "source": "lean4web/BinaryFormMoatLean4Web.lean",
-  "source_sha256": "dccb16f725f5563387357dbe2341bfd06f70bd71130d3b0a28150bbcb1e20779",
+  "source_sha256": "55cf7cbcca94e44352fe3b70a7a841a0b60787f109add0f26f6d7b3f6c7b8914",
   "full_source_file_compiled": false,
   "axiom_audit_completed": false,
-  "compilation_started_at": "2026-10-10T21:55:35+09:00",
-  "host_restarted_at": "2026-10-10T22:19:29+09:00",
   "notes": [
-    "The full source compilation did not complete before the host restarted.",
+    "A previous full source compilation was interrupted by a host restart.",
+    "The current generated file replaces four deprecated spanSingleton alias references using compatibility lemmas.",
+    "The compatibility lemmas use map_mul and map_one for Latest Mathlib and submodule proofs for the pinned snapshot.",
     "The generated definitions and target statements match the FC files.",
     "This record does not certify compilation or axioms of the current single file."
-  ]
+  ],
+  "previous_full_file_attempt": {
+    "status": "interrupted_by_host_restart",
+    "source_sha256": "dccb16f725f5563387357dbe2341bfd06f70bd71130d3b0a28150bbcb1e20779",
+    "full_source_file_compiled": false,
+    "axiom_audit_completed": false,
+    "compilation_started_at": "2026-10-10T21:55:35+09:00",
+    "host_restarted_at": "2026-10-10T22:19:29+09:00"
+  },
+  "compatibility_fix": {
+    "deprecated_alias_references_removed": 4,
+    "replacement_facts": [
+      "BinaryFormMoatLean4WebCompat.spanSingleton_mul",
+      "BinaryFormMoatLean4WebCompat.spanSingleton_one"
+    ],
+    "local_full_compilation_restarted": false
+  }
 }

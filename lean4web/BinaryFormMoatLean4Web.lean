@@ -418,6 +418,30 @@ set_option linter.ambiguousOpen false
 set_option warn.redundantExpose false
 #guard Lean.versionString == "4.35.0-rc4"
 
+-- Latest Mathlib makes spanSingleton a monoid-with-zero homomorphism.
+-- The pinned snapshot has the same operation as an ordinary function.
+namespace BinaryFormMoatLean4WebCompat
+variable {R P : Type*} [CommRing R] [CommRing P] [Algebra R P]
+  (S : Submonoid R) [IsLocalization S P]
+
+theorem spanSingleton_mul (x y : P) :
+    FractionalIdeal.spanSingleton S x * FractionalIdeal.spanSingleton S y =
+      FractionalIdeal.spanSingleton S (x * y) := by
+  first
+  | exact (map_mul (FractionalIdeal.spanSingleton S) x y).symm
+  | apply FractionalIdeal.coeToSubmodule_injective
+    simp only [FractionalIdeal.coe_mul, FractionalIdeal.coe_spanSingleton,
+      Submodule.span_mul_span, Set.singleton_mul_singleton]
+
+theorem spanSingleton_one : FractionalIdeal.spanSingleton S (1 : P) = 1 := by
+  first
+  | exact map_one (FractionalIdeal.spanSingleton S)
+  | apply FractionalIdeal.coeToSubmodule_injective
+    simp only [FractionalIdeal.coe_spanSingleton, FractionalIdeal.coe_one,
+      Submodule.one_eq_span]
+
+end BinaryFormMoatLean4WebCompat
+
 
 -- Source: Moat.Basic
 section Source0
@@ -60996,9 +61020,9 @@ theorem idealClass_eq_one_iff_exists_integral {𝔪 : Modulus K} (I : integralId
       rw [← FractionalIdeal.coeIdeal_span_singleton, ← FractionalIdeal.coeIdeal_mul, hab,
         FractionalIdeal.coeIdeal_span_singleton]
     rw [Units.val_mul, Units.val_inv_eq_inv_val, hxa, hyb,
-      ← FractionalIdeal.spanSingleton_mul_spanSingleton, ← hcoe, mul_assoc,
-      FractionalIdeal.spanSingleton_mul_spanSingleton, mul_inv_cancel₀ hb0,
-      FractionalIdeal.spanSingleton_one, mul_one]
+      ← BinaryFormMoatLean4WebCompat.spanSingleton_mul, ← hcoe, mul_assoc,
+      BinaryFormMoatLean4WebCompat.spanSingleton_mul, mul_inv_cancel₀ hb0,
+      BinaryFormMoatLean4WebCompat.spanSingleton_one, mul_one]
 
 end TauCeti.GlobalNumberFields
 end
@@ -62256,7 +62280,7 @@ theorem ray_le_ker_cyclotomicArtinAway :
     refine Subtype.ext (Units.ext ?_)
     rw [Subgroup.coe_mul, Units.val_mul, coe_integralIdealsAwayHom, coe_integralIdealsAwayHom,
       ← hxJ, coe_toPrincipalIdeal, FractionalIdeal.coeIdeal_span_singleton,
-      FractionalIdeal.coeIdeal_span_singleton, FractionalIdeal.spanSingleton_mul_spanSingleton,
+      FractionalIdeal.coeIdeal_span_singleton, BinaryFormMoatLean4WebCompat.spanSingleton_mul,
       hab, mul_comm]
   -- Hence the cyclotomic character of `(x)` is trivial once those of `(a)` and `(b)` agree.
   refine (mul_eq_right (b := hζ.autToPow K (cyclotomicArtinIntegral F m ⟨_, hIb⟩))).mp ?_

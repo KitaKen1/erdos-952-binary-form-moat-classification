@@ -154,6 +154,30 @@ set_option linter.redundantVisibility false
 set_option linter.ambiguousOpen false
 set_option warn.redundantExpose false
 #guard Lean.versionString == "4.35.0-rc4"
+
+-- Latest Mathlib makes spanSingleton a monoid-with-zero homomorphism.
+-- The pinned snapshot has the same operation as an ordinary function.
+namespace BinaryFormMoatLean4WebCompat
+variable {R P : Type*} [CommRing R] [CommRing P] [Algebra R P]
+  (S : Submonoid R) [IsLocalization S P]
+
+theorem spanSingleton_mul (x y : P) :
+    FractionalIdeal.spanSingleton S x * FractionalIdeal.spanSingleton S y =
+      FractionalIdeal.spanSingleton S (x * y) := by
+  first
+  | exact (map_mul (FractionalIdeal.spanSingleton S) x y).symm
+  | apply FractionalIdeal.coeToSubmodule_injective
+    simp only [FractionalIdeal.coe_mul, FractionalIdeal.coe_spanSingleton,
+      Submodule.span_mul_span, Set.singleton_mul_singleton]
+
+theorem spanSingleton_one : FractionalIdeal.spanSingleton S (1 : P) = 1 := by
+  first
+  | exact map_one (FractionalIdeal.spanSingleton S)
+  | apply FractionalIdeal.coeToSubmodule_injective
+    simp only [FractionalIdeal.coe_spanSingleton, FractionalIdeal.coe_one,
+      Submodule.one_eq_span]
+
+end BinaryFormMoatLean4WebCompat
 \n'''
 bodies = []
 module_data = {}
@@ -209,6 +233,15 @@ for i,(module,path,text) in enumerate(selected):
         anchor = 'Subgroup.map_comap_eq_self_of_surjective e.surjective'
         assert body.count(anchor) == 1
         body = body.replace(anchor, 'Subgroup.map_comap_eq_self_of_surjective (f := e.toMonoidHom) e.surjective')
+    if module in ['TauCeti.NumberTheory.NumberField.Global.RayClass.Integral',
+                  'TauCeti.NumberTheory.Chebotarev.GaloisCharacter.Cyclotomic.Basic']:
+        old_mul = 'FractionalIdeal.spanSingleton_mul_spanSingleton'
+        old_one = 'FractionalIdeal.spanSingleton_one'
+        integral = module.endswith('RayClass.Integral')
+        assert body.count(old_mul) == (2 if integral else 1)
+        assert body.count(old_one) == (1 if integral else 0)
+        body = body.replace(old_mul, 'BinaryFormMoatLean4WebCompat.spanSingleton_mul')
+        body = body.replace(old_one, 'BinaryFormMoatLean4WebCompat.spanSingleton_one')
     pair_notation = ('local notation3:100 "⟨" X ", " Y "⟩" => _root_.prod X Y\n'
                      if module != pair_module and uses_pair(module) else '')
     assert not re.search(r'^(?:(?:public|meta) )?import\b|^module\b',body,re.M),module
@@ -260,7 +293,8 @@ args.report.write_text(json.dumps({'BinaryFormMoatLean4Web':dict(
                 'Harper layer locator uses explicit maximality proof',
                 'zeroExtend_zero simplified for current simp set',
                 'RayClass definitional congruence drops already-discharged subgoals',
-                'TaggedFixedField map homomorphisms made explicit'],
+                'TaggedFixedField map homomorphisms made explicit',
+                'spanSingleton multiplicativity and unit proofs support pinned and latest Mathlib without deprecated aliases'],
     mathematical_definitions_and_main_hypotheses_retained=True)},indent=2)+'\n')
 print('Generated',output,'from',len(selected),'support modules and',len(entry_sources),
       'FC-matching proof entries;',len(result.splitlines()),'lines')

@@ -18,9 +18,9 @@ is written as `False`, and FC catalogue attributes are omitted.
 Intermediate axiom prints are omitted to reduce Lean4Web diagnostics; the modular
 sources retain those audits.
 
-The current complete-file compilation with Lean **v4.35.0-rc4** was interrupted
-by a host restart before the final axiom audits completed. This generated file
-has not been fully verified.
+A previous complete-file compilation with Lean **v4.35.0-rc4** was interrupted
+by a host restart before the final axiom audits completed. The current generated
+file includes a compatibility fix for Latest Mathlib and has not been fully verified.
 [Current compilation status](../lean/evidence/direct-fc-browser-verification.json).
 The unchanged modular counterparts were checked with Lean **v4.35.0-rc3**;
 all three use only `propext`, `Classical.choice` and `Quot.sound`, with no `sorryAx`.
@@ -39,3 +39,6 @@ python3 lean/scripts/make_lean4web.py
 
 The generator checks definitions and target statements against the FC files before
 embedding the complete proof dependencies and the three final proof entries.
+The browser file supplies proofs of `spanSingleton` multiplication and its value
+at one, using Latest Mathlib's `map_mul` and `map_one` when available and submodule
+proofs for the pinned snapshot. These replace the four deprecated alias references.

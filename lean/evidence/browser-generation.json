@@ -3062,8 +3062,8 @@
       "Erdos952.erdos_952_openai_generalized_variant",
       "BinaryFormMoatClassification.binary_form_moat_classification"
     ],
-    "generated_sha256": "dccb16f725f5563387357dbe2341bfd06f70bd71130d3b0a28150bbcb1e20779",
-    "lines": 105305,
+    "generated_sha256": "55cf7cbcca94e44352fe3b70a7a841a0b60787f109add0f26f6d7b3f6c7b8914",
+    "lines": 105329,
     "targets": [
       "Erdos952.erdos_952_openai",
       "Erdos952.erdos_952_openai_generalized_variant",
@@ -3495,7 +3495,8 @@
       "Harper layer locator uses explicit maximality proof",
       "zeroExtend_zero simplified for current simp set",
       "RayClass definitional congruence drops already-discharged subgoals",
-      "TaggedFixedField map homomorphisms made explicit"
+      "TaggedFixedField map homomorphisms made explicit",
+      "spanSingleton multiplicativity and unit proofs support pinned and latest Mathlib without deprecated aliases"
     ],
     "mathematical_definitions_and_main_hypotheses_retained": true
   }

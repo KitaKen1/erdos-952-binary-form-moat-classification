@@ -367,8 +367,9 @@ The [Lean4Web file](lean4web/BinaryFormMoatLean4Web.lean) uses the same
 [FClikelean/](FClikelean/). Its final declarations are the three target theorems,
 each followed by `#print axioms`. In both standalone versions, FC's
 `answer(False)` is written as `False`, and FC catalogue attributes are omitted.
-The current single-file compilation was interrupted by a host restart before
-the final axiom audits completed; it has not been fully verified.
+Full-file verification remains incomplete after a host restart interrupted
+compilation before the final axiom audits. The current file also includes a
+compatibility fix for Latest Mathlib and has not been fully verified.
 [Current single-file check status](lean/evidence/direct-fc-browser-verification.json).
 
 ## References
