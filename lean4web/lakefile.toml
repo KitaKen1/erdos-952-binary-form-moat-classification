@@ -1,0 +1,15 @@
+name = "binary_form_moat_browser_proof"
+allowNonModules = true
+defaultTargets = ["BinaryFormMoatLean4Web"]
+
+[leanOptions]
+warningAsError = true
+
+[[require]]
+name = "mathlib"
+git = "https://github.com/leanprover-community/mathlib4"
+rev = "021ce68bf125a049beee22b3fc7664d78728e21d"
+
+[[lean_lib]]
+name = "BinaryFormMoatLean4Web"
+

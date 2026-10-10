@@ -1,0 +1,7 @@
+'Erdos952.erdos_952_openai' depends on axioms: [propext, Classical.choice, Quot.sound]
+
+'Erdos952.erdos_952_openai_generalized_variant' depends on axioms: [propext, Classical.choice, Quot.sound]
+
+'BinaryFormMoatClassification.binary_form_moat_classification' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]

@@ -1,0 +1,1604 @@
+{
+  "lean": "4.35.0-rc3",
+  "mathlib_commit": "f6090c7095e1e56b3464c1daba5f24631f1290d2",
+  "upstream_commits": {
+    "TauCeti": "d5a37097e93f6289425d25632df6c8bf00d749c0",
+    "LeanPool": "01db1d7049cf9668bda1e9e106875ee1278b43e6",
+    "PFR": "68f55a1771e1eb7948fbf90656268bfdb0c969f2"
+  },
+  "local_source_sha256": {
+    "LeanPool.BooleanIsoperimetry.Cube": "fdb666ac9b0aed9e0cf0335af67b6a3f0c169dcd1abe72983dae536eb7edbf8e",
+    "LeanPool.BooleanIsoperimetry.Cascade": "9b65a1786410539c1ceb3bd6232b79147424f6c14e67d856a38a5cb5b54f8189",
+    "LeanPool.BooleanIsoperimetry.Macaulay": "479369031628556b8d2baddcbbe151515f1a27b8f7e20544aa5226d4da39971a",
+    "LeanPool.BooleanIsoperimetry.SimplicialCompression": "dc23cb513c616496838008ca0d7ad6fb75aa768ad303d1aba2a07f058a9dde84",
+    "LeanPool.BooleanIsoperimetry.KruskalKatona": "74714ee8fa9eb03aa42d8391f1f60d61b6b8c52d1ff662494b62dde404da590c",
+    "LeanPool.BooleanIsoperimetry.LayerWindows": "32d72e24034e78ba773f2471e681a5c3681f19376497566829b3519a9684b36b",
+    "LeanPool.BooleanIsoperimetry.Compression": "42c24e73d58e4db547eb1bee9a9e4c1ef07bbbd28fc3d66bda3fbe4f961e0153",
+    "LeanPool.BooleanIsoperimetry.Shadow": "aa602452472b2746be5185f40c20b152138dc999e1be045931f83b0c80bdb4a1",
+    "LeanPool.BooleanIsoperimetry.Harper": "5d8522cbd983ac30c89a25bb7eef4cab1ea4a51aaa6bb07f1e835d9e633728a9",
+    "Moat.Basic": "86ba4a0325cd129af3a13306fa89bdf3d89a215198d9e6c979ab0ff18e7af227",
+    "Moat.Obstructions": "1924e433bcbee836ee83b284ca93018129e8d330982ed78cd2dda6baec934163",
+    "Moat.Reduction": "76f5ac07d187b86d97f0995fb9f1234f9268936db7a65a18f9f4a853d2bbe73a",
+    "Moat.Certificate": "089328e274c3e128c7138ecc213977920314604534ab50bea0ad1f8aee34db1b",
+    "Moat.Arithmetic": "898fda43c806f220a9cf72aa1b2a59293de8cc8904586dd1220af1f397df7dde",
+    "Moat.Normalization": "9aa16dd18646dde083bef66c1a0ecf6673aac9ac214a404ef6c003e3dad3caea",
+    "Moat.Barriers": "6d05406236c966d9bcff9fc9cca958631452b2e6ec779a1fc3cdda81ec19ce18",
+    "Moat.LinearFactors": "9b6cc12455a981fb1d6eab807058fe61f9c5e9d590a83e5cf68be30e49459ed4",
+    "Moat.PeriodicCertificate": "b2a7eb0017121f5cac959bb67b0bc5d0b0a7868f595b4054c5c4f778a2aeeb14",
+    "Moat.Sieve": "a124b06fba82acb208f0568223866e64c980c6cd436328c162b4fdc386b96320",
+    "Moat.Homogenization": "66f01ed882ae9b8f5b33bf81321f5c657b9e93399bdc1d6c2ac2d0c6997e8026",
+    "Moat.Factorization": "fa45d4a98f26a3503f2ab482a246eb6a5cae38a7292b7e5c03c77141c1edfcf6",
+    "Moat.PrimeSupply": "00f1ffee68371c43c7de2cbf63b43b080e86e2f9b26a8220497c83e457cafc91",
+    "Moat.GoodReduction": "8df324d3d60e8fe9e74b0891de99c920b4d66193e9a05c83c94a8ce083934672",
+    "Moat.ArithmeticInput": "d29c7d4010681fe21211bec210f4d4ca3fc1a8501ce107f96214ea33255aa019",
+    "Moat.RootCount": "70386d7db06edce193a6cb9671a2eb64b585b970d6af70ea402b72f3d5a89017",
+    "Moat.RootSampling": "744d26a4e8d244ea2ff20de158782bf28137a11ed915e957e83297388bc17f61",
+    "Moat.RootSieve": "3a4dc70a278b85be45ac4c8d5512c2fc4dc93439cbc5b47bb3e25efd6822b64b",
+    "Moat.DeterminantGeometry": "3e016044f8e25dd2e90281e6cd3c1958fc4ed7a32e6934846e872dca0e754c55",
+    "Moat.FiniteSampling": "83ba6d67fc7223b58b082bfd54b25bf25712ed4510e8c7e6d4ed1c2c04481b43",
+    "Moat.LogBudget": "be557c0f398dad54c12e511c8fc300bddc3b792c663210b432f76bb7df1156b1",
+    "Moat.UniformSampling": "5acbf94ada04323062fcd611a5f8cd38edc9ff611a9879dbaed1a6f9f273caa9",
+    "Moat.Concentration": "92efa43779c117f3f12de8e7ced34866f0fa2ffbb44797324dc1a8b000723035",
+    "Moat.RootConcentration": "b394d5910fec572d06b637f90f22cfb74048374e2bb04532a6d6bf47c7473754",
+    "Moat.LineWitness": "ba9c973d5cbfc1c5dcf563a60a577382e145bb6a2ca434e35cb3f00693092256",
+    "Moat.BoxLineWitness": "f601ffe212c8994793584d799c87a2d55a6008bbb93c4237ce9bc3c3ae1524aa",
+    "Moat.IrreducibleValues": "57795d045b3c2dbe4fe4dc9e5fbcba521857573315bcc3b906015259c069d444",
+    "Moat.DyadicLineTail": "57169651dd99853a9f085c42cb5ba6fa2819f9af224df73d6ed93db24e8c1cce",
+    "Moat.BalancedEncoding": "593be738043f3ad164d9629b8d10697d8eab838ae3b14fcd7ad2275de802e5d4",
+    "Moat.BlockHamming": "25fc22da03cb2ad7557d83205081bc8f229c6288e80ef69ae49e0674caad4753",
+    "Moat.EncodingDensity": "44ca7242295816e99908de72ffb26c0117adc9e9d0ef6a4e7ef7ef6c8bd4524f",
+    "Moat.HammingGeometry": "35928b6715d2fa1ad64d5b51d7487688efd4acda4d996aee2655c0faecf3bc98",
+    "Moat.NeighborhoodGrowth": "6c80afead9e949b4af212d2bfb4d39ad8fb84247e47189920af588c8bebede11",
+    "Moat.ExpansionBudget": "b0bea3089beee675363d71b5986355452ea662a5c7fd41ad5c1e81f4c612639e",
+    "Moat.ExpansionParameters": "d3cd1a82e5bcb6a1faf0f7dd333cec3bf835dc3670e7354e92e44df3c5d359e0",
+    "Moat.HammingPacking": "46825ecb8986083d3e171f99cd6a96a391bf890ef887bd0263fcc3462cb37ad6",
+    "Moat.EncodedRootTail": "96b53da686bcb4fc2488ca63844892c5f543012dac3f24af0c91913f0712d9d1",
+    "Moat.EncodedSeparation": "1ed884832e335c196d8daea75e4b5435a4bce8bcf48fbec346c7228c6cf9b9dc",
+    "Moat.EncodedPacking": "b445bd8331bd98f0c46bba6672a2862b1eaab62d469c69956887001ab1774a14",
+    "Moat.LineRepresentatives": "cee5724256314079e2acc3f6aad3e0caf7a73db9f9dae98b0012cb50b0be7312",
+    "Moat.RectanglePacking": "c3f08e3373689eebdba35fb85cdcdffc9587c1d5ac4d1de19733a1086c4a538e",
+    "Moat.RectangleParameters": "b547c8a6be7c2e0a5d9d7f4186b3dee5663f6a9ae17af14f887fff8d4ee407fb",
+    "Moat.RectangleExistence": "e9fe3327fe2756cfad497048a153e8383402d05d6c033286c7e26205c3054b81",
+    "Moat.FiniteSetPacking": "9eba9f3f4a8475e612c9dde3eef8e82bdfa93e16c7a92df1ba2e2476cc84c724",
+    "Moat.RotatedRectangles": "476ede66d6417086f904aec1fe6296b27027d072e75d1ea71d87af5687b7e909",
+    "BinaryFormMoat": "7adcb7ff5f95fa638b7c3fa7bd8c48cf2be723b087af8c36a74b5cc77d694f58",
+    "Moat": "245d1eb563807c00dd5ad1f5ed23bfccc6d4b70184179b55369d73a64cd0bca0",
+    "Moat.Examples.XYCertificate": "01623da1ea7d7d31b90bb9ee780fda9a318748c0c5737403b8f553a8bbeb7e04",
+    "Moat.Audit": "11844c48b79758e307f9888c8678fd3022a6064b627c8cc8dd49306b727c0d32",
+    "Integrations.HarperBridge435": "20ebf6610e20436ec505807e1a274765f63bc9b3cf251313500cd3249d042e9b",
+    "Integrations.HarperGrowth435": "ed4dd89fabba83d795677a70bc5c4c8d91ccf4ff69c6da1b40abdae1990bf5de",
+    "Integrations.HarperThreshold435": "576f450b8cc34c44fe46fc46bcca875bab951e7e47f8e1d79ca473c029ff2731",
+    "Integrations.HarperSchedule435": "ab56dbfdd44b3af59c8f92e61c036a09efaa0df8087e4f7f39259cbf3b5862b9",
+    "Integrations.RectangleHarper435": "50ba85d7cc423880efc1d9d7f89f6fa0172be8be2326e95a24051463f6d27687",
+    "Integrations.TauCeti435": "a05efa397c3a5baf09e8d9dbd74f87551cb7fd4fc45beaaf42e060a2b14ea83d",
+    "Integrations.RationalPrimes435": "14c3b4e5312395ab8d7f52c39158e1beccd75bca7eaeaa0bec9aa48379eecf08",
+    "Integrations.PolynomialRoots435": "03f80d0adde637ae2761af6922d3c4978c0d9a0b4e57ef493c1bf003abe2b845",
+    "Integrations.TauHarper435": "993a79bec3505a067840f1442aafe8502bbca025f2db7cb76db9e890ba95b647",
+    "Integrations.FiniteSetHarper435": "dcff939c1cc38ab05cb49cb9f48ace63776bfbdf1abb957beb8213f60123cb1f",
+    "Integrations.RotatedTauHarper435": "02735ec430e3b4691fa8c09972c069b4e0a42171c9dc8b239b3bfe5a02aacf4a",
+    "Integrations.Harper435": "47129c1fdf2c2cc0b2ab58d43cf6d450acbd5b76114f6f41462bfe25f58d80fe",
+    "PFR.Mathlib.MeasureTheory.Constructions.Pi": "e3cc6a8198d8de2b0aad1e14583f7d265ed6e8e18d97c4b90ad2a6d69ee2668b",
+    "PFR.Mathlib.Probability.Independence.Kernel.IndepFun": "fb8d1209f5f3eb56cabf84cbe4d24bd853fde95604be558adb1e6172fdabea80",
+    "PFR.Mathlib.Probability.Independence.Basic": "135675495f5fc75d8c25ae3a63d8c45321246a673f0ace3559ad1685a772a410",
+    "PFR.Mathlib.Probability.IdentDistrib": "e8630b9b5cbd5ccb80f629a6cf3bcceb73cee5a4e687c2e437a504078bad7170",
+    "PFR.ForMathlib.FiniteRange.Defs": "4b3d84345edd8097929ad2f4b8915dc599acf5fcd1ebc71640b036a1cac45512",
+    "PFR.ForMathlib.FiniteRange.ConditionalProbability": "8ab2a206953f0c2e109c5ca180343a2902d8a51590221f83f88743592b8f8378",
+    "PFR.ForMathlib.Pair": "33c2546b8980dba23557144554e519d5825dbaaa964259b0a5ff7f52fb2e31bc",
+    "PFR.ForMathlib.ConditionalIndependence": "da2c893b103237c549c178d4af1a9f9ad4385cf62376b2c5568587e4f7a20acd",
+    "PFR.Mathlib.MeasureTheory.Integral.Lebesgue.Basic": "e38455b6a12e5698b406cdd88e19ac805855de48992529503e45833204d53ffc",
+    "PFR.Mathlib.MeasureTheory.Integral.Lebesgue.Countable": "f14a868066adaa633be3768daf06eb0b5de22f78afc5bd9b3488b4fd268c0a09",
+    "PFR.Mathlib.Probability.Kernel.Disintegration": "1798358c3b7a852997afc8939c95e263599b1fa003dd315be4f6e12e933f7b42",
+    "PFR.Mathlib.Probability.Kernel.Composition.Comp": "357dac5eb4b2797db8464e513b64cc2173acc6fa6834f9c3ee5bd97f03b647ae",
+    "PFR.Mathlib.MeasureTheory.MeasurableSpace.Constructions": "425794c0e2483f0fd31d380df86ca367ccd3bf64c3971498ec4824170fc371fc",
+    "PFR.Mathlib.MeasureTheory.Measure.Dirac.Def": "15dccaa138cd4e0116d936781ca7bedaa970f7ac2a62500982e0526c4bad932e",
+    "PFR.Mathlib.MeasureTheory.Measure.MeasureSpaceDef": "ee19d453a04cb16bd1f3e84b9a6c73608037224fe45eb280c5474539f4040adf",
+    "PFR.Mathlib.MeasureTheory.Measure.Prod": "0d1b6fa2ae60f0d470827b3e12eed114806469b274b2a0cc6d8bd9cd42239bce",
+    "PFR.Mathlib.MeasureTheory.Measure.Real": "f9dd720a476f7ac710061f1a4080a3ece9bee66cdfb7f88ccdda75074b6c2aac",
+    "PFR.Mathlib.Data.Set.Basic": "da03b19656f0ddcc10a1eac2fa05bb9dfbb93071414c659510cba7f553768828",
+    "PFR.Mathlib.Data.Set.Insert": "046509a4e650658ce57d58353b8d29d6dd9df6f2db336dfbf84bc03f29ec9a0c",
+    "PFR.Mathlib.Data.Set.Card": "6400d8bd23c49feb6fa70a20115f93d57ec2e44067d9bc1e0a0d6166d7bae234",
+    "PFR.Mathlib.Probability.UniformOn": "59030161177c08566b53a31fa0f057e40ba0dbe9d1dff37f794d26c0fd8ff8f2",
+    "PFR.ForMathlib.Entropy.Measure": "7e754a8ef98136caa3dbd348d8d6205b09b01772074b57c6a35d0e71f57d4333",
+    "PFR.ForMathlib.Entropy.Kernel.Basic": "a118ac7cced6bfd1f170c1dde38ca8fe3da0fa0d55bb6056488fdbc234328642",
+    "PFR.ForMathlib.Entropy.Kernel.MutualInfo": "4b66f604b9afb72e917b2df16213dec4dd1e86d38e64cae60e701f5d06ca1e5c",
+    "PFR.ForMathlib.Uniform": "9ac959add6c773813ac2144681e39b2912c6c6e90a434d0d920876191ca9f79a",
+    "PFR.Mathlib.Probability.ConditionalProbability": "8df1659678d67c036ec50a3b103cc5ec3f6062012c9f5b41018d7cf37039a64f",
+    "PFR.ForMathlib.Entropy.Basic": "794969effe1d58fc027138f1d46f2d2aab217f030b6bb4c640d0741d5485adba",
+    "Integrations.PFR435": "32b6f9051f2a877e1c1a3f42d4d78f9b52257ab3e1b2445f5f922806149638d9",
+    "Integrations.PFRList435": "78f763eea1ad9bf0db932c59e599beaab8fafee4e0146553bf91b2481ca09811",
+    "Integrations.PFRInformation435": "9b584876aab55abeff19132bad475edb56cde41a5e7b91c7ae96fae5d253c5db",
+    "Integrations.InformationHistory435": "914f130b6e3e9c756f2b9f97c55ac63bdf0ecc4e3f6a95d4ae80084b1a1d3964",
+    "Integrations.CoordinateEntropy435": "19e7f9d271b8f8b915106c6a0d955574c4d8edb953b5e5b812a34614944ce551",
+    "Integrations.SuccessEntropy435": "bdfad1e4c0b311681117e0f084ab69278fd32cedf8bb6bc9e814bb0841c08360",
+    "Integrations.SuccessAverage435": "37675a8837ceae266ceb1f96c49de4eb839d326ddeb127f476dc19c7bdb6c328",
+    "LeanPool.Brouwer.Simplex": "bfa2a8f34c2577aa456ce14f5ac7204777ede926cf2aac28e91c515d0e1694dc",
+    "LeanPool.Brouwer.Scarf": "00923ed3a590f4f1dde2ebb068a61285cd575726ae3f474c07dacf18ac464a1b",
+    "LeanPool.Brouwer.Brouwer": "40371ce0c60e9428ce0ed82b06a7aa9b0a70215c6b6300727fbd3d61bb15171a",
+    "LeanPool.Brouwer.BrouwerProduct": "52474c03f0707779993705e72b02d0c3cf0f71e248857af106552beeddbf33f2",
+    "Integrations.Brouwer435": "c47d72c1102102cf337b2a9e4b544623af232fc0fe408b6531b340f2dad838e4",
+    "Integrations.BernoulliLowerTail435": "2db893777b20e06845051b75e0895e3d32fb0b9239276574b3b9c136fc2eb708",
+    "Integrations.FiniteEntropy435": "0cb4dd1a1b420ddaa288f4009c8526673c72cac4f994853c97a1a3e2622aaa32",
+    "Integrations.SubsetSampling435": "718f794dc07ebe717ce78e798032a63358350f59a543dffeff6bd0b01cfbbe03",
+    "Integrations.SharedData435": "ade196b3d9a0149f091d0d5d9e7663f124dc6627093862e231fb33c292c9de34",
+    "Integrations.EmpiricalLists435": "68b52dc0a58fd1e7d1df6691657c112c32fd95400ba9ca2428f441fbfbcb0608",
+    "Integrations.TranslationOverlap435": "96084e3bf652022cfb2adc808afd4b57a5ed359be08e859d453c4f397b46b3d4",
+    "Integrations.CoverageBudget435": "2848c04c8f40cf51fe507c028c8c17c2c2301dcc21108bcc442540c4ce5a6b0c",
+    "Integrations.EmpiricalTail435": "496b4165a9965a0b883ca22cdff1beb82ddf34901f272d13cb2e358f5828cbb5",
+    "Integrations.ConditionalAverage435": "d6c0e3db8a986462c66db6ef2bda6e29d0a92ee48833bcc7c07dd855af6976b0",
+    "Integrations.CoverageRounding435": "abae55ba008b3474b07af5876099b8e22596595a39ea717015080103dbc2dc07",
+    "Integrations.CoverageTransfer435": "d28aaf6f6df055f45a5599e1e014bbe9917d02bacf5c613869fe531dd92b4feb",
+    "Integrations.OneStepCoverage435": "ace0f4a97fc13b41ebc90425a2d51d8b036f522e4175214fa2770f0d45835702",
+    "Integrations.ContinuationResampling435": "5276ea856c9687b66895813e5dd30b6b83982d592d0320f8cd2f647574d96122",
+    "Integrations.OriginalContinuation435": "5d26250acf8c471376a4d07440a8ac98a26518fe1a6b4e85428370cc190b98b8",
+    "Integrations.ConditionalResidues435": "a8ebabe7bc672a8e3ee1978969ed1beee8f88c80ff05003eb79b142d3b803f3a",
+    "Integrations.ResampledCoverage435": "7d6cfeba3601068dfec36f2c4af1279b178be970f9fe7341919838bc971d4620",
+    "Integrations.PosteriorEntropy435": "020471b26ffc47658c2a6de47f906147e7a9d060092d36925f7bcddde7cc332f",
+    "Integrations.PosteriorCoverage435": "0f46913bb28e248448dfa60e0bbe7f7f665a8921fcf92ddb4d4fe88ce4a0722b",
+    "Integrations.WalkDisplacement435": "f4e535f7e4a93761674db4467c16c49a7a8ce65d9700918600bb11b2daf48a7f",
+    "Integrations.FiniteCheckpoint435": "25e2b9f663c47a3e7dd69c2359b681fc8ec5ebdee219912a67339a7c6f0adb2f",
+    "Integrations.EntropyTransport435": "ba6c15a3affc3cb05262f0b7f9ce338a129a2186f7f0fd1bb429c918deab6e97",
+    "Integrations.WalkLaw435": "a525c15e388a78ebc8e8f4e09c8112c8214a55c4b8c86de944468d5e0a24bc86",
+    "Integrations.WalkCoverage435": "06bd0dafd5bab5b75ecc054ca49a9bb8a217c574e983786e4fd4ffeb500c891c",
+    "Integrations.RootResidues435": "9ec474c8609e22d7bc62ebcfa1d4336739adc743c6d0d53ef7149ef5e81b58c2",
+    "Integrations.WindowSmoothing435": "ea9345eb7398d6e88b401d68b18d4911c80823d46a9621bca1b4e880ba112a30",
+    "Integrations.TerminalSmoothing435": "c92db3bbaa0b8fa8b3030c13562bb688ab80fccf73ae922431e5c63e54dd2b6c",
+    "Integrations.TerminalSchedule435": "d1fc1f0ef471de57137ce97933b276dc89c93f51b244f6f575b3dcf7dc112964",
+    "Integrations.FlagContinuity435": "bd4a5ca570c7e33ac6d650fa8b732136aec90dd7c0c5875fc798b17301406aa4",
+    "Integrations.TerminalCoupling435": "8042ca149d4ae47388c654e317775bda022c239a52dd9340c01cb960cc28f4be",
+    "Integrations.TerminalEntropy435": "81c20e34199ea01fe64a0519f2f6df32996720f9157d1267f9f35e5fca65c318",
+    "Integrations.SmoothingBudget435": "82b6625cde887d84da31de53c50fbe0bf4b658b0a38da2dfa8c81fa0177978c8",
+    "Integrations.ConditionalBlocks435": "f8a2f44ad614ec632ff960e24d0e371b7950e013f7ab59a4fe232257c8bd3d74",
+    "Integrations.WordBlocks435": "5328061f1bd6c8d92f417a4da2c15f4b05017abca0722610e73432b451526bf1",
+    "Integrations.InformationRate435": "c773168b19fffe302da7990d787af1a57629fc282ba9ee70225954eee1afbea8",
+    "Integrations.WalkWordBudget435": "b01b38d76dc72c74754f58f7115340adc40a78b95efcd25f755fe1d2162285c0",
+    "Integrations.ShortWordResidues435": "8803896c6edfd3526d7e86725adf919402b8a5e480f41e9427de87c0b9ed9f07",
+    "Integrations.ShortWordHits435": "68ceb0e8a3907b7264c9a300fd10a328a771e3e2df5e278f1fc9502e01cdad9a",
+    "Integrations.SmoothedWordHits435": "ace2a1f962fa3ef6ff898d7485c2bc06a48dbe626769f69fd043cc2441199f2f",
+    "Integrations.PassingLists435": "f3dfd87e1aca9dcafafaeeadc09a77ec3390c9c045e395557ef24ec5ce6dc44f",
+    "Integrations.PosteriorPassing435": "1f65f5fd0a433c9e14544858998dff65d6cdfbc45cdf6051188a7e064419cf5f",
+    "Integrations.ExpectedListEntropy435": "cd999e7117bd30eeb7e31be5b0564a78049c0ac9bc5a6e320d344e228329c6e6",
+    "Integrations.PassingQuota435": "5ea9a757db8221a3cefa4626618dc53f0b55afcee4700838e7d1041adbf4d072",
+    "Integrations.SmoothedPassingFloors435": "78fbbfa2514b9b3a001ddc6327c3870e149c429d0993cbe21fa9d9e9565f9415",
+    "Integrations.PackageInformation435": "562d28a9a496bd5b1cdfe2ed11dab10d5c62dce42fa1d19b64041509e15ad3b0",
+    "Integrations.InformationTransport435": "6ab914f57ca8de1b5d06630221529a6c814dcb4bb1feec00fbdf40a0dece14aa",
+    "Integrations.PosteriorPackageInformation435": "f9d2bde1cc104f5f3a6f1ec935272fa6cfde0b59ef2b08844143de7f8167b80b",
+    "Integrations.WalkPackageRate435": "778da75900ce7ececf7992ae36afd1a2dc1672e232a0b53bfb73efcc4dbf5f83",
+    "Integrations.PassingLoss435": "e00d0fea598683968d6af9439f0dc14c2a13fef914b80d5fdbf3638db93c88dd",
+    "Integrations.PrimeWordBudget435": "5600eb94fa470f374c401e277644cc4bb4b89f74e48c5baabce0afb19a1b4678",
+    "Integrations.NormalizedPrimeLoss435": "f13f2e18fbdbba0de2ff9c8e7b8e47d024de407139895312e7452bc085c125b9",
+    "Integrations.WalkPassingLoss435": "f91c065dc1b014ac73bd3550f33f844c1bebe9af949e41b54c358377e01265ca",
+    "Integrations.SquareBrouwer435": "c23e94d630d3908fc89e2528b770b447ef56ed96060a324926efc82f0eab1023",
+    "Integrations.LatticeDifference435": "39668448a7f82651289b37ead22480d6460b16abf78bb060b26b61c9a8210ebb",
+    "Integrations.PeriodicDeviation435": "ead77e855898052d5e7a5f97620d9574e5664bb69b6ce812c1b0b4b63749ac67",
+    "Integrations.RealLattice435": "ea4256108f23b3e6760781c363a0975f6e4ec698a8f9744b064d10cc37970a23",
+    "Integrations.PathDifference435": "ca1d68125aa1066787c379a193682085c4e18fbe30d183c4f2a9e7666d11c7ae",
+    "Integrations.WalkInterpolation435": "c6fc200ed38d9fcddc198411e7ed9af7713bf22366ffc728e8af59196790fff8",
+    "Integrations.AreaEnvelope435": "702fed65e10336f3e56a14cdac1c4ba51b6644a8b320dbc98500047a233b99c6",
+    "Integrations.DifferenceSeparation435": "7e6bab9a4fa57054958544605a380aa55fdb86a76b8f4bd97a298148fa704c51",
+    "Integrations.UniformDifferenceEntropy435": "5d0672d4ba1d85953d0d6738b628674cf069758b82352006d861ad4a1da023e0",
+    "Integrations.DifferenceEndpoint435": "b8bbc9795868f9072e21c8d290b0f8fbe770697b49062874ac5dbe9ccf0efdc9",
+    "Integrations.DifferenceForwardLaw435": "de562084f3a1b688df82ae081d0eec6f2f8c85f7a4766ff2f128225b363b1a60",
+    "Integrations.FairDifferenceEntropy435": "6d604a1a12fb2dfab5a3ec9affb6ec5d57c365c83beb1390a49fa3dd8649d2bc",
+    "Integrations.WalkDifferenceEntropy435": "2370c3e3a683758e6fdd76081a77da2832c71eb4a3c75723d24188f17e9801d3",
+    "Integrations.RetainedDifferenceEntropy435": "1f1d502738e3f542d8bfd3b69b1281769a610f97e17dc503036b0f07ef15468b",
+    "Integrations.WalkRetainedEntropy435": "dcf601adbeb4c126fedc50ee57aee6eaf1af48d51c3112274d1bbf5e21f80ab7",
+    "Integrations.WalkEnrichmentCost435": "d48132a59556e8d2f48b38048d9a78562f4032fc3408ce57c419720bd1513967",
+    "Integrations.DyadicDifferenceSeparation435": "7cec8497ba7d0f9654e3898c566b3d1de32640bfaa54132862e95efb84b4c185",
+    "Integrations.SubsetSecondMoment435": "565aae7116a3adcd620821ff4c5150eaa2eaa49906acafb152f18bb30ee9bc05",
+    "Integrations.SubsetPrimeProduct435": "5ecfa9deb142a90b4b4318c539b76c893ef71dc060291cd87b06343369e0a2ae",
+    "Integrations.FiniteUnion435": "b2cd16ab3fa1949a5855a37c5f82ba50d8204eb0ed911e678a9568dc8940b16a",
+    "Integrations.PeriodicFinite435": "acbbf073602d1d5c85b69483b8bd7fdcc5f8183272363c67fb805ee7fe3b39a1",
+    "Integrations.PrimeBlocks435": "acb8522c793624831eae828d3145a24e3d9fc7d57486fdf3ef38846010be0d57",
+    "Integrations.FiniteSieveExit435": "552e8f8f2098cc95a4577bcebd2093c81f38b84afdd05f69766838397c217c67",
+    "Integrations.FiniteWalkSieve435": "da6ae41bad67baf7a11e461e828ca513c2dc37ee0111bfa3a42006ec30ad65c3",
+    "Integrations.SubsetIncrement435": "8a9a4267752998e8ff40c6226fc2d4cfc4a5abcab49a9d3622db8f7f3607a644",
+    "Integrations.SubsetEntropy435": "5e113b1acfb206f4775e4f98279bbf900c34e11c9e7ad34a6c7e5bde543881e5",
+    "Integrations.LabelledSubsetEntropy435": "f611206dfe0195f89cd7c5af4be0ca516adedac1ebb4765007771418cc3eab3a",
+    "Integrations.NestedSubset435": "38612bd7f9ca12794d55b39a2e90d4af9c5fbea11caac3de1bfd0a12922fa447",
+    "Integrations.LabelledWalkEnrichment435": "4ced188f10e9b435cc08f8588aa549e9a1844c74e58e11c05f9103c94e7dd4e6",
+    "Integrations.NormalizedEnrichment435": "d28c80458e4a323f95e1f97818e3b7674cf65c52c82b4f097013b55cc7883f57",
+    "Integrations.DisjointSubset435": "6e37cd4b0a5de10dc318683841dd4022fee2a1f3641b4be640620d245048eae1",
+    "Integrations.RemainingCoordinate435": "cb07ef34c1d1cddee4f83bf5299dbcc5b761e454b58460f0eaefbb6e8a739140",
+    "Integrations.SubsetProjection435": "803a9bf7d5f3188190d87520e3928aeaa450a4b2f2695aabc8054ddc4fd99d50",
+    "Integrations.GeometricCoordinateFloor435": "8786956fa02c842a7fca446a59469291e40358985306ba45fd8ccc420e055cf6",
+    "Integrations.MixedCoordinateFloor435": "cc0241f3402d5afbce4f29fad8735c258d61b4f8345a3b09729b7a9ff25a8d06",
+    "Integrations.NestedFresh435": "28edb8bd0472633d693ccad4aa7c72307c7a01d31d785b74a8bd98fada9c2fe6",
+    "Integrations.BatchAverage435": "5e130cdb2bd88d5c73a32a4ef3a4c2a7578719cc651832a02dfdeebb994e9633",
+    "Integrations.BatchRetainedEntropy435": "fa2dc8d592ea7968c2bbebfd427e2154f0f7a1ee7685844be368f008b16bc1b6",
+    "Integrations.BatchEnrichment435": "3b7ce47bd51fe58e29cb3286d85d3580388c87a595e88c1de8461a1c1f1c1501",
+    "Integrations.DifferencePairLaw435": "4328a4875b77421bdd62e60890c4ec3d70be7f53455fdeabd954229c9d8e4371",
+    "Integrations.MixedFairEndpoint435": "57f6085d4827e92e98cd4beff067a7f8290ae6ffba4095a1faffc17427e67e0c",
+    "Integrations.DifferencePairEntropy435": "a4546fc25efeaf18e191b0973ea8ee8475fad2458899a1d2a7262ff4c9c85e23",
+    "Integrations.DifferencePairEnrichment435": "83aa286d719258e5b019115b930ae006f5469f6f273d446b799f48111de2c683",
+    "Integrations.PairedConditionalEnrichment435": "e2e26b7d7971500ed2c2aa82567bb2267c9d26ce87e9d293ee44d45cc5989063",
+    "Integrations.PairedWalkProcess435": "02de5fdb60de71bd151daa1f1da0ea09f054e889f9d713902d79f9f5b0c1c40b",
+    "Integrations.PairedWalkIteration435": "218bd9d52bc39ae8164e281aec8b831a15db1e2d70362859e7e88fdeb14d49ba",
+    "Integrations.RoundedHarperQuota435": "24921aa0839b215abfee91d45865f9019f97503eb9bd0d6f43b95e85c56e0f16",
+    "Integrations.RestrictedLabelAverage435": "1d6807e7f266e5480aef3aca4be3bb7e7584d2394837c31cd4b1980b0d0c55f4",
+    "Integrations.PrimeSubsetLabels435": "bb190de949dad3c72a451198517f316b89366d4672737a196f75f6f5ea1451bd",
+    "Integrations.SubsetRootSeparation435": "ee172ce5e9ec8909cc73f0c4f09f0132a9cdd0e1aae57a6d46fbdcabd12b7ff9",
+    "Integrations.SubsetSeparationEnrichment435": "a896851e7cc14de313c942aba1984a5effc9840e0f0f9b2a087cdcc4ba3f8e35",
+    "Integrations.ScaledSeparationCount435": "85c97273790f558bf037f99ec5ca4cd852bfe98e360554c6b4c48abe5f3b852f",
+    "Integrations.ConstructedSubsetBudget435": "86b94fd725f5aac29d9f186b09c79c4c6d7ae297176baa529763ce4da734f517",
+    "Integrations.ConstructedSeparationError435": "342c295debb0765b2928b447d34fadda3a7e8674fd8f3f5399aeb199ab1c11c8",
+    "Integrations.ConstructedSeparationEnrichment435": "4909703cc16a4898df48f97d6748a751415a992fd2fcde973ca176d0b3c32573",
+    "Integrations.PaperWalkWindow435": "0d2cfc8a5fc9e5620a83689ed96666a29bfcf5b8d1d7d85c6c3127ac60119c92",
+    "Integrations.PaperRankBudget435": "77b94d5190c250a97a92fa4fd526b31140cee38de7627a00b2feec2e94a67645",
+    "Integrations.PaperEnrichmentQuota435": "c889f284453df36239e557ab79646d44cefff36a028c1e43da38c4e13a91cfbc",
+    "Integrations.PaperEnrichment435": "7d76f6c28d1e0eff0d4d51da2d7b17656a7a6c403222bb1aa6960bbd28991189",
+    "Integrations.ExponentialScheduleGrowth435": "9e06b3745419799dc6728078d13ee24129cbe3087273bbd1c771a034a1b344e1",
+    "Integrations.PaperScheduleScales435": "4bf5529962edc65562e57c3d7e60e26b7447c8831d6c5f86d75c84ce1ee23f3d",
+    "Integrations.PaperScheduleExtremes435": "3b2561b935bb85e16378fc293251a7377dd83b9b16d596c5e80a956939574b1e",
+    "Integrations.PaperBandIteration435": "7206e42082ce0dacf09163e160adf74a9938a4807856455910cf5792d87a0920",
+    "Integrations.PaperScheduleBands435": "fe319ddb3bc914b4f8c90a70c1d0663d60a71d82480927e6383e9a9cf2c07272",
+    "Integrations.PaperScheduleOperations435": "ae62458dc7b4310de3eafa432e0b22c6ed99ec5a8a4cde78b23ef476da0a2cb2",
+    "Integrations.PaperScheduleOrder435": "6b523f852267116d5314dcca92fad6cfbbe3dfd53031ecc873f6d0a4317a7ecc",
+    "Integrations.PaperFutureShift435": "0b5f2b68b3085195767dd2997b2fbdc9af27647700812b145ae3aa63e70a302f",
+    "Integrations.PaperScheduleWindows435": "c2af4452edfebd2e1f26f7fdc89f6b4be29e1f85eedc4afa9c180cc9f54cb19a",
+    "Integrations.PairedWalkHistory435": "20f4ce16cc9be3fe04ab867ce4bcdefd836dd4c94f5c413e83781633c5f222f8",
+    "Integrations.PaperTerminalHistory435": "0dde1d161ce6a8cff6adcd5e8e9a7fa62a32bcf588cd081d72ad78d33ca813c0",
+    "Integrations.PaperCheckpointEntropy435": "2ae8c21c4f6726c32f480348ad9894d68bffef21a855bfbf59b9d66c84c0b252",
+    "Integrations.PaperPrimeInventory435": "9e053ac8546b7fec583b741f10a3424cde4c19fcb466228646a0a9f585e484d1",
+    "Integrations.PaperBandEntry435": "07b529ebb107f3b3e1bd50d3379fe7910c99eca9bfc197e218b0b2ef51486fd1",
+    "Integrations.PaperBandRoom435": "427679f260128ed409acb7b3f90a96add9709fe004d0ecce4a9de203d6240f2b",
+    "Integrations.PaperInventoryBlock435": "ebd59e4a0bf47699c4afe0a31af5c972e1259c0b0c249d066632b2b42ee6102c",
+    "Integrations.PaperScheduleBlocks435": "851d780dfbcc1ced388f248fae9865bbfcad903d80d534b207fe584621fedbd7",
+    "Integrations.PaperGlobalBlock435": "86e95624e47c85ac6880739e6a915998e1161f278b141e7ff4d99c59cd76eb1d",
+    "Integrations.PaperTerminalBlock435": "4a161190a9a2cf0adda775fc3dccca98e420f6095c46e941f79ad800240ae0e1",
+    "Integrations.PaperTopTerminal435": "a70d9b03a8b1ad2bcb5cdd1fa0de9284ce6c76a491a02caeb3a73d94a8084b4b",
+    "Integrations.PairedWalkTail435": "30b82292501cf370dddcc650f3b8b81fb94c40276166db449f9cffb009c02038",
+    "Integrations.PaperTailEnrichment435": "48aa438938ea118c85437868a4143e109e9f093ec039906b4803f1f7b9aba32a",
+    "Integrations.PaperTailHistory435": "d6f44fee5954fe5c7af44c77ec8e601ac071d86f2167f387cb0f6f3446b74506",
+    "Integrations.PaperTailTerminal435": "109fe351426e2fe27ea6d7a4f6847e57da39a597a0dec47f0460eb9ff5145cac",
+    "Integrations.PaperCheckpointParameters435": "32f29619fed7dda27c3dcdf5722d742073fc58b2d1b665917abe49f11050f12c",
+    "Integrations.PaperCheckpointStop435": "7d8b823c70e2bb957d8f5393dade0241263cc29fd1d0adfb6d2754c6ee2b2387",
+    "Integrations.PaperCheckpointScales435": "ece3850e16924a85b652b86198e5293acc3626edfbe050db2fa5dc13e2fb24ea",
+    "Integrations.PaperCheckpointSchedule435": "e9bf99900a738de4a0d1cd7183657bb644233b13465a6130715fd48fa2a62088",
+    "Integrations.PaperBlockCertificate435": "28ccc3339177d267b021792e253c8d9f6850e6f2d8fce5e0378dd717a554a703",
+    "Integrations.PaperTailBlockEntropy435": "ffae2a8ca6a3484f6014e30420bb5dc6e3035fb4844d419d3fefe5f5b6d311be",
+    "Integrations.PaperCheckpointBatches435": "a81e3ec35e5de820c07c10e3cf370abedb67cca1ef55ac32588dcab3e2e639ec",
+    "Integrations.PaperCheckpointHighEntropy435": "e37e6ec472f654c19ea7139293275c18dd25d92cb978509d9289124ce5372ad3",
+    "Integrations.RareResidueEntropy435": "1ceb13f241040b8871a3fc9f9bfb83ca341e027d5eb05233e1f54bb5497093eb",
+    "Integrations.SingletonCoverage435": "59e486f95e8c1d737ba4154733b1e086523c0220485d53d023341681a4b3ab38",
+    "Integrations.PaperCoverageParameters435": "8860e8e92ab3112ad7baa64ffd0230e82ad75af3784f658c86ee0f5901d03943",
+    "Integrations.PaperTerminalCoverage435": "f77fdd6a955670313144768f669895c38ebbb56bfc2413a3dc29e1d2073e60fd",
+    "Integrations.PaperCoverageTrials435": "6d5ba12516fa6c04029121fc3ab531d291a69f1999abf99c35bbb8e2d0d056bf",
+    "Integrations.PaperCoverageSharedData435": "b30b9067e44d5161c34821271d13b88f2f5bf899c080a2de8e2243a6bde9430d",
+    "Integrations.PaperCoverageMargins435": "b2122852759440635441a3832c695a5da72d747827e3971b5d387ba01781c8a3",
+    "Integrations.PaperCoverageBudgets435": "ce79e06e29eea03d0b1ac40c81659419a13cfb15ae7199d35165cc235d23fb13",
+    "Integrations.PaperCoverageApplication435": "902cbacb14d33c0ade16c1e6c812eb757384f5b875a737523ccce69d80f8fc0c",
+    "Integrations.FiniteNaturalCheckpoint435": "8c4b134a3e9d49a4a6f6bd8579f86f27aeedc0bee1179fe816f684b51602dfb6",
+    "Integrations.PaperMiddleWitness435": "27691eb2a19fc1d110bfe05c9425c3627892c9606f7d2da4f94e3890e15620cb",
+    "Integrations.PaperFullTailCheckpoint435": "6aba31b104a33530e69307459e2acae8db8b7b271fb1b4f6f91616785924b02f",
+    "Integrations.PaperMiddleTailTransfer435": "9a7eb85107fdf6e04b3fc9abe04ec212d8d64b8e308c48e5947d4cc5516d21d3",
+    "Integrations.PairedWalkRestart435": "ac91e95d77a0a2638a364a92809ead068369bf02b9476dfdc860e43b2f6f0a9f",
+    "Integrations.PairedWalkTerminalRestart435": "0aa1950779569f0293d4f0f83c9a1b402e79d26c682058326fe381f7190e4536",
+    "Integrations.PairedWalkTerminalRestartAt435": "768c94cee92475c456bee30fe24a351ba7f8d26943179efe16ec7a1ed264ecb1",
+    "Integrations.PaperConditionalCoverage435": "1b7c771e137fbfb9b53c3f66c686cd3502d096257d249d5c166a3382edcbaf1e",
+    "Integrations.PaperBackwardCoverage435": "67e3e91b4ea79026f44ea75c9e670ad7c9949374089c39c4d313f605f7aea9bb",
+    "Integrations.GeometricBatches435": "1b0db399c114eb30dff17f81a22ae454b490a5a889e22ff10e9e3dd07a0fb27a",
+    "Integrations.PaperJointBatches435": "a5382c6047e57a8ce27e24b4e0a534e86105a61230716a4551353b90233d73fd",
+    "Integrations.PaperGeometricIndices435": "e82bffa4c0dc8d611560455f8d4c8ac1fa8585d3b52edace6d67fc2affa67b7f",
+    "Integrations.PaperGeometricFamily435": "d5591596be59486d325b84acccc903b61ecc25958bec54d07462736d4f4fdebb",
+    "Integrations.GeometricResidueAlphabet435": "a6ef3756dfb8b5c546f1584f6c627c091aa535d33ea1587571436a25efe65713",
+    "Integrations.PaperJointBatchEntropy435": "ca93792aa87c09a1f28098f3258c616d2104f12813af0e2fa86fd02da8dac7fa",
+    "Integrations.LogGridWindow435": "d11bf57f4efb558ab1a0915b5299f4a8ff69b42a33247c58abbe83a2f8b56671",
+    "Integrations.PaperLogGridWindows435": "3255064c6375b4e9e2a094dbd0f2d74901ac52e3b090c84f4c58ee493d6d9a99",
+    "Integrations.PaperLogGridBudget435": "ef4f39de7ee4cddcf9e5bae60277e48319f71d6129217fd8d7ab73e5ba306539",
+    "Integrations.PaperGridSmoothing435": "9d4dbcd97d0a7378f919346c915ec1317352fc3b5a03a91f8269b59b93b518fc",
+    "Integrations.PaperGridInformationExit435": "39fb53b465941f3e0e2379f47c16b3ed286a7ea57526c55e96ec6d8006d471c2",
+    "Integrations.PaperInformationThresholds435": "42e47bb7e445f48029194e6b15a3f0a187c02a8ad1e27f59455b830a74be1b12",
+    "Integrations.PaperJointCoverage435": "60e1c11c756033fa6faaadc1d15cc91b9ce672908bd094940c6f444a1cd44eb5",
+    "Integrations.PaperGridCoveredFamily435": "6ea696cfdf1121b5cd042521a10ca33f91f31c62f0030ed1a2936c80885fc1d6",
+    "Integrations.PosteriorFavorable435": "1ee2e168a5386fe110f096e1e82b4baa0197847d0dbf62a8aa3136f02d285ef4",
+    "Integrations.PaperPosteriorFavorable435": "c76750559670e2e5f2278401730f76b9ecf77dbd8164febfe0dcdf9fe4671e7f",
+    "Integrations.PosteriorExactFibers435": "c13ad7651c85211b1f71c5926e5642fb1dfad69ef5b642f5dee603e26ddb0fa1",
+    "Integrations.PosteriorCandidates435": "fb3cebd3a8c6296698d4dd8fc3b6c0e4ca67832d0f5667268a83bbec6ae3ff79",
+    "Integrations.CheckpointWordHits435": "d15bcf05db9684f24251618056d6b174ad9b56b283ce4028f7d9581498e2073a",
+    "Integrations.TranslatedCandidates435": "1b57e594ade0a299520500acb5b808542014ffffda2938fb6650ae0f2a85699f",
+    "Integrations.CommonPassingQuota435": "fb720ef6ffb28f85cd4bab9a3082d1a3f4dc54e5dab36daf14a57990e0a27fad",
+    "Integrations.PosteriorRootPassing435": "9f433d36f96f86a492377ecaa49e3a8787c164384247677a5756dd267a54bc0a",
+    "Integrations.PosteriorRootLists435": "8b2646695f2389747d5947c314294a072992783c84ca5a88d189ee5764a7fad4",
+    "Integrations.CheckpointCompression435": "0740c1951fdcc75e77a6a9b6acd625a0662da4f2ee91571ae230ea88daa0d454",
+    "Integrations.WalkWordCompression435": "ae7ce91e13e9fbdd074554b03edf1d6940ce3652964df923aa544d0c5ec46f13",
+    "Integrations.SmoothedRootPackage435": "795244b82db784cdc667342430c86d194648df5506bcc79288cc03eea068c89e",
+    "Integrations.PosteriorLogLists435": "22687c6d3ad643347c487f367198b7bab5e5bfebbe57dd6b610e7226c5979a24",
+    "Integrations.SmoothedRootInformation435": "f084d6064a172ac49ba12932e027ce147977390c81d44ad6e90cb77be6455221",
+    "Integrations.PosteriorBadData435": "ace2376257a2965c76389d611c1a71a48d26a81acc838761f4550c8571406a2b",
+    "Integrations.PaperCoordinateBadData435": "014865de7f7c6fb3921b52c8afa668a64314601743c91dae1a22a08a85daabac",
+    "Integrations.SmoothedRootPriorBad435": "14ef21bc2e7e2e0f5b4cefd330890466b29c67e21257f721ffee96c68fb31e53",
+    "Integrations.SmoothedRootExactCheckpoint435": "720303d0fa451caa3644918c2c8abf0a5af6f227002ae91f88740ef9fee83991",
+    "Integrations.FinitePriorChain435": "b10a9a577756316e05c558ec80c348165be7437704d886214d6fe07a10346fb2",
+    "Integrations.DyadicRootWords435": "8bbf8f6d7118dbe2fac1258f1ced898229df5d810b7f2e0b581673c708d929d6",
+    "Integrations.PosteriorGapLog435": "f575a9e922780fcf3f6a5e872cc95c296fa63c8b9679187350333498fd70d0b5",
+    "Integrations.SmoothedRootGapInformation435": "3422e9544188ad5688214f5dab72249b662b088cf780dd2def0be59aae78147a",
+    "Integrations.SmoothedRootGapExactCheckpoint435": "51b5498554c382afbf24d225d6b0351d8879cf523c767315e03e1c7c4e7e457b",
+    "Integrations.RootWordSmoothing435": "95683d586c74380785e22efef71c423590aa5761fbad6a61cef576d9f8ab083e",
+    "Integrations.PaperRootWordInputs435": "1884c0f567261bc16143d904fb9cc8792324dc84a576e3ae13327ddaa61d85ac",
+    "Integrations.SmoothedRootPretransport435": "9187b3ff74d02162a1f8179c1b53d73cbccd3ca3b18738be14ec5c2e0f65b668",
+    "Integrations.FiniteJointChain435": "489c53146b77bdba848bfcd745fa23420581aaa19cc945889d6c61a375bb8825",
+    "Integrations.OrderedJointBudget435": "94e025ddd6b5df68f274437de28eb080b74efa0b47320c37122c99404b6c2453",
+    "Integrations.SmoothedJointRoots435": "49ebbbc5777ad97e74dd042194c81c1e67a1ac96527d337ab439ff3db9fb1abe",
+    "Integrations.PaperJointBadGap435": "6dafb9f1bb5a8a45f1bdf0d1107ff3c2c97989d4730723db44dc7466957481ac",
+    "Integrations.PaperJointRootInformation435": "8138b6df41b1665dc77b1bbeca9292f42394e0be8f1134ee1fd1bfe88c7c8945",
+    "Integrations.JointInformationAverage435": "957ad218d108144b5500c2b897a5895597aa81e32181f1bc30c48180475e8690",
+    "Integrations.PaperJointInformationAverage435": "f7a5001602ad17d1ac5b90164e06a954af0ede27efb4b81f8c0f24ea696466db",
+    "Integrations.FamilyResiduePrior435": "f98ad61b92ec41433fd655dc3f9e08c0674360dafeaaa71ea0988612b0189a9a",
+    "Integrations.PaperFamilyPriorInformation435": "e1c1e54c4a839f586279cfb203a91560823fe05b90bd857313576d436bc9a31f",
+    "Integrations.JointInformationMargin435": "38d6a79f862f98ec3af64a89696db4909ec789c86a5ddc49eb11f3fe4aaa48b5",
+    "Integrations.FiniteFamilyHistory435": "e831dba742b957759630734b41af0c2f3c4c6c76dbb4431e1bafae2d9ea0f409",
+    "Integrations.PaperFamilyNumerator435": "261106e32260c54887275bd65076e23f2c63d06092e595b8f8809e1ca264fed0",
+    "Integrations.PaperInformationMarginFamily435": "31697146698e329a26b12eb8465b12b091bf02ec77269ed4756232adcba01bb2",
+    "Integrations.SortedFamilyHistory435": "38e3637513190dea3f5283ef0763cc9a1197689c27925a2e22360f1a4d1f2bc0",
+    "Integrations.JointPhysicalMargin435": "909e73c90f00183359f3eaf923d3480c6a6409a945c346814c710d748eeb412f",
+    "Integrations.PaperFamilyRate435": "6a8462f60c9d608b3ea8df8bc12aaa1e14b891e1093a1398f626ea22471f0762",
+    "Integrations.PaperPositiveInformation435": "dc3f345ace7a7809b286a69b06a799bcd6b993d7ecb5695bffbce61b90c98408",
+    "Integrations.FiniteProductAverage435": "09c55dc8232b26f28a4d83cee018ff9bb581d4a3a639f40ec98b0e2c5e2d6c7d",
+    "Integrations.CountableFamilyHistory435": "848ee437e80bc553b35d35f88ed2868254ff0ade2234007e415284ff00c169a6",
+    "Integrations.PaperTerminalLawMatch435": "a2c11fe828e83a83be5887c07b079a82087ee3093ab108e3681143346a277a62",
+    "Integrations.FamilyAuxiliaryChoices435": "203fc514bd071a12cd9db4dc1c82f8778cedeba1d42571180c3765d7e40ab956",
+    "Integrations.FiniteClampedWords435": "ceea1a61365ea8e34655728d1ba43306c418de83486e41f5f2c5490bdb6dbe75",
+    "Integrations.PaperFamilyAuxiliaryAverage435": "be821688d8a61df96f52474c129e1d4a1cee16daaa5626452b35f89eb678fac9",
+    "Integrations.SelectedFamilyWordBudget435": "2114e72c54800596f0cf593b5ebe279013a0c6c043251dc39ebed39c2df5ae51",
+    "Integrations.PaperFamilyWordLevels435": "16296bb0135f76663c842ec9951dbd2fdadd4086ffb67ae33eeed51dccf52c91",
+    "Integrations.PaperFamilyAverageBudget435": "805c8954bef4d670e41124b79ea90b018f9a0322f019bd95ee2eaf46a6c52e21",
+    "Integrations.PaperPrimeUnionWalkExit435": "95de45933b5f4e7b23aa07cb16145f9635ea9a45308da332ef59d7c3667f46da",
+    "Integrations.LatticeSimplePrefix435": "22e59abbb140892f98fc0c6d07911fdc8653dfc69a284213bf31673636c6978c",
+    "Integrations.LatticeSquaredStep435": "5545e7d16cd5a837df72dae89f1d7ca4f797901575dded374c8096a26ada7cf8",
+    "Integrations.LatticeRay435": "a5cc3c1b84017e9fed08d58e92c464e8702748a830a15707a368088352ad1939",
+    "Integrations.IrreducibleFiniteSieve435": "10f673ba3e4df3b08a02bf3dc469a738c411fbe305b39cb64ba669b679a43149",
+    "Moat.Conjectures": "8ff13e8243bfdd4a2be7e9ec7a127ec20529ecfbec08e421fb894677d855b185",
+    "Integrations.Unified435": "c3b233ee8b4407ae08ea943ea03e67bd7f09cbc05a61b14da2316eede7611bb4"
+  },
+  "selected_upstream_source_modules": {
+    "LeanPool.BooleanIsoperimetry.Harper": {
+      "namespace": "LeanPool",
+      "source_sha256": "5d8522cbd983ac30c89a25bb7eef4cab1ea4a51aaa6bb07f1e835d9e633728a9"
+    },
+    "LeanPool.BooleanIsoperimetry.Macaulay": {
+      "namespace": "LeanPool",
+      "source_sha256": "479369031628556b8d2baddcbbe151515f1a27b8f7e20544aa5226d4da39971a"
+    },
+    "LeanPool.BooleanIsoperimetry.Cascade": {
+      "namespace": "LeanPool",
+      "source_sha256": "9b65a1786410539c1ceb3bd6232b79147424f6c14e67d856a38a5cb5b54f8189"
+    },
+    "LeanPool.BooleanIsoperimetry.Cube": {
+      "namespace": "LeanPool",
+      "source_sha256": "fdb666ac9b0aed9e0cf0335af67b6a3f0c169dcd1abe72983dae536eb7edbf8e"
+    },
+    "LeanPool.BooleanIsoperimetry.Shadow": {
+      "namespace": "LeanPool",
+      "source_sha256": "aa602452472b2746be5185f40c20b152138dc999e1be045931f83b0c80bdb4a1"
+    },
+    "LeanPool.BooleanIsoperimetry.Compression": {
+      "namespace": "LeanPool",
+      "source_sha256": "42c24e73d58e4db547eb1bee9a9e4c1ef07bbbd28fc3d66bda3fbe4f961e0153"
+    },
+    "LeanPool.BooleanIsoperimetry.SimplicialCompression": {
+      "namespace": "LeanPool",
+      "source_sha256": "dc23cb513c616496838008ca0d7ad6fb75aa768ad303d1aba2a07f058a9dde84"
+    },
+    "LeanPool.BooleanIsoperimetry.LayerWindows": {
+      "namespace": "LeanPool",
+      "source_sha256": "32d72e24034e78ba773f2471e681a5c3681f19376497566829b3519a9684b36b"
+    },
+    "LeanPool.BooleanIsoperimetry.KruskalKatona": {
+      "namespace": "LeanPool",
+      "source_sha256": "74714ee8fa9eb03aa42d8391f1f60d61b6b8c52d1ff662494b62dde404da590c"
+    },
+    "TauCeti.NumberTheory.Chebotarev.PrimeCounting.SplitsCompletely": {
+      "namespace": "TauCeti",
+      "source_sha256": "ec26b092936cc028d793de1d3bdbfce120f3982082ea13510797b08b4af2e675"
+    },
+    "TauCeti.NumberTheory.Chebotarev.PrimeCounting.FrobeniusPrimeCount": {
+      "namespace": "TauCeti",
+      "source_sha256": "18174e14acb8c8ef59ccb1224e9326f2cca85ef5fadb3aa7fa38582e8cd2fe68"
+    },
+    "TauCeti.NumberTheory.Chebotarev.PrimeCounting.Chebotarev": {
+      "namespace": "TauCeti",
+      "source_sha256": "81888bb403fa0e95375d0e073be97875e1050b7f9ad6b997c404c7951d095470"
+    },
+    "TauCeti.NumberTheory.Chebotarev.PrimeCounting.VonMangoldt": {
+      "namespace": "TauCeti",
+      "source_sha256": "6d53d60dd25f2d26e25def8792ab49a7ee4903d915062b0a514ce73ae7a86c37"
+    },
+    "TauCeti.NumberTheory.ArithmeticDirichletSeries.Prime.PowerIndex": {
+      "namespace": "TauCeti",
+      "source_sha256": "9b0106cfeec5558740be4b0357723d2708dc821191bc395776498d4a131aa066"
+    },
+    "TauCeti.NumberTheory.ArithmeticDirichletSeries.Counting": {
+      "namespace": "TauCeti",
+      "source_sha256": "1a37fc1d3a867ddfdb903d1452994c8dd75153a8a3c7003379708a8183215639"
+    },
+    "TauCeti.RingTheory.DedekindDomain.PrimesAbove": {
+      "namespace": "TauCeti",
+      "source_sha256": "817d9e5719831a8d088e4a19080ec5b4fe07feba4d56f9c3ab9e380556a20f8b"
+    },
+    "TauCeti.NumberTheory.ArithmeticDirichletSeries.NormCoeff": {
+      "namespace": "TauCeti",
+      "source_sha256": "1f653aea07370c3bd48b357a0b1b4e4e92346c45cdda02df1aa77daaaa31ff71"
+    },
+    "TauCeti.NumberTheory.ArithmeticDirichletSeries.Basic": {
+      "namespace": "TauCeti",
+      "source_sha256": "59a0b41a2b6b087c5dcc065d134677a16844a307783977db5b7283e01a362d06"
+    },
+    "TauCeti.NumberTheory.NumberField.RingOfIntegers.Transport": {
+      "namespace": "TauCeti",
+      "source_sha256": "267dc0e51ddc0d560dca2e571849c0dcba151ee0d59042a3f27d3d96d4ca3c33"
+    },
+    "TauCeti.RingTheory.DedekindDomain.Ideal": {
+      "namespace": "TauCeti",
+      "source_sha256": "441b884fc0a0af892d60366000a098d72d3c78ded46a17c65bb1c98c0877a9c7"
+    },
+    "TauCeti.RingTheory.Ideal.Norm.AbsNorm": {
+      "namespace": "TauCeti",
+      "source_sha256": "bd0e58706e49f20ae037a27fe203b8d05b63d9f7baa29d52ff9819ef8aa2a0d2"
+    },
+    "TauCeti.Data.ZMod.Divisibility": {
+      "namespace": "TauCeti",
+      "source_sha256": "c0afa7cd31b91f6285ae8ed2e63a609c369ffdd8e48cf33d85ace991e84b2de7"
+    },
+    "TauCeti.RingTheory.Norm.Congruence": {
+      "namespace": "TauCeti",
+      "source_sha256": "d2a3ce04840eb604e6193e0ca53dea11b0670aebaa3d3c11df5f6e52bdc62358"
+    },
+    "TauCeti.NumberTheory.ArithmeticDirichletSeries.Weight": {
+      "namespace": "TauCeti",
+      "source_sha256": "f92f6f4b40c98f0a7818228af0a253ec189d2c25cee5dcfa1a78c2dd5736f750"
+    },
+    "TauCeti.Order.Northcott.Basic": {
+      "namespace": "TauCeti",
+      "source_sha256": "d0b25fc30d7680befc82e7ecd29c08165803e95a3b3694b61cb223909b07a7eb"
+    },
+    "TauCeti.NumberTheory.ArithmeticDirichletSeries.EulerProduct.Basic": {
+      "namespace": "TauCeti",
+      "source_sha256": "3d92949b507f3e891b3fe743072a3529349022885d2e0edebef7a6da7a5b2fbb"
+    },
+    "TauCeti.NumberTheory.ArithmeticDirichletSeries.Convolution": {
+      "namespace": "TauCeti",
+      "source_sha256": "441fcde63e91e6962b97bb79109345160117422e2ba14e902623acbba2d7114e"
+    },
+    "TauCeti.RingTheory.Ideal.Operations": {
+      "namespace": "TauCeti",
+      "source_sha256": "4e7867825bf1f03cb61d64e915758fc791ee656deb7a6a35241c6742dd1aa6da"
+    },
+    "TauCeti.Algebra.Ring.Subgroup": {
+      "namespace": "TauCeti",
+      "source_sha256": "cde26933b53a4b75af43c2028c21a3b6947ae6d50053d09db4ac9411cfd82f81"
+    },
+    "TauCeti.NumberTheory.ArithmeticDirichletSeries.Prime.Psi": {
+      "namespace": "TauCeti",
+      "source_sha256": "0be45ee41348a6440ac08f92a63c6c692338b9f4c99fddfc8a30337a12250f09"
+    },
+    "TauCeti.NumberTheory.ArithmeticDirichletSeries.HigherPrimePowers": {
+      "namespace": "TauCeti",
+      "source_sha256": "d9d504c01b3df2822ff9fb3b2ea7da47782f52e14128bc9dc20b94495f52d8d4"
+    },
+    "TauCeti.NumberTheory.ArithmeticDirichletSeries.VonMangoldt": {
+      "namespace": "TauCeti",
+      "source_sha256": "b7f69bf8ee539bb701d5a59704a5857c68ff5a5fe6214ec1aa1fa39853b04e8f"
+    },
+    "TauCeti.NumberTheory.ArithmeticDirichletSeries.Trivial": {
+      "namespace": "TauCeti",
+      "source_sha256": "1e33d63a71a7411d9e35fa19e1cb4a08c1d02096304c466d2283cd2085fef49c"
+    },
+    "TauCeti.NumberTheory.NumberField.Ideal.IntegersRat": {
+      "namespace": "TauCeti",
+      "source_sha256": "5e5035f0cfe41c8dfd909183943112ed3d9dd8fdb57894f7595f566c94a2460e"
+    },
+    "TauCeti.RingTheory.RamificationInertia.Bijective": {
+      "namespace": "TauCeti",
+      "source_sha256": "e21219f9526d51658e1604dee9cf0c17771ef9f2b7467ee9650708858fac0130"
+    },
+    "TauCeti.Algebra.Algebra.Tower": {
+      "namespace": "TauCeti",
+      "source_sha256": "a4cb67c2145a150d1706c829ac4939912e75c8b52bd9b27adaf242316ed64d92"
+    },
+    "TauCeti.NumberTheory.NumberField.Frobenius.DecompositionGroup": {
+      "namespace": "TauCeti",
+      "source_sha256": "63aba5810a02a06760c9cdc0c0e073820c825e7b261a5d80b0b57133e0d94d81"
+    },
+    "TauCeti.NumberTheory.NumberField.Frobenius": {
+      "namespace": "TauCeti",
+      "source_sha256": "362afa3ba1e8af34bad834fdae2eb27088f7d5ad0a8ae24fa27b9b64d1cbc0f6"
+    },
+    "TauCeti.RingTheory.Frobenius": {
+      "namespace": "TauCeti",
+      "source_sha256": "9794a590522d3ead0320e5e232d9552c5e6aa1839eaf4adb4e3e2e24ce2d6f47"
+    },
+    "TauCeti.NumberTheory.LegendreSymbol.Frobenius": {
+      "namespace": "TauCeti",
+      "source_sha256": "eb437b26e30d952970b085c2d0accd9f2ffa6a4d2208d96d5f8b2607b95439a5"
+    },
+    "TauCeti.RingTheory.Ideal.LiesOver": {
+      "namespace": "TauCeti",
+      "source_sha256": "563ed2cc428910d7d3f0eabddb3098a3ba7fb25725f6a7d431fb2f08e3bb7c8f"
+    },
+    "TauCeti.NumberTheory.NumberField.AutomorphismAction": {
+      "namespace": "TauCeti",
+      "source_sha256": "7ae0d7dfcf0f51e55d22a070a809f1dfb73a2432492ba5c2472de62d2b85a9fa"
+    },
+    "TauCeti.NumberTheory.NumberField.IntegralSqrt": {
+      "namespace": "TauCeti",
+      "source_sha256": "08ff82404aedd68082389be95505a09b1c63bac2c2beb65341ca9fb233f2f178"
+    },
+    "TauCeti.NumberTheory.RamificationInertia.Galois": {
+      "namespace": "TauCeti",
+      "source_sha256": "3f5eca6403298d5110ccbd60fb67ef2199dd18096e85805578ae8a1a19239f29"
+    },
+    "TauCeti.RingTheory.Ideal.PrimesOver": {
+      "namespace": "TauCeti",
+      "source_sha256": "bdaf76b4a6012c17cd0e9b0fa1100e2b2492970a52b635d297bbcadbe1a5f61b"
+    },
+    "TauCeti.RingTheory.Unramified.AlgEquiv": {
+      "namespace": "TauCeti",
+      "source_sha256": "3a1378d73032f704083fe5e804bb642b5471003ed9cfae206bf7f71ba2e62cf9"
+    },
+    "TauCeti.RingTheory.Ideal.RamificationGroup": {
+      "namespace": "TauCeti",
+      "source_sha256": "794fa3a702b816550bfb940617cc5f20540075c201e80db3b53f2093b370050b"
+    },
+    "TauCeti.Algebra.Group.Subgroup.FiniteFiltration": {
+      "namespace": "TauCeti",
+      "source_sha256": "8d2e4f6055dd5c7ef7c90b72b645490f7446c91754e25c96f32748ceeb457558"
+    },
+    "TauCeti.Algebra.Ring.Action.End": {
+      "namespace": "TauCeti",
+      "source_sha256": "2469e041e53babe32a018782bc48dbfde3b20e1af25f51491428761c34ca763d"
+    },
+    "TauCeti.Algebra.Group.Conj": {
+      "namespace": "TauCeti",
+      "source_sha256": "d8496cde1e169ae8800d40bdc6675db47c44f1541cbb0ab0b0a2350076847bae"
+    },
+    "TauCeti.NumberTheory.Chebotarev.FrobeniusPrimeSet": {
+      "namespace": "TauCeti",
+      "source_sha256": "33d4392f04c03ec83ba5dc69e3bad4d26413dc633775160b3b9bf13961edd40a"
+    },
+    "TauCeti.NumberTheory.Chebotarev.RamifiedPrimes": {
+      "namespace": "TauCeti",
+      "source_sha256": "8478c946f5874d93bb0037bd45a233db2c23a2c2cb7c265c4829ac18572d356b"
+    },
+    "TauCeti.RingTheory.DedekindDomain.RamificationLocus": {
+      "namespace": "TauCeti",
+      "source_sha256": "7cea61a12910498ced6b85dafb78d8116d61c9d3dce87e7c72dc854c4640a146"
+    },
+    "TauCeti.NumberTheory.RamificationInertia.Tower": {
+      "namespace": "TauCeti",
+      "source_sha256": "d4cc64453adf671be2934c829b83cbf26202cb24baaedf83781aff31ab6659c3"
+    },
+    "TauCeti.NumberTheory.NumberField.ArtinSymbol": {
+      "namespace": "TauCeti",
+      "source_sha256": "c920610fd0bfb89fe867ca50317f4380dd476a0840e432c39b52c01fafd24a2a"
+    },
+    "TauCeti.NumberTheory.NumberField.Frobenius.Restriction": {
+      "namespace": "TauCeti",
+      "source_sha256": "d7d8c79ce33c55796e1bb861c16fe64a9096cf182167367298b1803debb1535e"
+    },
+    "TauCeti.NumberTheory.NumberField.UnramifiedTower": {
+      "namespace": "TauCeti",
+      "source_sha256": "f9ee46b035da91313714181f3cc71972d418cadb845519df9f808fc490145e72"
+    },
+    "TauCeti.NumberTheory.NumberField.Frobenius.Tower": {
+      "namespace": "TauCeti",
+      "source_sha256": "d69eea370f9b569b00bf865be28bdce261863005451fd921bf784be6f950d356"
+    },
+    "TauCeti.NumberTheory.NumberField.SplitsCompletely.Basic": {
+      "namespace": "TauCeti",
+      "source_sha256": "1b1dba2d2e5f5eb3b3654bae619ac860c3956e30c204099051fb46ca50b162e4"
+    },
+    "TauCeti.NumberTheory.RamificationInertia.Splitting": {
+      "namespace": "TauCeti",
+      "source_sha256": "52b764874cbbf1dbb9ae361b9f554d65e4b20b66a595f541a933b45ba0c4606f"
+    },
+    "TauCeti.NumberTheory.NumberField.AlgEquiv": {
+      "namespace": "TauCeti",
+      "source_sha256": "179a33675cc5d0881c8f5543ca0ab35315991b68c7882468e8903a00684a5b4b"
+    },
+    "TauCeti.Analysis.Asymptotics.Lemmas": {
+      "namespace": "TauCeti",
+      "source_sha256": "4fac9dde315f0dfd8385c210b6d8f1148f27711aa8650b2e16ae5a92988462f3"
+    },
+    "TauCeti.NumberTheory.Chebotarev.AuxiliaryPrime": {
+      "namespace": "TauCeti",
+      "source_sha256": "36a2a9023095e8d4a7a2e832b59e7246c33d5ae4ef9b8945de21648066cb540f"
+    },
+    "TauCeti.NumberTheory.NumberField.Cyclotomic.IrreducibleOfUnramified": {
+      "namespace": "TauCeti",
+      "source_sha256": "c0f7ca98710dff51d42ff29c192ba85e98206378bbb92b91a9c81a3eab6317d6"
+    },
+    "TauCeti.NumberTheory.Cyclotomic.Irreducible": {
+      "namespace": "TauCeti",
+      "source_sha256": "3878f568ddfb65194ff286e01498ea37c7f42a059af1d7a630a5e90c2fcbffb5"
+    },
+    "TauCeti.NumberTheory.RamificationInertia.NumberField": {
+      "namespace": "TauCeti",
+      "source_sha256": "c2a48aed71e27d87ae154369892145ee1b3deaa869e351e8d7c6ce53902eb5c8"
+    },
+    "TauCeti.NumberTheory.NumberField.RamifiedPrimes": {
+      "namespace": "TauCeti",
+      "source_sha256": "101661e0e714010da70f790caf48c919a3961102d30f9d03c1d58bc46cb4db84"
+    },
+    "TauCeti.NumberTheory.Chebotarev.Crossing.CrossingConstant": {
+      "namespace": "TauCeti",
+      "source_sha256": "886b74976537a70079bfaeaaf63246271795d2f8d4d69f9e835530165cd22a85"
+    },
+    "TauCeti.NumberTheory.Chebotarev.Crossing.TaggedCount": {
+      "namespace": "TauCeti",
+      "source_sha256": "1f1f942b820a94511b53a805f094c64f1e2f8d787c3e341ccff3a066d02395cb"
+    },
+    "TauCeti.GroupTheory.SpecificGroups.Cyclic.OrderCount": {
+      "namespace": "TauCeti",
+      "source_sha256": "1bd733e36443b8ff4b60f6d4da0c6e4f003c8841e399694637e2636bf0ac4abf"
+    },
+    "TauCeti.Data.ZMod.Count": {
+      "namespace": "TauCeti",
+      "source_sha256": "80ab7b46f825db154cae80d0a02ecd291949771056b79bc7f6330174161b3129"
+    },
+    "TauCeti.GroupTheory.OrderOfElement.Basic": {
+      "namespace": "TauCeti",
+      "source_sha256": "0263d1b40ef795bf10ba9e24b561b602c4a06ad629b7d36742bf403bf3ea7ece"
+    },
+    "TauCeti.Data.Nat.Factorization.MulDvd": {
+      "namespace": "TauCeti",
+      "source_sha256": "7039a06ce5475281ce7a5268c72420545c7e9a790f484b600f9cf2544fe7e38d"
+    },
+    "TauCeti.NumberTheory.Chebotarev.PrimeCounting.Cyclotomic": {
+      "namespace": "TauCeti",
+      "source_sha256": "ac107062bf74575a48f6eccac9ace6d13bdf385a7bfcc093db484a6626420f56"
+    },
+    "TauCeti.NumberTheory.Chebotarev.GaloisCharacter.Cyclotomic.Nonvanishing": {
+      "namespace": "TauCeti",
+      "source_sha256": "146b1f7fef9d2a4ce1720f54415b7394ae4b0ca7cc57d6a63583a5a780626dfe"
+    },
+    "TauCeti.NumberTheory.Chebotarev.GaloisCharacter.Cyclotomic.Series": {
+      "namespace": "TauCeti",
+      "source_sha256": "e9b61b4c5dafef725396ebf1b33598020d0e796a3615fcb9a74574453e766c01"
+    },
+    "TauCeti.NumberTheory.Chebotarev.GaloisCharacter.Cyclotomic.Cancellation": {
+      "namespace": "TauCeti",
+      "source_sha256": "4a8bf57518bf7ccbed0b09dd891af4d2cd6383dd158ad02459eb61b771daed5d"
+    },
+    "TauCeti.NumberTheory.ArithmeticDirichletSeries.Cancellation": {
+      "namespace": "TauCeti",
+      "source_sha256": "2b3771728d67dc069ca28195cf3f062d13cb3c2b2264f7c92fcafe946ce37319"
+    },
+    "TauCeti.Analysis.Complex.HalfPlaneIdentity": {
+      "namespace": "TauCeti",
+      "source_sha256": "c3ae571a5fe1cf1735a76e8370d15de6e67c6416afef8eebc045dc580161a00e"
+    },
+    "TauCeti.NumberTheory.ArithmeticDirichletSeries.AbelSummation": {
+      "namespace": "TauCeti",
+      "source_sha256": "22192bb4f37ef7aa14dbf9cbb65f4b237e1b225ff1e81c02477a1d38fed1b93c"
+    },
+    "TauCeti.NumberTheory.ArithmeticDirichletSeries.Estimates": {
+      "namespace": "TauCeti",
+      "source_sha256": "6a1b6bbce54a5ee017a3a2aa584e23aff7006c813f288fe5a0a74bafc8675ad4"
+    },
+    "TauCeti.NumberTheory.ArithmeticDirichletSeries.Regroup": {
+      "namespace": "TauCeti",
+      "source_sha256": "1339f03c4c3d45078cea3cfc2c72d937adcd4a3597f7b1fef5029e248c3d9283"
+    },
+    "TauCeti.NumberTheory.ArithmeticDirichletSeries.EulerProduct.Restrict": {
+      "namespace": "TauCeti",
+      "source_sha256": "bf521280d142fb2f20f9339ae361bbfa25f0fe71e7e6a92e96701c49cd5c166d"
+    },
+    "TauCeti.NumberTheory.ArithmeticDirichletSeries.EulerProduct.Analytic": {
+      "namespace": "TauCeti",
+      "source_sha256": "d6d2e9a5081c39f0e8809d20399826d3d45d04a3eeaed1aa72786c640b03845d"
+    },
+    "TauCeti.NumberTheory.ArithmeticDirichletSeries.EulerProduct.Data": {
+      "namespace": "TauCeti",
+      "source_sha256": "b73578e8c2978726e684915b4d9736704e5b6469e13e8a189e7e0b16b2cc7d56"
+    },
+    "TauCeti.NumberTheory.LSeries.Twist": {
+      "namespace": "TauCeti",
+      "source_sha256": "6d0d51c46cb716711a6f9e66af930af35647d4a61172e7f00331c964176fc06c"
+    },
+    "TauCeti.NumberTheory.LSeries.SumCoeff": {
+      "namespace": "TauCeti",
+      "source_sha256": "74c973a5bcda58482ac8b8fee826542e1416556210e69e94dc9a38595a832a69"
+    },
+    "TauCeti.NumberTheory.Chebotarev.GaloisCharacter.Cyclotomic.Basic": {
+      "namespace": "TauCeti",
+      "source_sha256": "e69d697066586bdbe841b608b08550a36b00cecc1bb454c24116f5e82a67cfc4"
+    },
+    "TauCeti.NumberTheory.Chebotarev.GaloisCharacter.Weight": {
+      "namespace": "TauCeti",
+      "source_sha256": "e53b26fe4685509d2296877042bfb85b6510333daf5e9ccfa17872cf5203b6c8"
+    },
+    "TauCeti.NumberTheory.NumberField.Global.RayClass.Character.Basic": {
+      "namespace": "TauCeti",
+      "source_sha256": "81f0029a9edb4e3fed355c1af4132a03d21408836fb947115902af8361fc381f"
+    },
+    "TauCeti.NumberTheory.NumberField.Global.RayClass.Exact": {
+      "namespace": "TauCeti",
+      "source_sha256": "e433e938330930c9fc2cf52a36b2f71352f009899643d80ea0ec5fdf1b726959"
+    },
+    "TauCeti.NumberTheory.NumberField.Global.RayClass.CongruenceQuotient": {
+      "namespace": "TauCeti",
+      "source_sha256": "347f2480b5c69169cfa64657def26ecf9859deeb7add9fa9e0dc79e52af1cd07"
+    },
+    "TauCeti.NumberTheory.NumberField.Global.RayClass.Residue": {
+      "namespace": "TauCeti",
+      "source_sha256": "2c938393dc9f57678d432f5ecb7c8f86b46cd1c1c695c8ab89f371271840f19d"
+    },
+    "TauCeti.NumberTheory.NumberField.Global.RayClass.Basic": {
+      "namespace": "TauCeti",
+      "source_sha256": "d90c73d36111fdf19c941cbe12b5a66b51e89e432eadaa0043e4693ac52abe45"
+    },
+    "TauCeti.NumberTheory.NumberField.Global.RayClass.Modulus": {
+      "namespace": "TauCeti",
+      "source_sha256": "84630cde583d6503b0ef3549b2e746ba9c315103ec5fb6e3cc80897bac126299"
+    },
+    "TauCeti.NumberTheory.NumberField.Ideal.Away": {
+      "namespace": "TauCeti",
+      "source_sha256": "eab31cd14dfcd6da028fda8267918fe9a7f3389af2d5c3f40edb8c0ab3aa43a6"
+    },
+    "TauCeti.RingTheory.DedekindDomain.Factorization": {
+      "namespace": "TauCeti",
+      "source_sha256": "4faf5bddb43bc20a473e050fa1379aa56ebe243db14c683be0d5de868170e9bd"
+    },
+    "TauCeti.NumberTheory.NumberField.TotallyPositive": {
+      "namespace": "TauCeti",
+      "source_sha256": "9986f795def1361d1baac3c945568129f63a5e76f0140fd589b223feb877bb64"
+    },
+    "TauCeti.Algebra.Order.Ring.Units": {
+      "namespace": "TauCeti",
+      "source_sha256": "3cb40dfab40ffdb6bb2f3d5ed6e44032c77d18071d1d11bee6b599ef470e11d0"
+    },
+    "TauCeti.GroupTheory.Index.Basic": {
+      "namespace": "TauCeti",
+      "source_sha256": "48ae232e29e937ddb69314d78701d6d21194776bc50adb624ae56b2136ebd0e6"
+    },
+    "TauCeti.Algebra.Group.Subgroup.Map": {
+      "namespace": "TauCeti",
+      "source_sha256": "534492e26e9142b2d07d34945b5f0ec597dede92cc39bfb29030d4d079cc8c6a"
+    },
+    "TauCeti.NumberTheory.NumberField.InfinitePlace.Basic": {
+      "namespace": "TauCeti",
+      "source_sha256": "d0a97ff4941e669100a93540490119d4fb4dff35f52aa506f45a4a9c3ba3881b"
+    },
+    "TauCeti.RingTheory.ClassGroup.Basic": {
+      "namespace": "TauCeti",
+      "source_sha256": "b43a094d8af133e7278007722ff3626e05c4d4a28aab57dd5a68f6443f8f2674"
+    },
+    "TauCeti.RingTheory.Ideal.Quotient.Representative": {
+      "namespace": "TauCeti",
+      "source_sha256": "9027d35ce4ca37255e2898c23ecadac3cdd12d8d5bf613eb4b71b2f352732c9a"
+    },
+    "TauCeti.NumberTheory.NumberField.Units.Signature.Integer": {
+      "namespace": "TauCeti",
+      "source_sha256": "3910aecac55dfbd25ce67d414e7c93d384e97c52b9efd66b591eadca8f0940b8"
+    },
+    "TauCeti.NumberTheory.NumberField.Units.Signature.Surjective": {
+      "namespace": "TauCeti",
+      "source_sha256": "df5f14c6909d61988dc66d55847bcb0813dedd3596db14f26656f4207e283d1a"
+    },
+    "TauCeti.NumberTheory.NumberField.SignApproximation": {
+      "namespace": "TauCeti",
+      "source_sha256": "c8cbcccd9bcc8e1320880400921f13c36e718c3d5cb22d43cd1c6195f413d63e"
+    },
+    "TauCeti.NumberTheory.NumberField.Units.Signature.Basic": {
+      "namespace": "TauCeti",
+      "source_sha256": "a77f02708176a8c3be6d413aa63ea24098e032f9b23c6c3ff41a7f0488993abc"
+    },
+    "TauCeti.GroupTheory.QuotientGroup.KerEquiv": {
+      "namespace": "TauCeti",
+      "source_sha256": "a9fb3955669650f3ebdd1c61c051fe7055a7e22c34dcedc80d0c82d752bafc9b"
+    },
+    "TauCeti.NumberTheory.NumberField.Global.Approximation.Weak": {
+      "namespace": "TauCeti",
+      "source_sha256": "6f36950dbd0dd6e34f1ef69a6f73f3eae537cfad08ea6f4565da6c9be551b7fc"
+    },
+    "TauCeti.RingTheory.Valuation.Approximation": {
+      "namespace": "TauCeti",
+      "source_sha256": "b638cd6e9bd49042f0e67ae390b1076ae10b352f950556686d58d977c8ad529f"
+    },
+    "TauCeti.RingTheory.Valuation.AbsoluteValue": {
+      "namespace": "TauCeti",
+      "source_sha256": "9849bb5d495193bb85ad309171ee8b0742241c30c473bb3361c3af3e7ec422c9"
+    },
+    "TauCeti.NumberTheory.NumberField.Global.RayClass.Integral": {
+      "namespace": "TauCeti",
+      "source_sha256": "310341b970738c9433083bbb89b1885e98f59a904626d6fb78f4ac36fef10d0e"
+    },
+    "TauCeti.NumberTheory.NumberField.Cyclotomic.Frobenius": {
+      "namespace": "TauCeti",
+      "source_sha256": "8416f66c8661a7079cd61971685ce29f2a002bfdd0e5a385da818151b51159c2"
+    },
+    "TauCeti.NumberTheory.NumberField.Cyclotomic.Galois": {
+      "namespace": "TauCeti",
+      "source_sha256": "cecb430368f47411711de344f0668c6aa73d91a9e60fe8480408a2d90d6a2d19"
+    },
+    "TauCeti.RingTheory.RootsOfUnity.PrimitiveRoots": {
+      "namespace": "TauCeti",
+      "source_sha256": "85395b1a124adb7b9e13482fc0c64edf2f7649e473cffaf81b5fe57375621349"
+    },
+    "TauCeti.NumberTheory.NumberField.Cyclotomic.Ramification": {
+      "namespace": "TauCeti",
+      "source_sha256": "d7fda9752910246815703c54c6b83bf9eb1ba7ab30efd58511ca02cb6be5afb9"
+    },
+    "TauCeti.NumberTheory.NumberField.Ideal.ArtinMap": {
+      "namespace": "TauCeti",
+      "source_sha256": "490b96a3e88076a5f465a012b23491f36787c02f21059c3adba85e76cb84a05d"
+    },
+    "TauCeti.FieldTheory.Galois.Abelian.Basic": {
+      "namespace": "TauCeti",
+      "source_sha256": "1cd2eaba1b6df749b9c3888edd09de0c15b179a8051259c6ecba08861d6fa437"
+    },
+    "TauCeti.NumberTheory.NumberField.Global.RayClass.Character.PartialSums": {
+      "namespace": "TauCeti",
+      "source_sha256": "e7a8feebf65b098746d47e0d5a6fbd5d7b083ab04fa60bdcd6dd87ca5b7aeed6"
+    },
+    "TauCeti.NumberTheory.NumberField.Global.RayClass.Character.Sum": {
+      "namespace": "TauCeti",
+      "source_sha256": "477483642429e2522bcf84aeebb685aa3612e35215c748d632ff2c8c5942d631"
+    },
+    "TauCeti.NumberTheory.NumberField.Global.RayClass.Count.Basic": {
+      "namespace": "TauCeti",
+      "source_sha256": "2934856bd0811d67b223648bc2f4b690f2a13ed13d2bf00f36c41d73e35c6298"
+    },
+    "TauCeti.NumberTheory.NumberField.Global.RayClass.Count.Asymptotic": {
+      "namespace": "TauCeti",
+      "source_sha256": "2c8c3829a9893025c4678da0118a0bc6e1a6b788bf51e8f460ba7b8b47cfb19f"
+    },
+    "TauCeti.NumberTheory.NumberField.Global.RayClass.MainTerm": {
+      "namespace": "TauCeti",
+      "source_sha256": "58a9ad8ab2c2ea9a586e0e11f74e981ae9aac11c7a04e82b451865f99e082aaf"
+    },
+    "TauCeti.NumberTheory.NumberField.Global.RayClass.Finite": {
+      "namespace": "TauCeti",
+      "source_sha256": "ad40d661bb4fc32b3098406e99c2d9188ae203516154daa69473e7c395205ade"
+    },
+    "TauCeti.NumberTheory.NumberField.Global.Counting.Ray.Ideal.Count": {
+      "namespace": "TauCeti",
+      "source_sha256": "3ccd8054f831362c048e64faf0e25eb18236381817530e3d5dff5e23ff5c3a61"
+    },
+    "TauCeti.NumberTheory.NumberField.Global.Counting.Ray.Ideal.Set": {
+      "namespace": "TauCeti",
+      "source_sha256": "ef5f8c84b90d17c826e3f8c2bd9ff82d11ff77dfd6a29b29aff746e5e81fae31"
+    },
+    "TauCeti.NumberTheory.NumberField.Global.Counting.Ray.Coset": {
+      "namespace": "TauCeti",
+      "source_sha256": "73f501ba88c3ed3fdb3e643d828b907d7fca97f7b368fde5337cbb2e33979e81"
+    },
+    "TauCeti.NumberTheory.NumberField.Global.Counting.CongruenceLattice": {
+      "namespace": "TauCeti",
+      "source_sha256": "baa39dfe6879b131d15f14f15277df312b1230693547b72ba6b39c176247ef2b"
+    },
+    "TauCeti.NumberTheory.NumberField.CanonicalEmbedding.IdealLattice": {
+      "namespace": "TauCeti",
+      "source_sha256": "3bcdcb203a60a5acc2241fd9ec5d4189bf95b1da20a4aef79fe387ee745cd11e"
+    },
+    "TauCeti.NumberTheory.NumberField.FractionalIdeal": {
+      "namespace": "TauCeti",
+      "source_sha256": "d184cfc4cef280a234ab4e0b01aa478edecf8008c7eb52ebef41149d7ede6865"
+    },
+    "TauCeti.RingTheory.Ideal.CoprimeCoset": {
+      "namespace": "TauCeti",
+      "source_sha256": "a335de3bb91e6e60faf9839919fd98fbc9653f495fccd77fbaee6f106616fe84"
+    },
+    "TauCeti.NumberTheory.NumberField.Global.Counting.RayFundamentalDomain.IntegerSet": {
+      "namespace": "TauCeti",
+      "source_sha256": "a1ce031ef74e99ff88b2fa8932fb039faf7b1bf7d964d50ebaed7a0842171764"
+    },
+    "TauCeti.NumberTheory.NumberField.Global.Counting.RayFundamentalDomain.Basic": {
+      "namespace": "TauCeti",
+      "source_sha256": "0b4f89d387aed433d61e0013a80efd125700abf4e50ab2c9309dc243e66ac5a2"
+    },
+    "TauCeti.NumberTheory.NumberField.CanonicalEmbedding.SignCut": {
+      "namespace": "TauCeti",
+      "source_sha256": "32a88add38252cf00637a5cec8fcb7b6ef80d08a8ab1274b74f7dcec14b33cf5"
+    },
+    "TauCeti.NumberTheory.NumberField.CanonicalEmbedding.UnitAction": {
+      "namespace": "TauCeti",
+      "source_sha256": "7b33a86a354805df711aa224121458720933fe96011c0a2f184913084855d31c"
+    },
+    "TauCeti.NumberTheory.NumberField.Global.Counting.RayFundamentalDomain.Orbit": {
+      "namespace": "TauCeti",
+      "source_sha256": "5cc42bc062775193dbe9d99f31e4e825a9bcc21cb4e40b936fe61c6ba5620a23"
+    },
+    "TauCeti.NumberTheory.NumberField.Global.Counting.RayFundamentalDomain.LatticeCount": {
+      "namespace": "TauCeti",
+      "source_sha256": "d08f3d01ad82969b56c0c98d2205b007c0b93b5f170f7b01b4412d162331d0b9"
+    },
+    "TauCeti.NumberTheory.GeometryOfNumbers.LatticePointCount": {
+      "namespace": "TauCeti",
+      "source_sha256": "2a8a40fdbef1d5e888c49b44232f9702fcfd256d5f77b658f6f82dcf2f7a4d8a"
+    },
+    "TauCeti.Algebra.Module.ZLattice.Basic": {
+      "namespace": "TauCeti",
+      "source_sha256": "8962dfd46afd01775a2b864d911079ffbf0ad04d7508c36aad8fe63149410014"
+    },
+    "TauCeti.MeasureTheory.Group.Measure": {
+      "namespace": "TauCeti",
+      "source_sha256": "07fbb82d7efda385e4e2163189b406684490b88d7b9d838db18721680f8fb359"
+    },
+    "TauCeti.NumberTheory.GeometryOfNumbers.BoundaryCount": {
+      "namespace": "TauCeti",
+      "source_sha256": "a902bb2f2c972fc70dbbd8402203a0692ad9d40917e3c061f68f32f95639fd10"
+    },
+    "TauCeti.Topology.MetricSpace.DiscreteAddSubgroup": {
+      "namespace": "TauCeti",
+      "source_sha256": "4d51bc14fee3592a5c46e2eaec7e91afb5c681d0c14369a47ae20c6f8e5215b7"
+    },
+    "TauCeti.Topology.MetricSpace.LipschitzParametrizable": {
+      "namespace": "TauCeti",
+      "source_sha256": "e539f9529c22c601d114aa11c16bc1708215e545bd30ee8c80805683805ed4dc"
+    },
+    "TauCeti.Topology.Frontier": {
+      "namespace": "TauCeti",
+      "source_sha256": "1708cbead95d84531f10dcb4ae6625161f81a0e51604ee3848a4369be6ce03eb"
+    },
+    "TauCeti.NumberTheory.NumberField.Global.Counting.RayFundamentalDomain.Lipschitz": {
+      "namespace": "TauCeti",
+      "source_sha256": "4e72a21ff33601adb0156237f5157c1916be2df9a33f0e644c4cbebd9bc65349"
+    },
+    "TauCeti.NumberTheory.NumberField.CanonicalEmbedding.NormLeOneLipschitz": {
+      "namespace": "TauCeti",
+      "source_sha256": "7b01347c850e2788c9527819d2972d18969954d363fa80b1a13454b89e360c88"
+    },
+    "TauCeti.NumberTheory.NumberField.Units.Dirichlet": {
+      "namespace": "TauCeti",
+      "source_sha256": "991f82d231c97dd5e66acf01c3490f21fbbfc0b4d4f0a9dc341121f7fd50ed33"
+    },
+    "TauCeti.NumberTheory.NumberField.Global.Counting.RayFundamentalDomain.MainTerm": {
+      "namespace": "TauCeti",
+      "source_sha256": "2144cc7ee95d894f3477522bdc9c9d8a869ba670daf84601f09728c7b910d48f"
+    },
+    "TauCeti.NumberTheory.NumberField.Global.Counting.RayFundamentalDomain.Volume": {
+      "namespace": "TauCeti",
+      "source_sha256": "49a766e0d191f710db8035ffaabb458d63d7e7ff941b866bb73dbb61bbc79f93"
+    },
+    "TauCeti.NumberTheory.NumberField.CanonicalEmbedding.MulVolume": {
+      "namespace": "TauCeti",
+      "source_sha256": "259a45b726e57a6c9db758d98f00d4fde4d6518dda21fd84aba82249d90d5bf6"
+    },
+    "TauCeti.RingTheory.NormTrace.Pi": {
+      "namespace": "TauCeti",
+      "source_sha256": "dc88b018d0b6f36464bea57ced705fb28aa2d5140fce42989f1ec4a0f16062a6"
+    },
+    "TauCeti.RingTheory.Norm.Units": {
+      "namespace": "TauCeti",
+      "source_sha256": "53088416ce9fe10bee6f92b821b5d5e688201841dc9da65713504841d37eddf3"
+    },
+    "TauCeti.LinearAlgebra.Pi": {
+      "namespace": "TauCeti",
+      "source_sha256": "654b5284a922c4186ea35a51c97b0abcd7a214f93a74235f6970ba00808f4b1a"
+    },
+    "TauCeti.LinearAlgebra.Matrix.Block": {
+      "namespace": "TauCeti",
+      "source_sha256": "61cb29f81f81671dad9f93a857465a09963b373d13235377f2b9a6e08aba0bcb"
+    },
+    "TauCeti.LinearAlgebra.Trace.Pi": {
+      "namespace": "TauCeti",
+      "source_sha256": "200bd3ad97a116630ba612ff77b3f3b38f8ee39b326ea7ee0215a72694bf63fe"
+    },
+    "TauCeti.RingTheory.NormTrace.Prod": {
+      "namespace": "TauCeti",
+      "source_sha256": "ca43d74ac2cb91f9fa18036be0d13c89e79c3eec9d30348882cdc8c99fd0d8ec"
+    },
+    "TauCeti.NumberTheory.NumberField.CanonicalEmbedding.NormLeOne": {
+      "namespace": "TauCeti",
+      "source_sha256": "23dc1c652e2de64e52cbaa6274182e78add5f0dd38d1757484a5c6064825fc00"
+    },
+    "TauCeti.NumberTheory.NumberField.Global.RayClass.ClassNumber": {
+      "namespace": "TauCeti",
+      "source_sha256": "9855b5c4ef86690a1a3a058596174735aa6650b004b79d1adfa3848e8e7dcea8"
+    },
+    "TauCeti.RingTheory.DedekindDomain.Totient": {
+      "namespace": "TauCeti",
+      "source_sha256": "327cf7469f125e2fca08f1fd2a0a48c232ae5e985375e0390db898658035ca7a"
+    },
+    "TauCeti.NumberTheory.NumberField.Global.RayClass.Count.Reindex": {
+      "namespace": "TauCeti",
+      "source_sha256": "cfa9b8d46c0155ff4d1352a5280605f24ab6bccc6672fd8f89b9c93b95107f26"
+    },
+    "TauCeti.Analysis.SpecialFunctions.Log.OneDivSub": {
+      "namespace": "TauCeti",
+      "source_sha256": "1c48a6023f713d9122537253bd44288a3b55ea0aabbdeac5fb6143071702a9c1"
+    },
+    "TauCeti.NumberTheory.ArithmeticDirichletSeries.EulerProduct.Logarithm.Basic": {
+      "namespace": "TauCeti",
+      "source_sha256": "983b8ee2f707becf366ac1c5f83a658087c8949a006c0ce1daa1e47fbc76b374"
+    },
+    "TauCeti.Analysis.SpecialFunctions.Complex.LogBounds": {
+      "namespace": "TauCeti",
+      "source_sha256": "5016a763029d93492a5f2bd24d0477fea4e23b9a5c4368b6b781c6ceae5f38f0"
+    },
+    "TauCeti.Topology.Algebra.InfiniteSum.Real": {
+      "namespace": "TauCeti",
+      "source_sha256": "79c248a6336c11d62a7fa132a6fafddb5233240c313878d8441905be753eb26f"
+    },
+    "TauCeti.NumberTheory.Chebotarev.Density.SplitsCompletely": {
+      "namespace": "TauCeti",
+      "source_sha256": "436121d59015bd362818ef00b7e6e82cbb5fe1391f25d74c4e817f2c79ce83fe"
+    },
+    "TauCeti.NumberTheory.ArithmeticDirichletSeries.Prime.Contraction": {
+      "namespace": "TauCeti",
+      "source_sha256": "a31628a62a4d417b2645b2a43e49c629990c2e38ad79fea4c80026d567adcc94"
+    },
+    "TauCeti.NumberTheory.ArithmeticDirichletSeries.DirichletDensity.Negligible": {
+      "namespace": "TauCeti",
+      "source_sha256": "5d9f406a5b1e8c5954d0bcfcc681464f6d70524598cedf7994f3866b2c47aebc"
+    },
+    "TauCeti.NumberTheory.ArithmeticDirichletSeries.DirichletDensity.Basic": {
+      "namespace": "TauCeti",
+      "source_sha256": "9c720a7ffa7b21a12e1692ccc121ddcc704f02292149fcd97d1ce3b91b532402"
+    },
+    "TauCeti.Algebra.Order.BigOperators.Sum.Slack": {
+      "namespace": "TauCeti",
+      "source_sha256": "fc79b9d31203f8238c9592e656501adf9c1c7ee140ee3837af43a641cab2e947"
+    },
+    "TauCeti.NumberTheory.ArithmeticDirichletSeries.Convergence": {
+      "namespace": "TauCeti",
+      "source_sha256": "011b8b2e43a75a1d4c2671b17ab124e28c5dff596b1ea902f15e788354bbeedd"
+    },
+    "TauCeti.NumberTheory.ArithmeticDirichletSeries.ZetaSumPartition": {
+      "namespace": "TauCeti",
+      "source_sha256": "68871f5720c6d38f24da64ac44b55622510935282bb1ea466de78733a53c3252"
+    },
+    "TauCeti.NumberTheory.NumberField.DirichletDensityBounds": {
+      "namespace": "TauCeti",
+      "source_sha256": "af05a7bd0d2c7d166ef1d32ca9f1f01c46b123d57426f7fd538254db6048303d"
+    },
+    "TauCeti.NumberTheory.ArithmeticDirichletSeries.ResidueDegree": {
+      "namespace": "TauCeti",
+      "source_sha256": "55d90434a652ac129160c28e5c2416a1d8213d6eef520ca2f78dd5a370f48591"
+    },
+    "TauCeti.Analysis.PSeries": {
+      "namespace": "TauCeti",
+      "source_sha256": "0e301124a4368fb1b71f96f52a5dd8456256e561a7de904f72264e106940599a"
+    },
+    "TauCeti.NumberTheory.NumberField.ResidueDegree": {
+      "namespace": "TauCeti",
+      "source_sha256": "de0d15b88c2b4ba0387de9c4f99d5f9bbe1d56662df3d4cf505f235c5da6c3f3"
+    },
+    "TauCeti.NumberTheory.NumberField.PrimeIdeal": {
+      "namespace": "TauCeti",
+      "source_sha256": "7481f7a32d3efcf5032a0400f795fcda39067ef33a6725f39011d3eaadd4eb99"
+    },
+    "TauCeti.NumberTheory.ArithmeticDirichletSeries.Prime.IdealZetaSum": {
+      "namespace": "TauCeti",
+      "source_sha256": "ac9bfcaacd218a43380fd038287d769fe3e11031c346b9978c23358d72f2a498"
+    },
+    "TauCeti.NumberTheory.ArithmeticDirichletSeries.EulerProduct.Logarithm.DedekindZeta.Basic": {
+      "namespace": "TauCeti",
+      "source_sha256": "7e3d36338da04aac595e1362acbf885fdc86bfe904ba2e726a191f2e9137d8dd"
+    },
+    "TauCeti.Analysis.SpecialFunctions.Log.NegLogOneSub": {
+      "namespace": "TauCeti",
+      "source_sha256": "8608071db6957de1130efde8953230bf6c54b75efd93fd60bca9db7d21ecf645"
+    },
+    "TauCeti.Analysis.SpecialFunctions.Pow.Bounds": {
+      "namespace": "TauCeti",
+      "source_sha256": "1cab6e7c8b248f512953f44876200f6cd231565a862bbd53ad507edc4b956be9"
+    },
+    "TauCeti.NumberTheory.ArithmeticDirichletSeries.EulerProduct.Logarithm.DedekindZeta.Tail": {
+      "namespace": "TauCeti",
+      "source_sha256": "a5052875a3db71ea5d98811886ef314f1729297fc151e4d5ca252d09cef178ad"
+    },
+    "TauCeti.Topology.Algebra.Order.Field": {
+      "namespace": "TauCeti",
+      "source_sha256": "e2fd9023cb3185616f71535030859a4d1e32112a6e7c02881976a9d3842d2983"
+    },
+    "TauCeti.NumberTheory.ArithmeticDirichletSeries.ResidueDegree.NaturalDensity": {
+      "namespace": "TauCeti",
+      "source_sha256": "cc5ae3ea4b0158fd7411da73bd2795652e205cd8176d45560514f9c05b5f1c42"
+    },
+    "TauCeti.NumberTheory.ArithmeticDirichletSeries.NaturalDensity": {
+      "namespace": "TauCeti",
+      "source_sha256": "505fd4f52a82695d173e38198a20484521dba0877a3d95d678f458e376c7c638"
+    },
+    "TauCeti.Analysis.SpecialFunctions.LogIntegral": {
+      "namespace": "TauCeti",
+      "source_sha256": "2066a18d733288c4ded47693734df2e855791e2619ed7d1dab5821130d86c5a5"
+    },
+    "TauCeti.NumberTheory.ArithmeticDirichletSeries.Prime.PrimeIdealTheorem": {
+      "namespace": "TauCeti",
+      "source_sha256": "538a3d683158071951f7f24a2b9d39ad7c71fb337a75dccbeaf9d80ebe345434"
+    },
+    "TauCeti.NumberTheory.LFunctions.PrimeIdealBoundary": {
+      "namespace": "TauCeti",
+      "source_sha256": "4772683d64cae31f095467531e283c7b117e09b60897879f36be16a2fa7c4dc7"
+    },
+    "TauCeti.NumberTheory.ArithmeticDirichletSeries.Prime.DedekindZeta": {
+      "namespace": "TauCeti",
+      "source_sha256": "2010a5db8dfbb44f6b9825f023023f0a11634be15d01196884e770f3d6f22432"
+    },
+    "TauCeti.NumberTheory.ArithmeticDirichletSeries.EulerProduct.Logarithm.VonMangoldtCoeff": {
+      "namespace": "TauCeti",
+      "source_sha256": "f4d63b7f337445407a3902f042a7542e1a9c4586ddb661e6f1bbed8f848c2945"
+    },
+    "TauCeti.NumberTheory.ArithmeticDirichletSeries.EulerProduct.Logarithm.Convergence": {
+      "namespace": "TauCeti",
+      "source_sha256": "e6970b647a75c829e5e930286d9de4d6d4c1ced5c2bf180e9b80345a9be64109"
+    },
+    "TauCeti.Analysis.Complex.PowerSeries.Log.Deriv": {
+      "namespace": "TauCeti",
+      "source_sha256": "ccf54dd6bfb532a4d94626b5388680892083b01ddc376ae43a4868e67f354cea"
+    },
+    "TauCeti.Analysis.Analytic.OfScalars": {
+      "namespace": "TauCeti",
+      "source_sha256": "ee68f1625fbfbd2d05b9d2449bfe372c50d982bd7f00d44446af02096a4dd7b3"
+    },
+    "TauCeti.RingTheory.PowerSeries.Log": {
+      "namespace": "TauCeti",
+      "source_sha256": "b4f37ace7fb05326a1f62076e5f78e5999bd4a79bc356dd31e73e81baac5a39d"
+    },
+    "TauCeti.NumberTheory.ArithmeticDirichletSeries.EulerProduct.Logarithm.Eval": {
+      "namespace": "TauCeti",
+      "source_sha256": "3fb3f673b88622a56ade61a77b7282a180ddf8b2f49798567d53cf20966a3cf8"
+    },
+    "TauCeti.NumberTheory.ArithmeticDirichletSeries.EulerProduct.Logarithm.Coeff": {
+      "namespace": "TauCeti",
+      "source_sha256": "462b3d2590448981b064d8d1b36afa4b355193db9ac71f8444f6167ebdae7e4d"
+    },
+    "TauCeti.NumberTheory.ArithmeticDirichletSeries.EulerProduct.Logarithm.LogDeriv": {
+      "namespace": "TauCeti",
+      "source_sha256": "b909a2563d2e90304c765c5c2afdd6677cb239bc78627a3de167b28d8d1b65e9"
+    },
+    "TauCeti.NumberTheory.ArithmeticDirichletSeries.EulerProduct.Logarithm.Data": {
+      "namespace": "TauCeti",
+      "source_sha256": "ead385a38f4b758b942a4a4af439bd5a4e985ea05cc64aef84ce026888ed9945"
+    },
+    "TauCeti.NumberTheory.ArithmeticDirichletSeries.EulerProduct.Branch": {
+      "namespace": "TauCeti",
+      "source_sha256": "e94c62cdb053c6f532c773b543458b57d835707323b914a5a8fb8b89b2da7731"
+    },
+    "TauCeti.Analysis.Complex.BranchLogRoot": {
+      "namespace": "TauCeti",
+      "source_sha256": "8afbbbc7de72e5864b7a02c2c97909ad9369dccbf9fca090ec87dd6ae2908466"
+    },
+    "TauCeti.NumberTheory.ArithmeticDirichletSeries.Deriv": {
+      "namespace": "TauCeti",
+      "source_sha256": "69636e7398229d38bb42254d9ebf721bfe54cb98e02d56bac0b935a3630e4436"
+    },
+    "TauCeti.NumberTheory.ArithmeticDirichletSeries.EulerProduct.Logarithm.Deriv": {
+      "namespace": "TauCeti",
+      "source_sha256": "87605a9ff8d34b3d86b87d6dc0c70fe94ca16947c30f66c77fef2fa60c682c80"
+    },
+    "TauCeti.NumberTheory.ArithmeticDirichletSeries.Prime.Boundary": {
+      "namespace": "TauCeti",
+      "source_sha256": "3856f15504b1b1561fc5d114b24f873ad3c2bcb4cfca9f5009ca3ace2deb08d3"
+    },
+    "TauCeti.NumberTheory.ArithmeticDirichletSeries.Transfer": {
+      "namespace": "TauCeti",
+      "source_sha256": "22ce432da2eb5218fa8ad2e0b5a7d1f2265ed7f27c2a686c4bf5121e1e1fc4e7"
+    },
+    "TauCeti.NumberTheory.LSeries.WienerIkehara.SharpCutoff": {
+      "namespace": "TauCeti",
+      "source_sha256": "674629337a743e07cf3cba19d183d10d255199dc650c9ee660982559d7c75378"
+    },
+    "TauCeti.Analysis.Asymptotics.SumWindow": {
+      "namespace": "TauCeti",
+      "source_sha256": "7844e606faef1509897065dbe39eb47f766ac76ec41a0eb5bcdae9e868cd57fc"
+    },
+    "TauCeti.NumberTheory.LSeries.WienerIkehara.Approximation": {
+      "namespace": "TauCeti",
+      "source_sha256": "d93a6706aef9b095d858132e531e03c13989e6146a1a55176cd4887fbbd09f0e"
+    },
+    "TauCeti.NumberTheory.LSeries.WienerIkehara.Chebyshev": {
+      "namespace": "TauCeti",
+      "source_sha256": "51c9dc71540e80f623a46a8ac8aa1953ba3c854cc3fbf5078e5c976666ef5606"
+    },
+    "TauCeti.NumberTheory.LSeries.WienerIkehara.BoundaryGrowth": {
+      "namespace": "TauCeti",
+      "source_sha256": "3cdadf346b118cd37bfc856b9c9b4aa910c9ee8801d0f454830f5a64f0949078"
+    },
+    "TauCeti.NumberTheory.LSeries.Positivity": {
+      "namespace": "TauCeti",
+      "source_sha256": "4cb69ed7f546facebe5c4eed58a5fa60c1df3125c2eb2360bc0fb30131bdbf46"
+    },
+    "TauCeti.Analysis.Fourier.Decay": {
+      "namespace": "TauCeti",
+      "source_sha256": "c53da250ea73b3fe3a2c572b75ee61dba383dcce797bf06decac6b0efc5cf4a8"
+    },
+    "TauCeti.NumberTheory.LSeries.Summable": {
+      "namespace": "TauCeti",
+      "source_sha256": "40518ba4500fc0f7c970e9566d72080c9eb3a530968dcfa30ad70dc6f91c2b91"
+    },
+    "TauCeti.NumberTheory.AbelSummation": {
+      "namespace": "TauCeti",
+      "source_sha256": "4ac1458afa9101d638e12223bab9470303e6810e3e851662de93463b1a230318"
+    },
+    "TauCeti.Analysis.SpecialFunctions.ImproperIntegrals": {
+      "namespace": "TauCeti",
+      "source_sha256": "dab02f2d4634a8eb9125d53604ca689dc92a0d9be8760a0788cf8632d1c92f51"
+    },
+    "TauCeti.NumberTheory.LSeries.WienerIkehara.Asymptotic": {
+      "namespace": "TauCeti",
+      "source_sha256": "358273084f318390328ee233a03dda5a4e6e86510bf38e10f56e410d9e184433"
+    },
+    "TauCeti.Analysis.Fourier.RiemannLebesgue": {
+      "namespace": "TauCeti",
+      "source_sha256": "de905fbe95e76464e2c5f2341a9710ab694e34bc9b5e6bb0c22b82f2bb356dbc"
+    },
+    "TauCeti.NumberTheory.LSeries.WienerIkehara.Limit": {
+      "namespace": "TauCeti",
+      "source_sha256": "149f25150f83a0cb148e789160765c8efe3e309b018a72e552bbbc55f16c718f"
+    },
+    "TauCeti.Analysis.Fourier.Integrable": {
+      "namespace": "TauCeti",
+      "source_sha256": "9633384e0e15c48a291636d037f08f73750ca9bf90805dd66292f93bbcabca93"
+    },
+    "TauCeti.MeasureTheory.Integral.ExpDamped": {
+      "namespace": "TauCeti",
+      "source_sha256": "c20f000138b68e02eccf3a83b128d396a4419fea14544c7bf41d7b68c999c83f"
+    },
+    "TauCeti.NumberTheory.LSeries.WienerIkehara.Fourier": {
+      "namespace": "TauCeti",
+      "source_sha256": "b6c6c6d92ade4eb751a7ffda07bc9ad3d29a0f3e3721171b1295f9d277a31606"
+    },
+    "TauCeti.NumberTheory.LSeries.Continuity": {
+      "namespace": "TauCeti",
+      "source_sha256": "db7ae8c8fc8c8f753f63de609c5b609136f09e36dac966c0d5e9eb623d0bb00b"
+    },
+    "TauCeti.Analysis.Fourier.Continuous": {
+      "namespace": "TauCeti",
+      "source_sha256": "8d1ae8ba0445e2ab6b16893e894087c431827163b0f3fffddf20af2f28559e57"
+    },
+    "TauCeti.Analysis.Fourier.NonnegTestFunction": {
+      "namespace": "TauCeti",
+      "source_sha256": "30b254c7c3c62a393c270918fb1644953bf7d8243ff17bc5b75f0d9fcbcef348"
+    },
+    "TauCeti.Analysis.Bochner.Fourier.Nonneg": {
+      "namespace": "TauCeti",
+      "source_sha256": "55ba804e8190ab47ade4d442052bc01d6be94442b0a91ac276f956a5869f28ef"
+    },
+    "TauCeti.LinearAlgebra.Matrix.PosSemidef": {
+      "namespace": "TauCeti",
+      "source_sha256": "50597e840c1cc8f1de285c358470f57b38759d1f5f3fc34d3283090f39a9f607"
+    },
+    "TauCeti.Analysis.Bochner.Fourier.Convention": {
+      "namespace": "TauCeti",
+      "source_sha256": "2424ab4421430cfb4e447d933ea816a7037a553d0ec0158ba153dee5b1c27798"
+    },
+    "TauCeti.Analysis.Bochner.CharFun.PositiveDefinite": {
+      "namespace": "TauCeti",
+      "source_sha256": "4f9dc5f422fb53bcab09bbd42c009803449f170b492a753f2ffaf80339c35f85"
+    },
+    "TauCeti.Analysis.Bochner.CharFun.PosDef": {
+      "namespace": "TauCeti",
+      "source_sha256": "df71df5d14bba9dd2b96b94af815854a4a3c9afb3d3d1189657d27587d24c8f1"
+    },
+    "TauCeti.Analysis.PositiveDefinite.AddGroup": {
+      "namespace": "TauCeti",
+      "source_sha256": "f7341b578f3fb2b29c8b86d018d834c8ae4b2e5c0790a0bc3c1fe8b74f66c7b0"
+    },
+    "TauCeti.Analysis.PositiveDefinite.Continuity": {
+      "namespace": "TauCeti",
+      "source_sha256": "846f346383f0dd8e2115f577953a3f94de89d81406a4a52617d56475acb519a7"
+    },
+    "TauCeti.Analysis.PositiveDefinite.Basic": {
+      "namespace": "TauCeti",
+      "source_sha256": "0a8031f81729c5784fe930a51488a4d3116f1f0e824f5c88a9735e0f6334655e"
+    },
+    "TauCeti.Analysis.Matrix.PosSemidef": {
+      "namespace": "TauCeti",
+      "source_sha256": "cba4acf2b6c6bdd19bb895743170ee59d33fe1b5c3f1aabea48fca4129e05b48"
+    },
+    "TauCeti.Analysis.PositiveDefinite.Function.Closure": {
+      "namespace": "TauCeti",
+      "source_sha256": "731f4daab81e6777e644d7bdd8848de624120bedc2cc4ee8f88d21f190b08590"
+    },
+    "TauCeti.Analysis.PositiveDefinite.Function.Kernel": {
+      "namespace": "TauCeti",
+      "source_sha256": "b4e09d28e4686dd5db34c7584fc33bb5873299cc55121558e8b91014b04479c1"
+    },
+    "TauCeti.Analysis.PositiveDefinite.Limits": {
+      "namespace": "TauCeti",
+      "source_sha256": "12482aa919dbe48cf7aec2a7246ead72406de3e796e9b62339f94feff2270600"
+    },
+    "TauCeti.Analysis.PositiveDefinite.Normalize": {
+      "namespace": "TauCeti",
+      "source_sha256": "edb696e7e21217f6d0f612bfc134ac5f5b3917aa8236de17c365bb06f5cf2785"
+    },
+    "TauCeti.Analysis.PositiveDefinite.FourierAtom": {
+      "namespace": "TauCeti",
+      "source_sha256": "70706bdfc2b0c12b59fc262ef18745e3454279bd1531e02e9a851e9f11c5d1d7"
+    },
+    "TauCeti.Analysis.PositiveDefinite.Pullback": {
+      "namespace": "TauCeti",
+      "source_sha256": "b366f2a2a9da247af806c3420552909e97e1fa406a277d1946ae4a3108e7a7f2"
+    },
+    "TauCeti.Analysis.Bochner.Gaussian.Basic": {
+      "namespace": "TauCeti",
+      "source_sha256": "9f97b7ed987ea002c1644505b351cf732bdd641dc250550f31fb14362dc6fda6"
+    },
+    "TauCeti.Analysis.PositiveDefinite.Kernel.Bounds": {
+      "namespace": "TauCeti",
+      "source_sha256": "36735ff8c7090e3db4f1c957f575e998c07e1c4660615e7f093e5def5525685a"
+    },
+    "TauCeti.Algebra.Order.BigOperators.Sum.ByParts": {
+      "namespace": "TauCeti",
+      "source_sha256": "54932f64cfded3c21a2ef28c228120d052e8f05817b2d16b3a1d7f21ea631057"
+    },
+    "TauCeti.Analysis.Distribution.SchwartzSpace.Cutoff": {
+      "namespace": "TauCeti",
+      "source_sha256": "32ea528a795442aa5f4903fb7bd0769705e6e26280d0e1261c5de3d29176a734"
+    },
+    "TauCeti.Analysis.Calculus.ContDiff.Scaling": {
+      "namespace": "TauCeti",
+      "source_sha256": "38483a2393d0ecbff84fbe4924c9eb67041540424908af894c17c8999b94dd99"
+    },
+    "TauCeti.NumberTheory.NumberField.DedekindZeta": {
+      "namespace": "TauCeti",
+      "source_sha256": "f640c4068d541711b45b28582d9b65a70f3d32074fec85d8af739609f0c5e7aa"
+    },
+    "TauCeti.NumberTheory.ArithmeticDirichletSeries.EulerProduct.ThreeFourOne": {
+      "namespace": "TauCeti",
+      "source_sha256": "1e43b5cf0ffa7cb40c5a2d9dea30feed7ad2cea54495a1575f22242fdcc91938"
+    },
+    "TauCeti.NumberTheory.LSeries.ThreeFourOne": {
+      "namespace": "TauCeti",
+      "source_sha256": "b7f93f6e53658652903194df21b201ce92fd562d927299afddeae2e5ce8ad3c8"
+    },
+    "TauCeti.Analysis.SpecialFunctions.Trigonometric.NonnegCombination": {
+      "namespace": "TauCeti",
+      "source_sha256": "88e6afdf446ad3688bd3e8cc1a5928397df25b55ae30ff94c68a01e9cd2520f1"
+    },
+    "TauCeti.Analysis.Asymptotics.InvSubOne": {
+      "namespace": "TauCeti",
+      "source_sha256": "d4a5dacfa52b6ee8ed9a040d5b04dbb288465f28882eaa73590f9b6480a1025f"
+    },
+    "TauCeti.NumberTheory.LSeries.Nonvanishing": {
+      "namespace": "TauCeti",
+      "source_sha256": "96b966c2c8dab96c2e3e32e842d0a59538f4555370e650d96dbbbf001b4fcafe"
+    },
+    "TauCeti.Data.Set.Restrict": {
+      "namespace": "TauCeti",
+      "source_sha256": "eb42951476a995632ecad963f0195f87ba6b3410f73bcf28ce10ba06e2531c7a"
+    },
+    "TauCeti.NumberTheory.Chebotarev.SplitsCompletely": {
+      "namespace": "TauCeti",
+      "source_sha256": "22e7a7829873612f86bac10a881eb5395cde04368a5834f89cc9c4dfcdc816e4"
+    },
+    "TauCeti.NumberTheory.NumberField.SplitsCompletely.GaloisClosure": {
+      "namespace": "TauCeti",
+      "source_sha256": "766f16bcce9cb35667e93439820d647f3850d5b4a1cfebf9053579f01d5bb455"
+    },
+    "TauCeti.NumberTheory.NumberField.Frobenius.FixedField.Inertia": {
+      "namespace": "TauCeti",
+      "source_sha256": "d18b272d2b598bebddb6332e72455f9f325daa51b69ee59e580962e1e8606159"
+    },
+    "TauCeti.GroupTheory.SpecificGroups.Cyclic.Index": {
+      "namespace": "TauCeti",
+      "source_sha256": "e7304d8a051aaaf5fc1fe2c261f9ee84881ae661d60507b83d456b5909607958"
+    },
+    "TauCeti.Algebra.Group.Subgroup.ZPowers": {
+      "namespace": "TauCeti",
+      "source_sha256": "b2bf0254ce79df8c1bda6dc610814d835294acabe5967bb392ea1e7d95c87f6d"
+    },
+    "TauCeti.NumberTheory.NumberField.FixedField": {
+      "namespace": "TauCeti",
+      "source_sha256": "86e50b134caed1e4dcf0ea08bc0402fe255baea96d3ebc7d91fc2f4d45a4a90e"
+    },
+    "TauCeti.FieldTheory.Galois.FixedField": {
+      "namespace": "TauCeti",
+      "source_sha256": "f8cf47f9280c17f25ebd60b02801d3c1a096d6441505d3a50a64b22b91fbef50"
+    },
+    "TauCeti.NumberTheory.Chebotarev.GaloisCharacter.Cyclotomic.Surjective": {
+      "namespace": "TauCeti",
+      "source_sha256": "6f28fd4871739a683a69a51a5ed2fbb02f69993376f84929ccf7768afbb59379"
+    },
+    "TauCeti.NumberTheory.Chebotarev.GaloisCharacter.Orthogonality": {
+      "namespace": "TauCeti",
+      "source_sha256": "83444894792c116502c73cb6a8cc6ab4a4614939c4f717d1fe2ff2b25d7bbc8e"
+    },
+    "TauCeti.GroupTheory.FiniteAbelian.CharacterOrthogonality": {
+      "namespace": "TauCeti",
+      "source_sha256": "e96c9a101a9d6538b51d8f853e6319d60f66c2318d95a212bf28d25ffc04a32b"
+    },
+    "TauCeti.NumberTheory.Chebotarev.GaloisCharacter.Nonvanishing": {
+      "namespace": "TauCeti",
+      "source_sha256": "33811657dbf40783e625f3ad6c3c7cc245dab17d6f19ce466aa7a6847af2d8a1"
+    },
+    "TauCeti.NumberTheory.Chebotarev.PrimeCounting.CharacterExpansion": {
+      "namespace": "TauCeti",
+      "source_sha256": "3a01a05f717f45bc386ec6d505a58ffa67d53cf8f0d6e98d845dd0ce860f911b"
+    },
+    "TauCeti.NumberTheory.Chebotarev.PrimeCounting.Partition": {
+      "namespace": "TauCeti",
+      "source_sha256": "e23afe99f79bda8d841460bfec64cca8bd71bb08f62843b71759f6f43e750b95"
+    },
+    "TauCeti.NumberTheory.Chebotarev.PrimeCounting.FixedFieldContraction": {
+      "namespace": "TauCeti",
+      "source_sha256": "3cdf9724a676e6e592ec8ca41a944f79cf94c2a9385b424cb4aca089098342b5"
+    },
+    "TauCeti.NumberTheory.Chebotarev.FixedField.FiberCount": {
+      "namespace": "TauCeti",
+      "source_sha256": "cd24c37616f1832fbf9e598c237fcfeeca045b951124fdeeadafac2c96552fd4"
+    },
+    "TauCeti.NumberTheory.NumberField.Frobenius.FiberCount": {
+      "namespace": "TauCeti",
+      "source_sha256": "22b4b58bde56bd1e7ff6278d4c5b25ef4cd12cedc9b402eee2d70bca193aa5b4"
+    },
+    "TauCeti.NumberTheory.NumberField.Frobenius.FixedField.Fiber": {
+      "namespace": "TauCeti",
+      "source_sha256": "9c9a7c301751034a57cd996072b9df028db8f53e1d7b8df77fad0d316a0b8840"
+    },
+    "TauCeti.NumberTheory.Chebotarev.PrimesAboveRamifiedPrimes": {
+      "namespace": "TauCeti",
+      "source_sha256": "518203a55f6b6dbe7f540e02228d3f904ce797c69ced96005d6e7f493070d93e"
+    },
+    "TauCeti.NumberTheory.Chebotarev.PrimeCounting.Discard": {
+      "namespace": "TauCeti",
+      "source_sha256": "810c198bfa2f41e09e55d028dd5c089c8f94235118175dce43b4e01992371c7d"
+    },
+    "TauCeti.NumberTheory.Chebotarev.PrimeCounting.Tower": {
+      "namespace": "TauCeti",
+      "source_sha256": "ab5887919e882bef7010d81ec526339e6ff915d17cddaad704b99a00e02b269c"
+    },
+    "TauCeti.NumberTheory.Chebotarev.TaggedFixedField": {
+      "namespace": "TauCeti",
+      "source_sha256": "ae4e0d4aabeabb109e309de200af51925a1a05afe985b26843e8f596f67f3c27"
+    },
+    "TauCeti.NumberTheory.Cyclotomic.FixedField": {
+      "namespace": "TauCeti",
+      "source_sha256": "ec4f250f4ac16a5e354cb0b057ed764923ca9acc8315ec90399b065903f425f3"
+    },
+    "TauCeti.NumberTheory.Cyclotomic.Adjoin": {
+      "namespace": "TauCeti",
+      "source_sha256": "766acb92467e603395d50c5604ee5d220ecf5ed323c2f3689d96a50bd89f5f93"
+    },
+    "TauCeti.NumberTheory.Cyclotomic.FixingSubgroup": {
+      "namespace": "TauCeti",
+      "source_sha256": "20cf863af83ba2098ebad95208da1412dd697f83f96a260d59aa76233349dccb"
+    },
+    "TauCeti.NumberTheory.NumberField.Cyclotomic.Compositum": {
+      "namespace": "TauCeti",
+      "source_sha256": "261d134532f15b07d53596753e2855c0f62ec7229dd4984dfd5ac67c95222e20"
+    },
+    "TauCeti.FieldTheory.IntermediateField.Adjoin.EqTop": {
+      "namespace": "TauCeti",
+      "source_sha256": "7087bc748fcc684a0b5cd17cbe539693cfbbfa5825f0e441de10e36a9294365d"
+    },
+    "TauCeti.NumberTheory.NumberField.Cyclotomic.Finrank": {
+      "namespace": "TauCeti",
+      "source_sha256": "78d829391e24f927a6052d4ee6000da16751e99cbab21a87352e3355bb9e4ada"
+    },
+    "TauCeti.Topology.Algebra.Order.LiminfLimsup": {
+      "namespace": "TauCeti",
+      "source_sha256": "327db5aff1ee3706c66fc2b61015fe36ac593e1990e6040c327777efd260a567"
+    },
+    "TauCeti.Algebra.Group.ConjFinite": {
+      "namespace": "TauCeti",
+      "source_sha256": "a802963522da8a8c51d5e69e45040cdc9ec674244e4bfad8b1fa1011f3f0101e"
+    },
+    "TauCeti.NumberTheory.NumberField.RootReduction": {
+      "namespace": "TauCeti",
+      "source_sha256": "c71a65bd04a9cdaad1ff2cbe192754eb286d35b65ef0b924b41572f2f8142585"
+    },
+    "PFR.ForMathlib.Entropy.Basic": {
+      "namespace": "PFR",
+      "source_sha256": "794969effe1d58fc027138f1d46f2d2aab217f030b6bb4c640d0741d5485adba"
+    },
+    "PFR.ForMathlib.ConditionalIndependence": {
+      "namespace": "PFR",
+      "source_sha256": "da2c893b103237c549c178d4af1a9f9ad4385cf62376b2c5568587e4f7a20acd"
+    },
+    "PFR.Mathlib.Probability.IdentDistrib": {
+      "namespace": "PFR",
+      "source_sha256": "e8630b9b5cbd5ccb80f629a6cf3bcceb73cee5a4e687c2e437a504078bad7170"
+    },
+    "PFR.Mathlib.MeasureTheory.Constructions.Pi": {
+      "namespace": "PFR",
+      "source_sha256": "e3cc6a8198d8de2b0aad1e14583f7d265ed6e8e18d97c4b90ad2a6d69ee2668b"
+    },
+    "PFR.Mathlib.Probability.Independence.Basic": {
+      "namespace": "PFR",
+      "source_sha256": "135675495f5fc75d8c25ae3a63d8c45321246a673f0ace3559ad1685a772a410"
+    },
+    "PFR.Mathlib.Probability.Independence.Kernel.IndepFun": {
+      "namespace": "PFR",
+      "source_sha256": "fb8d1209f5f3eb56cabf84cbe4d24bd853fde95604be558adb1e6172fdabea80"
+    },
+    "PFR.ForMathlib.FiniteRange.ConditionalProbability": {
+      "namespace": "PFR",
+      "source_sha256": "8ab2a206953f0c2e109c5ca180343a2902d8a51590221f83f88743592b8f8378"
+    },
+    "PFR.ForMathlib.FiniteRange.Defs": {
+      "namespace": "PFR",
+      "source_sha256": "4b3d84345edd8097929ad2f4b8915dc599acf5fcd1ebc71640b036a1cac45512"
+    },
+    "PFR.ForMathlib.Pair": {
+      "namespace": "PFR",
+      "source_sha256": "33c2546b8980dba23557144554e519d5825dbaaa964259b0a5ff7f52fb2e31bc"
+    },
+    "PFR.ForMathlib.Entropy.Kernel.MutualInfo": {
+      "namespace": "PFR",
+      "source_sha256": "4b66f604b9afb72e917b2df16213dec4dd1e86d38e64cae60e701f5d06ca1e5c"
+    },
+    "PFR.Mathlib.Probability.Kernel.Composition.Comp": {
+      "namespace": "PFR",
+      "source_sha256": "357dac5eb4b2797db8464e513b64cc2173acc6fa6834f9c3ee5bd97f03b647ae"
+    },
+    "PFR.Mathlib.Probability.Kernel.Disintegration": {
+      "namespace": "PFR",
+      "source_sha256": "1798358c3b7a852997afc8939c95e263599b1fa003dd315be4f6e12e933f7b42"
+    },
+    "PFR.Mathlib.MeasureTheory.Integral.Lebesgue.Basic": {
+      "namespace": "PFR",
+      "source_sha256": "e38455b6a12e5698b406cdd88e19ac805855de48992529503e45833204d53ffc"
+    },
+    "PFR.Mathlib.MeasureTheory.Integral.Lebesgue.Countable": {
+      "namespace": "PFR",
+      "source_sha256": "f14a868066adaa633be3768daf06eb0b5de22f78afc5bd9b3488b4fd268c0a09"
+    },
+    "PFR.ForMathlib.Entropy.Kernel.Basic": {
+      "namespace": "PFR",
+      "source_sha256": "a118ac7cced6bfd1f170c1dde38ca8fe3da0fa0d55bb6056488fdbc234328642"
+    },
+    "PFR.ForMathlib.Entropy.Measure": {
+      "namespace": "PFR",
+      "source_sha256": "7e754a8ef98136caa3dbd348d8d6205b09b01772074b57c6a35d0e71f57d4333"
+    },
+    "PFR.Mathlib.MeasureTheory.MeasurableSpace.Constructions": {
+      "namespace": "PFR",
+      "source_sha256": "425794c0e2483f0fd31d380df86ca367ccd3bf64c3971498ec4824170fc371fc"
+    },
+    "PFR.Mathlib.MeasureTheory.Measure.Dirac.Def": {
+      "namespace": "PFR",
+      "source_sha256": "15dccaa138cd4e0116d936781ca7bedaa970f7ac2a62500982e0526c4bad932e"
+    },
+    "PFR.Mathlib.MeasureTheory.Measure.MeasureSpaceDef": {
+      "namespace": "PFR",
+      "source_sha256": "ee19d453a04cb16bd1f3e84b9a6c73608037224fe45eb280c5474539f4040adf"
+    },
+    "PFR.Mathlib.MeasureTheory.Measure.Real": {
+      "namespace": "PFR",
+      "source_sha256": "f9dd720a476f7ac710061f1a4080a3ece9bee66cdfb7f88ccdda75074b6c2aac"
+    },
+    "PFR.Mathlib.MeasureTheory.Measure.Prod": {
+      "namespace": "PFR",
+      "source_sha256": "0d1b6fa2ae60f0d470827b3e12eed114806469b274b2a0cc6d8bd9cd42239bce"
+    },
+    "PFR.Mathlib.Probability.UniformOn": {
+      "namespace": "PFR",
+      "source_sha256": "59030161177c08566b53a31fa0f057e40ba0dbe9d1dff37f794d26c0fd8ff8f2"
+    },
+    "PFR.Mathlib.Data.Set.Card": {
+      "namespace": "PFR",
+      "source_sha256": "6400d8bd23c49feb6fa70a20115f93d57ec2e44067d9bc1e0a0d6166d7bae234"
+    },
+    "PFR.Mathlib.Data.Set.Basic": {
+      "namespace": "PFR",
+      "source_sha256": "da03b19656f0ddcc10a1eac2fa05bb9dfbb93071414c659510cba7f553768828"
+    },
+    "PFR.Mathlib.Data.Set.Insert": {
+      "namespace": "PFR",
+      "source_sha256": "046509a4e650658ce57d58353b8d29d6dd9df6f2db336dfbf84bc03f29ec9a0c"
+    },
+    "PFR.ForMathlib.Uniform": {
+      "namespace": "PFR",
+      "source_sha256": "9ac959add6c773813ac2144681e39b2912c6c6e90a434d0d920876191ca9f79a"
+    },
+    "PFR.Mathlib.Probability.ConditionalProbability": {
+      "namespace": "PFR",
+      "source_sha256": "8df1659678d67c036ec50a3b103cc5ec3f6062012c9f5b41018d7cf37039a64f"
+    },
+    "LeanPool.Brouwer.BrouwerProduct": {
+      "namespace": "LeanPool",
+      "source_sha256": "52474c03f0707779993705e72b02d0c3cf0f71e248857af106552beeddbf33f2"
+    },
+    "LeanPool.Brouwer.Simplex": {
+      "namespace": "LeanPool",
+      "source_sha256": "bfa2a8f34c2577aa456ce14f5ac7204777ede926cf2aac28e91c515d0e1694dc"
+    },
+    "LeanPool.Brouwer.Brouwer": {
+      "namespace": "LeanPool",
+      "source_sha256": "40371ce0c60e9428ce0ed82b06a7aa9b0a70215c6b6300727fbd3d61bb15171a"
+    },
+    "LeanPool.Brouwer.Scarf": {
+      "namespace": "LeanPool",
+      "source_sha256": "00923ed3a590f4f1dde2ebb068a61285cd575726ae3f474c07dacf18ac464a1b"
+    }
+  },
+  "copied_sources_match_pinned_git_blobs": true,
+  "upstream_source_changed": false,
+  "local_cache_links_used": true,
+  "fresh_dependency_download_performed": false,
+  "lake_build_performed": false
+}

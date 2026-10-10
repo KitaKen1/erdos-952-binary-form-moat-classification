@@ -1,0 +1,10 @@
+{
+  "origin": "Moat/Conjectures.lean before removing the main sorry",
+  "source_before_sha256": "9810f45fac1ee4588a403068ae4973a8480b4b66206cdb20082075aa5121f594",
+  "theorem_signatures": {
+    "irreducible_homogenization_uniformMoat": "theorem irreducible_homogenization_uniformMoat (p : Polynomial ℤ) (hp : Irreducible p) (hdeg : 2 ≤ p.natDegree) : UniformMoat (p.homogenize p.natDegree)",
+    "uniformMoat_of_not_isLinearPower": "theorem uniformMoat_of_not_isLinearPower (F : Form) (d : ℕ) (hF : F ≠ 0) (hd : 0 < d) (hhom : F.IsHomogeneous d) (hex : ¬ IsLinearPower F) : UniformMoat F",
+    "classification": "theorem classification (F : Form) (d : ℕ) (hF : F ≠ 0) (hd : 0 < d) (hhom : F.IsHomogeneous d) : UniformMoat F ↔ ¬ IsLinearPower F"
+  },
+  "definitions_locked_by_parent_receipt": "build/walk-exit-reused-proof-report.json"
+}

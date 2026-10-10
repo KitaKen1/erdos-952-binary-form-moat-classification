@@ -1,0 +1,64 @@
+import Integrations.HarperBridge435
+import Integrations.HarperGrowth435
+import Integrations.HarperThreshold435
+import Integrations.HarperSchedule435
+import Integrations.RectangleHarper435
+import Integrations.TauHarper435
+import Integrations.FiniteSetHarper435
+import Integrations.RotatedTauHarper435
+
+/-! Harper, quantitative adapters and the all-line rectangle assembly.
+Tau Ceti realizes the prime quota. The global walk schedule remains separate. -/
+
+#print axioms BooleanIsoperimetry.harper_theorem
+#print axioms BinaryFormMoat.HarperIntegration.numbered_neighborhood
+#print axioms BinaryFormMoat.HarperIntegration.harper_hamming_one
+#print axioms BinaryFormMoat.HarperIntegration.harper_hamming_iterate
+#print axioms BinaryFormMoat.HarperIntegration.hDist_insert
+#print axioms BinaryFormMoat.HarperIntegration.low_layers_expand
+#print axioms BinaryFormMoat.HarperIntegration.initial_segment_low_layers
+#print axioms BinaryFormMoat.HarperIntegration.harper_hamming_growth_one
+#print axioms BinaryFormMoat.HarperIntegration.harper_hamming_growth
+#print axioms BinaryFormMoat.HarperIntegration.half_cube_le_twice_ball
+#print axioms BinaryFormMoat.HarperIntegration.ball_card_mono_dimension
+#print axioms BinaryFormMoat.HarperIntegration.ball_card_lower
+#print axioms BinaryFormMoat.HarperIntegration.harper_growth_explicit_threshold
+#print axioms BinaryFormMoat.HarperIntegration.harper_uniform_expansion
+#print axioms BinaryFormMoat.HarperIntegration.harper_expansion_of_log
+#print axioms BinaryFormMoat.HarperIntegration.scheduled_harper_expansion
+#print axioms BinaryFormMoat.HarperIntegration.harper_rectangle_bound
+#print axioms BinaryFormMoat.HarperIntegration.harper_rectangle_exp_tail
+#print axioms BinaryFormMoat.mem_rectanglePoints
+#print axioms BinaryFormMoat.exists_primitive_multiple
+#print axioms BinaryFormMoat.exists_int_multiple_of_determinant_zero
+#print axioms BinaryFormMoat.exists_noncollinear_cover
+#print axioms BinaryFormMoat.exists_rectangle_line_representatives
+#print axioms BinaryFormMoat.rectangle_line_witness_box
+#print axioms BinaryFormMoat.rectangle_root_event_subset_box
+#print axioms BinaryFormMoat.encoded_rectangle_irreducible_line_tail
+#print axioms BinaryFormMoat.rectangle_line_witnesses_collinear
+#print axioms BinaryFormMoat.encoded_rectangle_lines_separated
+#print axioms BinaryFormMoat.rectangleWitnessEvent_eq_biUnion
+#print axioms BinaryFormMoat.encoded_rectangle_packing
+#print axioms BinaryFormMoat.dyadic_prime_product_lower
+#print axioms BinaryFormMoat.dyadic_prime_log_sum_lower
+#print axioms BinaryFormMoat.rectangle_log_gap_of_dyadic_lower
+#print axioms BinaryFormMoat.rectangle_separation_of_dyadic_bounds
+#print axioms BinaryFormMoat.HarperIntegration.harper_rectangle_exp_tail_of_dyadic_bounds
+#print axioms BinaryFormMoat.nat_le_pow_of_log_le
+#print axioms BinaryFormMoat.rectangle_area_of_radius_log
+#print axioms BinaryFormMoat.HarperIntegration.harper_rectangle_exp_tail_concrete
+#print axioms BinaryFormMoat.mem_primeRootSet
+#print axioms BinaryFormMoat.card_primeRootSet
+#print axioms BinaryFormMoat.TauHarperIntegration.exists_irreducible_nat_root_quota
+#print axioms BinaryFormMoat.TauHarperIntegration.exists_rectangle_batch_of_quota
+#print axioms BinaryFormMoat.TauHarperIntegration.exists_rectangle_batch_with_parameters
+#print axioms BinaryFormMoat.TauHarperIntegration.rectangle_size_budget_of_power_bound
+#print axioms BinaryFormMoat.TauHarperIntegration.exists_rectangle_window_batch
+#print axioms BinaryFormMoat.TauHarperIntegration.eventually_rectangle_window_batch
+#print axioms BinaryFormMoat.exists_rectangle_avoiding_root_assignment
+#print axioms BinaryFormMoat.TauHarperIntegration.eventually_exists_rectangle_avoiding_batch
+#print axioms BinaryFormMoat.HarperIntegration.harper_finiteSet_bound
+#print axioms BinaryFormMoat.HarperIntegration.harper_finiteSet_exp_tail
+#print axioms BinaryFormMoat.HarperIntegration.harper_rotated_rectangle_exp_tail_of_dyadic_bounds
+#print axioms BinaryFormMoat.TauHarperIntegration.exists_rotated_rectangle_batch_with_parameters

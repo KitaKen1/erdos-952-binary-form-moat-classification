@@ -1,0 +1,44 @@
+name = "binaryFormMoatClassification"
+# The original source/definition lock is preserved during module-system interop.
+allowNonModules = true
+srcDir = "."
+buildDir = "build/lake435"
+defaultTargets = ["OpenAIVariant", "GeneralizedVariant", "BinaryFormMoatClassification"]
+
+[leanOptions]
+warningAsError = true
+
+[[require]]
+name = "MoatTauCeti"
+path = "verification/lean435/vendor/TauCeti"
+
+[[require]]
+name = "MoatLeanPool"
+path = "verification/lean435/vendor/LeanPool"
+
+[[require]]
+name = "MoatPFR"
+path = "verification/lean435/vendor/PFR"
+
+[[require]]
+name = "mathlib"
+git = "https://github.com/leanprover-community/mathlib4"
+rev = "f6090c7095e1e56b3464c1daba5f24631f1290d2"
+
+[[lean_lib]]
+name = "BinaryFormMoat"
+
+[[lean_lib]]
+name = "Moat"
+
+[[lean_lib]]
+name = "Integrations"
+
+[[lean_lib]]
+name = "OpenAIVariant"
+
+[[lean_lib]]
+name = "GeneralizedVariant"
+
+[[lean_lib]]
+name = "BinaryFormMoatClassification"

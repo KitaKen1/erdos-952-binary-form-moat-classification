@@ -1,0 +1,11 @@
+**/.lake/
+**/build/
+**/__pycache__/
+*.olean
+*.ilean
+*.ir
+*.ndjson
+*.aux
+*.out
+*.toc
+.DS_Store
