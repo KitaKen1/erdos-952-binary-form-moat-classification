@@ -367,10 +367,10 @@ The [Lean4Web file](lean4web/BinaryFormMoatLean4Web.lean) uses the same
 [FClikelean/](FClikelean/). Its final declarations are the three target theorems,
 each followed by `#print axioms`. In both standalone versions, FC's
 `answer(False)` is written as `False`, and FC catalogue attributes are omitted.
-Full-file verification remains incomplete after a host restart interrupted
-compilation before the final axiom audits. The current file also includes a
-compatibility fix for Latest Mathlib and has not been fully verified.
-[Current single-file check status](lean/evidence/direct-fc-browser-verification.json).
+On 2026-10-10, the author successfully checked the complete single file on
+public Lean4Web using **Latest Mathlib with Lean v4.35.0-rc4**. All three final
+axiom audits show only `[propext, Classical.choice, Quot.sound]`, with no `sorryAx`.
+[Verification record](lean/evidence/direct-fc-browser-verification.json).
 
 ## References
 

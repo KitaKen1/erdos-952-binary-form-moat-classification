@@ -21,10 +21,10 @@ is written as `False`, and FC catalogue attributes are omitted.
 Intermediate axiom prints are omitted to reduce Lean4Web diagnostics; the modular
 sources retain those audits.
 
-A previous complete-file compilation with Lean **v4.35.0-rc4** was interrupted
-by a host restart before the final axiom audits completed. The current generated
-file includes a compatibility fix for Latest Mathlib and has not been fully verified.
-[Current compilation status](../lean/evidence/direct-fc-browser-verification.json).
+On 2026-10-10, the author successfully checked the complete file on public
+Lean4Web using **Latest Mathlib with Lean v4.35.0-rc4**. All three final axiom
+audits show only `[propext, Classical.choice, Quot.sound]`, with no `sorryAx`.
+[Verification record](../lean/evidence/direct-fc-browser-verification.json).
 The unchanged modular counterparts were checked with Lean **v4.35.0-rc3**;
 all three use only `propext`, `Classical.choice` and `Quot.sound`, with no `sorryAx`.
 [Modular entry-point verification](../lean/evidence/entry-points.json).

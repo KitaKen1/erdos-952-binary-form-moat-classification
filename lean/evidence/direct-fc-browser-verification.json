@@ -1,5 +1,5 @@
 {
-  "recorded_at": "2026-10-10T13:56:38.998217+00:00",
+  "recorded_at": "2026-10-10T14:10:15.477837+00:00",
   "fc_definitions_and_target_statements_match": {
     "OpenAIVariant": {
       "fc_path": "FClikelean/OpenAIVariant.lean",
@@ -37,20 +37,20 @@
     }
   },
   "independent_kernel_replay_performed": false,
-  "public_lean4web_server_checked": false,
-  "status": "not_compiled_after_compatibility_fix",
+  "public_lean4web_server_checked": true,
+  "status": "passed_author_observed_public_lean4web",
   "lean": "4.35.0-rc4",
-  "mathlib_commit": "021ce68bf125a049beee22b3fc7664d78728e21d",
+  "mathlib_commit": null,
   "source": "lean4web/BinaryFormMoatLean4Web.lean",
   "source_sha256": "e9e6ec4c081282d50959bd3b4a6c6d2ffbbdbbe9bc1547310223037c24580d00",
-  "full_source_file_compiled": false,
-  "axiom_audit_completed": false,
+  "full_source_file_compiled": true,
+  "axiom_audit_completed": true,
   "notes": [
-    "A previous full source compilation was interrupted by a host restart.",
-    "The current generated file replaces four deprecated spanSingleton alias references using compatibility lemmas.",
-    "The compatibility lemmas directly prove submodule equalities, with no version-dependent tactic branches.",
-    "The generated definitions and target statements match the FC files.",
-    "This record does not certify compilation or axioms of the current single file."
+    "The author reported that the complete file passed on public Lean4Web.",
+    "All three final target audits were confirmed with only propext, Classical.choice, and Quot.sound.",
+    "The server Mathlib commit was not recorded and is not assumed to equal the pinned local snapshot.",
+    "The successful browser check was not independently rerun by the assistant.",
+    "The previous interrupted local compilation remains recorded below."
   ],
   "previous_full_file_attempt": {
     "status": "interrupted_by_host_restart",
@@ -68,5 +68,37 @@
     ],
     "local_full_compilation_restarted": false,
     "proof_method": "Direct submodule equalities; unused fallback branches removed."
+  },
+  "verification_method": "Author-reported successful Lean4Web run and final target axiom audits.",
+  "observed_at": "2026-10-10T23:09:12+09:00",
+  "server_environment_label": "Latest Mathlib with Lean v4.35.0-rc4",
+  "pinned_local_mathlib_commit": "021ce68bf125a049beee22b3fc7664d78728e21d",
+  "axiom_audit": {
+    "Erdos952.erdos_952_openai": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "Erdos952.erdos_952_openai_generalized_variant": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "BinaryFormMoatClassification.binary_form_moat_classification": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ]
+  },
+  "sorryAx_in_final_target_audits": false,
+  "evidence": {
+    "axiom_print_lines": {
+      "Erdos952.erdos_952_openai": 105217,
+      "Erdos952.erdos_952_openai_generalized_variant": 105252,
+      "BinaryFormMoatClassification.binary_form_moat_classification": 105324
+    },
+    "source_identity_basis": "The reported final declaration and all three axiom-print line numbers match the generated source.",
+    "source_hash_verified_from_server": false,
+    "server_mathlib_commit_available": false
   }
 }

@@ -44,9 +44,10 @@ uses Lean **v4.35.0-rc4**. The single-file and modular versions use the definiti
 and finite injective-sequence target statements from these FC files. Each final
 target theorem is followed by `#print axioms`. FC's `answer(False)` is written
 as `False` in the standalone proofs; FC catalogue attributes are omitted.
-Single-file verification remains incomplete after a host restart; the current
-file also includes a compatibility fix for Latest Mathlib. See the
-[check status](../lean/evidence/direct-fc-browser-verification.json).
+The author successfully checked the complete single file on public Lean4Web
+with Latest Mathlib on 2026-10-10. All three final axiom audits show only
+`[propext, Classical.choice, Quot.sound]`, with no `sorryAx`.
+[Verification record](../lean/evidence/direct-fc-browser-verification.json).
 
 ## Appendix: classification theorem
 
