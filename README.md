@@ -77,15 +77,17 @@ Regarding Conjecture 4, this repository presents a **complete Lean 4 proof of th
 
 ### Comparison of conditions
 
-| Conjecture | Permitted points | $`F`$ | $`\operatorname{Irr}(F)`$ | $`\operatorname{Hom}_d(F)`$ | $`d`$ | Conclusion |
-|---|---|---|---|---|---|---|
-| Conjecture 1 **Gaussian moat** | Gaussian primes | $`X^2+Y^2`$ | ✓ | ✓ | $`2`$ | Answer: **negative**. |
-| Conjecture 2 **Uniform Gaussian moat** | Gaussian primes | $`X^2+Y^2`$ | ✓ | ✓ | $`2`$ | Answer: **negative**. |
-| Conjecture 3 **Generalized moat** | Lattice points with $`F(x,y)\ne0`$ and at most $`r`$ distinct prime divisors of $`\lvert F(x,y)\rvert`$ | $`F\in\mathbb Z[X,Y]`$ | ✓ | ✓ | $`d\ge2`$ | Answer: **negative**. |
-| Conjecture 4 **Binary-form classification** | Lattice points with $`F(x,y)\ne0`$ and at most $`r`$ distinct prime divisors of $`\lvert F(x,y)\rvert`$ | $`0\ne F\in\mathbb Z[X,Y]`$ | — | ✓ | $`d\ge1`$ | Answer: **positive** if $`F=c(aX+bY)^m`$ as below; **negative** otherwise. |
+All forms in this table lie in $`\mathbb Z[X,Y]`$.
 
-$`\operatorname{Irr}(F)`$ means irreducible in $`\mathbb Z[X,Y]`$;
-$`\operatorname{Hom}_d(F)`$ means homogeneous of degree $`d`$.
+| Conjecture | Permitted points | F | Irr | Hom | $`d`$ | Conclusion |
+|---|---|---|---|---|---|---|
+| Conjecture 1 **Gaussian moat** | Gaussian primes | X² + Y² | ✓ | ✓ | $`2`$ | Answer: **negative**. |
+| Conjecture 2 **Uniform Gaussian moat** | Gaussian primes | X² + Y² | ✓ | ✓ | $`2`$ | Answer: **negative**. |
+| Conjecture 3 **Generalized moat** | Lattice points with $`F(x,y)\ne0`$ and at most $`r`$ distinct prime divisors of $`\lvert F(x,y)\rvert`$ | F | ✓ | ✓ | $`d\ge2`$ | Answer: **negative**. |
+| Conjecture 4 **Binary-form classification** | Lattice points with $`F(x,y)\ne0`$ and at most $`r`$ distinct prime divisors of $`\lvert F(x,y)\rvert`$ | F ≠ 0 | — | ✓ | $`d\ge1`$ | Answer: **positive** if $`F=c(aX+bY)^m`$ as below; **negative** otherwise. |
+
+**Irr** means irreducible in $`\mathbb Z[X,Y]`$;
+**Hom** means homogeneous of degree $`d`$.
 ✓ means the property holds; — means no requirement. In the first two rows,
 $`F`$ records the Gaussian norm.
 
