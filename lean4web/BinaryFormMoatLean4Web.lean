@@ -418,8 +418,7 @@ set_option linter.ambiguousOpen false
 set_option warn.redundantExpose false
 #guard Lean.versionString == "4.35.0-rc4"
 
--- Latest Mathlib makes spanSingleton a monoid-with-zero homomorphism.
--- The pinned snapshot has the same operation as an ordinary function.
+-- Prove these identities through submodules, shared by both Mathlib APIs.
 namespace BinaryFormMoatLean4WebCompat
 variable {R P : Type*} [CommRing R] [CommRing P] [Algebra R P]
   (S : Submonoid R) [IsLocalization S P]
@@ -427,18 +426,14 @@ variable {R P : Type*} [CommRing R] [CommRing P] [Algebra R P]
 theorem spanSingleton_mul (x y : P) :
     FractionalIdeal.spanSingleton S x * FractionalIdeal.spanSingleton S y =
       FractionalIdeal.spanSingleton S (x * y) := by
-  first
-  | exact (map_mul (FractionalIdeal.spanSingleton S) x y).symm
-  | apply FractionalIdeal.coeToSubmodule_injective
-    simp only [FractionalIdeal.coe_mul, FractionalIdeal.coe_spanSingleton,
-      Submodule.span_mul_span, Set.singleton_mul_singleton]
+  apply FractionalIdeal.coeToSubmodule_injective
+  simp only [FractionalIdeal.coe_mul, FractionalIdeal.coe_spanSingleton,
+    Submodule.span_mul_span, Set.singleton_mul_singleton]
 
 theorem spanSingleton_one : FractionalIdeal.spanSingleton S (1 : P) = 1 := by
-  first
-  | exact map_one (FractionalIdeal.spanSingleton S)
-  | apply FractionalIdeal.coeToSubmodule_injective
-    simp only [FractionalIdeal.coe_spanSingleton, FractionalIdeal.coe_one,
-      Submodule.one_eq_span]
+  apply FractionalIdeal.coeToSubmodule_injective
+  simp only [FractionalIdeal.coe_spanSingleton, FractionalIdeal.coe_one,
+    Submodule.one_eq_span]
 
 end BinaryFormMoatLean4WebCompat
 

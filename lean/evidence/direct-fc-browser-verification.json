@@ -1,5 +1,5 @@
 {
-  "recorded_at": "2026-10-10T13:33:53.717432+00:00",
+  "recorded_at": "2026-10-10T13:36:42.502443+00:00",
   "fc_definitions_and_target_statements_match": {
     "OpenAIVariant": {
       "fc_path": "FClikelean/OpenAIVariant.lean",
@@ -42,13 +42,13 @@
   "lean": "4.35.0-rc4",
   "mathlib_commit": "021ce68bf125a049beee22b3fc7664d78728e21d",
   "source": "lean4web/BinaryFormMoatLean4Web.lean",
-  "source_sha256": "55cf7cbcca94e44352fe3b70a7a841a0b60787f109add0f26f6d7b3f6c7b8914",
+  "source_sha256": "e9e6ec4c081282d50959bd3b4a6c6d2ffbbdbbe9bc1547310223037c24580d00",
   "full_source_file_compiled": false,
   "axiom_audit_completed": false,
   "notes": [
     "A previous full source compilation was interrupted by a host restart.",
     "The current generated file replaces four deprecated spanSingleton alias references using compatibility lemmas.",
-    "The compatibility lemmas use map_mul and map_one for Latest Mathlib and submodule proofs for the pinned snapshot.",
+    "The compatibility lemmas directly prove submodule equalities, with no version-dependent tactic branches.",
     "The generated definitions and target statements match the FC files.",
     "This record does not certify compilation or axioms of the current single file."
   ],
@@ -66,6 +66,7 @@
       "BinaryFormMoatLean4WebCompat.spanSingleton_mul",
       "BinaryFormMoatLean4WebCompat.spanSingleton_one"
     ],
-    "local_full_compilation_restarted": false
+    "local_full_compilation_restarted": false,
+    "proof_method": "Direct submodule equalities; unused fallback branches removed."
   }
 }

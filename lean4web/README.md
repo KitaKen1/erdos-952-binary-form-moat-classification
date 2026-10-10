@@ -39,6 +39,6 @@ python3 lean/scripts/make_lean4web.py
 
 The generator checks definitions and target statements against the FC files before
 embedding the complete proof dependencies and the three final proof entries.
-The browser file supplies proofs of `spanSingleton` multiplication and its value
-at one, using Latest Mathlib's `map_mul` and `map_one` when available and submodule
-proofs for the pinned snapshot. These replace the four deprecated alias references.
+The browser file proves `spanSingleton` multiplication and its value at one
+directly through their submodules. These proofs replace the four deprecated
+alias references and use no version-dependent tactic branches.
