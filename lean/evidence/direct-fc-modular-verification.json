@@ -1,0 +1,87 @@
+{
+  "recorded_at": "2026-10-10T13:23:38.771336+00:00",
+  "fc_definitions_and_target_statements_match": {
+    "OpenAIVariant": {
+      "fc_path": "FClikelean/OpenAIVariant.lean",
+      "fc_source_sha256": "d6c5e9896e5507eeaa654425f20b99b23cba0d18f6d181cfd0757ad1f690c0fe",
+      "target": "Erdos952.erdos_952_openai",
+      "statement_sha256": "ef7eeda5c7b63455a5e3320eb73a4416fb68d7a555c331dd95856e55141b2c2a",
+      "definition_sha256": {},
+      "definitions_and_target_statement_match": true,
+      "answer_false_elaborated_as_false": true,
+      "final_target_axiom_print": true
+    },
+    "GeneralizedVariant": {
+      "fc_path": "FClikelean/GeneralizedVariant.lean",
+      "fc_source_sha256": "32c042dfe7e245dfc029af0bef66f40d584397ce762bd4fe9cd1ca064c2f0bd3",
+      "target": "Erdos952.erdos_952_openai_generalized_variant",
+      "statement_sha256": "8d92a89d800c7ece63b219c16966b1bd5b77cc71dadf91fcc89cc765ff91d11b",
+      "definition_sha256": {
+        "FewPrimeFactors": "8e571c5a5796741af8299b8b036930910600f7bedfcc1dd1ed4da0231d341c6c"
+      },
+      "definitions_and_target_statement_match": true,
+      "answer_false_elaborated_as_false": true,
+      "final_target_axiom_print": true
+    },
+    "BinaryFormMoatClassification": {
+      "fc_path": "FClikelean/BinaryFormMoatClassification.lean",
+      "fc_source_sha256": "41ddc90357d4de50cdf343faa2e1825a83c796510416129b75bdceb58e934f75",
+      "target": "BinaryFormMoatClassification.binary_form_moat_classification",
+      "statement_sha256": "37784ac119c67fe510cf64e4ad4d96dc6fa1c4cccc4b57969e17042c12b2f332",
+      "definition_sha256": {
+        "FewPrimeFactors": "8e571c5a5796741af8299b8b036930910600f7bedfcc1dd1ed4da0231d341c6c"
+      },
+      "definitions_and_target_statement_match": true,
+      "answer_false_elaborated_as_false": false,
+      "final_target_axiom_print": true
+    }
+  },
+  "independent_kernel_replay_performed": false,
+  "public_lean4web_server_checked": false,
+  "status": "partial_recheck",
+  "lean": "4.35.0-rc3",
+  "mathlib_commit": "f6090c7095e1e56b3464c1daba5f24631f1290d2",
+  "checks": {
+    "OpenAIVariant": {
+      "source_sha256": "1389d56eb4b94648108428a4f22846655b20d52fd976e7ef213409fd0a7f806b",
+      "log_sha256": "678e65c791a038d125d36f014e7227b54c76aef4444912f3bec79e70ef32fcf2",
+      "olean_sha256": "163864ca8acfdf2854e8619d15347c3e2cebfec7084996a61d1f7a45e053a665",
+      "strict_compile_exit_code": 0,
+      "axiom_audit": {
+        "Erdos952.erdos_952_openai": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ]
+      },
+      "full_source_file_compiled": true
+    },
+    "GeneralizedVariant": {
+      "source_sha256": "e6ddb65aa54d7556e34b5062e66d88750b4f901fb0bfed4b46c92fb0fb343f95",
+      "log_sha256": "2b6da334b97d2d963bd2babbb8405cd7a2a0801a1b4ef2d879c03409a28cc725",
+      "olean_sha256": "1985e8f06501822e315ca4a0ff4cd8533aea01399416dbf0cbd9b98baf5ad3e5",
+      "strict_compile_exit_code": 0,
+      "axiom_audit": {
+        "Erdos952.erdos_952_openai_generalized_variant": [
+          "propext",
+          "Classical.choice",
+          "Quot.sound"
+        ]
+      },
+      "full_source_file_compiled": true
+    }
+  },
+  "remaining_recheck": {
+    "module": "BinaryFormMoatClassification",
+    "status": "failed_during_import",
+    "reason": "Too many open files in system",
+    "source_sha256": "ae9c9729ea37cbd1ed760deb69f470992f92bc661c75c14efa4efe3ed7f5b6de",
+    "log_sha256": "00dd650ce39c7c6c47ad55caa822f3b074a918436e05beb2c8db784a68045dbf"
+  },
+  "previous_complete_verification": "entry-points.json",
+  "notes": [
+    "The first two modular entries completed strict compilation and axiom audits.",
+    "The classification recheck failed during import because of the host file limit.",
+    "The modular source files are unchanged from the previous complete verification."
+  ]
+}

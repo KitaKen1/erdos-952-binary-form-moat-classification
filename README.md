@@ -31,7 +31,7 @@ Contributions:
    (OpenAI has already formalized Conjecture 2 in Lean.)
 
 **Try it in Lean4Web:** [open the complete proof in one file](https://live.lean-lang.org/#url=https%3A%2F%2Fraw.githubusercontent.com%2FKitaKen1%2Ferdos-952-binary-form-moat-classification%2Fmain%2Flean4web%2FBinaryFormMoatLean4Web.lean)
-(Lean **v4.35.0-rc4**, component-bound formulation).
+(Lean **v4.35.0-rc4**, the same FC definitions and target statements).
 
 ## Conjecture statements
 
@@ -77,9 +77,10 @@ Regarding Conjecture 4, this repository presents a **complete Lean 4 proof of th
 
 ### Comparison of conditions
 
-All forms in this table lie in $`\mathbb Z[X,Y]`$.
+The column **Polynomial F(X,Y)** specifies the integer polynomial associated
+with each conjecture. All forms lie in $`\mathbb Z[X,Y]`$.
 
-| Conjecture | Permitted points | Form F | Irr | Hom | $`d`$ | Conclusion |
+| Conjecture | Permitted points | Polynomial<br>F(X,Y) | Irr | Hom | $`d`$ | Conclusion |
 |---|---|---|---|---|---|---|
 | **1. Gaussian<br>moat** | Gaussian primes | X² + Y² | ✓ | ✓ | $`2`$ | **Negative** |
 | **2. Uniform<br>Gaussian moat** | Gaussian primes | X² + Y² | ✓ | ✓ | $`2`$ | **Negative** |
@@ -346,7 +347,7 @@ Erdős Problem 952.
 |---|---|
 | [FClikelean/](FClikelean/) | Three separate Formal Conjecture style statements |
 | [lean/](lean/) | Three proof entries sharing one Lean **v4.35.0-rc3** project |
-| [lean4web/](lean4web/) | Complete component-bound proof in one file, Lean **v4.35.0-rc4** |
+| [lean4web/](lean4web/) | Complete proofs of the same three FC targets in one file, Lean **v4.35.0-rc4** |
 | [PDF/](PDF/) | Companion manuscript |
 
 ## Build and verification
@@ -360,6 +361,15 @@ lake --wfail build
 All three proof entries were checked with Lean **v4.35.0-rc3**. Their axiom
 outputs contain only `[propext, Classical.choice, Quot.sound]`, with no
 `sorryAx`. [Verification record](lean/evidence/entry-points.json).
+
+The [Lean4Web file](lean4web/BinaryFormMoatLean4Web.lean) uses the same
+`FewPrimeFactors` definitions and sequence-form target statements as
+[FClikelean/](FClikelean/). Its final declarations are the three target theorems,
+each followed by `#print axioms`. In both standalone versions, FC's
+`answer(False)` is written as `False`, and FC catalogue attributes are omitted.
+The current single-file compilation was interrupted by a host restart before
+the final axiom audits completed; it has not been fully verified.
+[Current single-file check status](lean/evidence/direct-fc-browser-verification.json).
 
 ## References
 

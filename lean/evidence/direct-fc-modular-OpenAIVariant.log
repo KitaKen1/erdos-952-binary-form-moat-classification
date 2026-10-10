@@ -1,0 +1,1 @@
+'Erdos952.erdos_952_openai' depends on axioms: [propext, Classical.choice, Quot.sound]

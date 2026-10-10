@@ -404,7 +404,8 @@ public import Mathlib.Topology.UniformSpace.UniformApproximation
 public import Mathlib.Util.Notation3
 import all Mathlib.NumberTheory.NumberField.DirichletDensity
 
-/-! Complete all-degree binary homogeneous form moat classification.
+/-! Complete proofs of the three targets stated in FClikelean.
+The final targets use the FC definitions and finite injective-sequence statements.
 The custom proof dependencies are embedded below; only pinned Mathlib is imported.
 Generated from the modular proof by lean/scripts/make_lean4web.py.
 -/
@@ -104915,15 +104916,10 @@ end BinaryFormMoat
 
 end Source598
 
--- The original all-degree target, with all original hypotheses.
-example (F : BinaryFormMoat.Form) (d : ℕ) (hF : F ≠ 0)
-    (hd : 0 < d) (hhom : F.IsHomogeneous d) :
-    BinaryFormMoat.UniformMoat F ↔ ¬ BinaryFormMoat.IsLinearPower F :=
-  BinaryFormMoat.classification F d hF hd hhom
 
-
--- Source: BinaryFormMoatProof (FC targets and their proofs)
-/- Complete proofs of the three FC-style targets, using the checked classification. -/
+-- Source: Moat.Catalogue
+section Source599
+/- Shared graph definitions and bridges for the two public proof entry points. -/
 
 namespace BinaryFormMoatCatalogue
 
@@ -105071,6 +105067,76 @@ theorem gaussian_prime_norm_fewPrimeFactors (z : GaussianInt) (hz : Prime z) :
   have hc := Finset.card_le_card (Nat.primeFactors_mono hnorm (pow_ne_zero 2 hpPrime.ne_zero))
   simpa [Nat.primeFactors_prime_pow (by decide : 2 ≠ 0) hpPrime] using hc
 
+/-- A uniform component-size bound rules out arbitrarily long injective prefixes. -/
+theorem no_arbitrarily_long_walks (S : Set (ℤ × ℤ)) (C : ℤ)
+    (hS : BoundedComponents S C.natAbs) :
+    ¬ ∀ N : ℕ, ∃ x : ℕ → GaussianInt,
+      Function.Injective x ∧
+        ∀ n ≤ N, ((x n).re, (x n).im) ∈ S ∧
+          (n < N → (x (n + 1) - x n).norm < C) := by
+  rintro hwalk
+  obtain ⟨B, hB⟩ := hS
+  obtain ⟨x, hx, hwalk⟩ := hwalk B
+  let v : Fin (B + 1) → S := fun i =>
+    ⟨((x i).re, (x i).im), (hwalk i (by omega)).1⟩
+  have hv : Function.Injective v := by
+    intro i j hij
+    apply Fin.ext
+    apply hx
+    have h := congrArg Subtype.val hij
+    apply Zsqrtd.ext
+    · exact congrArg Prod.fst h
+    · exact congrArg Prod.snd h
+  have reach (n : ℕ) (hn : n ≤ B) :
+      (stepGraph S C.natAbs).Reachable (v ⟨0, by omega⟩) (v ⟨n, by omega⟩) := by
+    induction n with
+    | zero => exact SimpleGraph.Reachable.refl _
+    | succ n ih =>
+      apply (ih (by omega)).trans
+      apply SimpleGraph.Adj.reachable
+      apply (stepGraph_adj _ _ _).mpr
+      constructor
+      · intro he
+        have hne := congrArg Fin.val (hv he)
+        change n = n + 1 at hne
+        omega
+      · have hs := (hwalk n (by omega)).2 (by omega)
+        have he :
+            ((x n).re - (x (n + 1)).re)^2 +
+              ((x n).im - (x (n + 1)).im)^2 = (x (n + 1) - x n).norm := by
+          simp only [Zsqrtd.norm, Zsqrtd.re_sub, Zsqrtd.im_sub]
+          ring
+        change ((x n).re - (x (n + 1)).re)^2 +
+          ((x n).im - (x (n + 1)).im)^2 ≤ (C.natAbs : ℤ)
+        rw [he]
+        exact hs.le.trans Int.le_natAbs
+  have hcard : ((B + 1 : ℕ) : ℕ∞) ≤
+      Set.encard {w | (stepGraph S C.natAbs).Reachable (v ⟨0, by omega⟩) w} := by
+    calc
+      _ = (Set.univ : Set (Fin (B + 1))).encard := by
+        simp [Set.encard_univ, ENat.card_eq_coe_fintype_card]
+      _ ≤ _ := Set.encard_le_encard_of_injOn
+        (f := v) (by intro i _; exact reach i (by omega)) hv.injOn
+  have hbad : B + 1 ≤ B := by
+    exact_mod_cast hcard.trans (hB (v ⟨0, by omega⟩))
+  omega
+
+end BinaryFormMoatCatalogue
+
+end Source599
+
+-- The original all-degree target, with all original hypotheses.
+example (F : BinaryFormMoat.Form) (d : ℕ) (hF : F ≠ 0)
+    (hd : 0 < d) (hhom : F.IsHomogeneous d) :
+    BinaryFormMoat.UniformMoat F ↔ ¬ BinaryFormMoat.IsLinearPower F :=
+  BinaryFormMoat.classification F d hF hd hhom
+
+
+-- Source: OpenAIVariant (FC target and complete proof)
+/- Complete proof of OpenAI's uniform Gaussian moat variant. -/
+
+namespace BinaryFormMoatCatalogue
+
 theorem quadratic_uniformMoat :
     BinaryFormMoat.UniformMoat
       ((MvPolynomial.X (0 : Fin 2) : MvPolynomial (Fin 2) ℤ)^2 + MvPolynomial.X 1^2) := by
@@ -105104,23 +105170,136 @@ theorem gaussian_moat (R : ℕ) :
   simpa [Zsqrtd.norm, pow_two] using gaussian_prime_norm_fewPrimeFactors
     (⟨z.1, z.2⟩ : GaussianInt) hz
 
-/-- The binary-form variant at every finite prime-factor budget. -/
-theorem gaussian_moat.generalizedvariant (F : NonlinearIrreducibleForm) (R r : ℕ) :
-    BoundedComponents
-      {z | F.FewPrimeFactors r ⟨z.1, z.2⟩} R := by
-  exact (uniformMoat_iff F.polynomial).mp
-    ((BinaryFormMoat.classification F.polynomial F.polynomial.totalDegree F.irreducible.ne_zero
-      (by have := F.nonlinear; omega) F.homogeneous).mpr (nonlinear_not_isLinearPower F)) R r
-
-/-- The all-degree classification, including reducible forms. -/
-theorem binary_form_moat_classification (F : MvPolynomial (Fin 2) ℤ) (d : ℕ) (hF : F ≠ 0)
-    (hd : 0 < d) (hhom : F.IsHomogeneous d) :
-    (∀ R r : ℕ, BoundedComponents
-      {z | FewPrimeFactors r (F.eval ![z.1, z.2])} R) ↔ ¬ IsLinearPower F := by
-  exact (uniformMoat_iff F).symm.trans (BinaryFormMoat.classification F d hF hd hhom)
-
 end BinaryFormMoatCatalogue
 
-#print axioms BinaryFormMoatCatalogue.gaussian_moat
-#print axioms BinaryFormMoatCatalogue.gaussian_moat.generalizedvariant
-#print axioms BinaryFormMoatCatalogue.binary_form_moat_classification
+namespace Erdos952
+
+theorem no_gaussian_walks (C : ℤ) :
+    ¬ ∀ N : ℕ, ∃ x : ℕ → GaussianInt,
+      Function.Injective x ∧
+        ∀ n ≤ N, Prime (x n) ∧ (n < N → (x (n + 1) - x n).norm < C) := by
+  have h := BinaryFormMoatCatalogue.no_arbitrarily_long_walks
+    {z | Prime (⟨z.1, z.2⟩ : GaussianInt)} C
+    (BinaryFormMoatCatalogue.gaussian_moat C.natAbs)
+  simpa using h
+
+/-- OpenAI's uniform strengthening in the sequence notation of FC 952. -/
+theorem erdos_952_openai : False ↔
+  ∃ C : ℤ, ∀ N : ℕ, ∃ x : ℕ → GaussianInt,
+    Function.Injective x ∧
+      ∀ n ≤ N, Prime (x n) ∧ (n < N → (x (n + 1) - x n).norm < C) := by
+  constructor
+  · exact False.elim
+  · rintro ⟨C, hwalk⟩
+    exact no_gaussian_walks C hwalk
+
+end Erdos952
+
+#print axioms Erdos952.erdos_952_openai
+
+-- Source: GeneralizedVariant (FC target and complete proof)
+/- Complete proof of the generalized binary-form moat variant. -/
+
+namespace Erdos952
+
+/-- The form's value at $z$ is nonzero and has at most $r$ distinct prime factors. -/
+def FewPrimeFactors (F : MvPolynomial (Fin 2) ℤ) (r : ℕ) (z : GaussianInt) : Prop :=
+  let n := F.eval ![z.re, z.im]
+  n ≠ 0 ∧ n.natAbs.primeFactors.card ≤ r
+
+/-- The binary-form generalization at every finite prime-factor budget. -/
+theorem erdos_952_openai_generalized_variant : False ↔
+  ∃ (F : MvPolynomial (Fin 2) ℤ) (d r : ℕ) (C : ℤ),
+    Irreducible F ∧ 2 ≤ d ∧ F.IsHomogeneous d ∧
+      ∀ N : ℕ, ∃ x : ℕ → GaussianInt,
+        Function.Injective x ∧
+          ∀ n ≤ N, FewPrimeFactors F r (x n) ∧
+            (n < N → (x (n + 1) - x n).norm < C) := by
+  constructor
+  · exact False.elim
+  · rintro ⟨F, d, r, C, hF, hd, hhom, hwalk⟩
+    have hdeg : F.totalDegree = d := hhom.totalDegree hF.ne_zero
+    let f : BinaryFormMoatCatalogue.NonlinearIrreducibleForm :=
+      ⟨F, hF, by simpa only [hdeg] using hhom, by omega⟩
+    have hmoat := (BinaryFormMoat.classification F d hF.ne_zero (by omega) hhom).mpr
+      (BinaryFormMoatCatalogue.nonlinear_not_isLinearPower f)
+    have h := BinaryFormMoatCatalogue.no_arbitrarily_long_walks
+      {z | BinaryFormMoatCatalogue.FewPrimeFactors r (F.eval ![z.1, z.2])} C
+      ((BinaryFormMoatCatalogue.uniformMoat_iff F).mp hmoat C.natAbs r)
+    exact h hwalk
+
+end Erdos952
+
+#print axioms Erdos952.erdos_952_openai_generalized_variant
+
+-- Source: BinaryFormMoatClassification (FC target and complete proof)
+/- The independent all-degree classification, including reducible forms. -/
+
+namespace BinaryFormMoatClassification
+
+/-- The form's value at $z$ is nonzero and has at most $r$ distinct prime factors. -/
+def FewPrimeFactors (F : MvPolynomial (Fin 2) ℤ) (r : ℕ) (z : GaussianInt) : Prop :=
+  let n := F.eval ![z.re, z.im]
+  n ≠ 0 ∧ n.natAbs.primeFactors.card ≤ r
+
+/-- Arbitrarily long walks exist exactly for the forms $c(aX+bY)^m$. -/
+theorem binary_form_moat_classification :
+  ∀ (F : MvPolynomial (Fin 2) ℤ) (d : ℕ),
+    F ≠ 0 → 0 < d → F.IsHomogeneous d →
+      ((∃ (r : ℕ) (C : ℤ), ∀ N : ℕ, ∃ x : ℕ → GaussianInt,
+        Function.Injective x ∧
+          ∀ n ≤ N, FewPrimeFactors F r (x n) ∧
+            (n < N → (x (n + 1) - x n).norm < C)) ↔
+        ∃ (c a b : ℤ) (m : ℕ), c ≠ 0 ∧ (a ≠ 0 ∨ b ≠ 0) ∧ 0 < m ∧
+          F = MvPolynomial.C c *
+            (MvPolynomial.C a * MvPolynomial.X (0 : Fin 2) +
+             MvPolynomial.C b * MvPolynomial.X (1 : Fin 2)) ^ m) := by
+  intro F d hF hd hhom
+  constructor
+  · rintro ⟨r, C, hwalk⟩
+    by_contra hex
+    have hmoat := (BinaryFormMoat.classification F d hF hd hhom).mpr hex
+    have h := BinaryFormMoatCatalogue.no_arbitrarily_long_walks
+      {z | BinaryFormMoatCatalogue.FewPrimeFactors r (F.eval ![z.1, z.2])} C
+      ((BinaryFormMoatCatalogue.uniformMoat_iff F).mp hmoat C.natAbs r)
+    exact h hwalk
+  · rintro ⟨c, a, b, m, hc, hab, _, rfl⟩
+    have hq : a^2 + b^2 ≠ 0 := by
+      rcases hab with ha | hb
+      · nlinarith [sq_pos_of_ne_zero ha, sq_nonneg b]
+      · nlinarith [sq_pos_of_ne_zero hb, sq_nonneg a]
+    let q : ℤ := c * (a^2 + b^2)^m
+    have hq0 : q ≠ 0 := mul_ne_zero hc (pow_ne_zero _ hq)
+    let x : ℕ → GaussianInt := fun n => ⟨a + b * (n : ℤ), b - a * (n : ℤ)⟩
+    have hx : Function.Injective x := by
+      intro n k h
+      apply BinaryFormMoat.fibrePoint_injective a b hab
+      exact Prod.ext (congrArg Zsqrtd.re h) (congrArg Zsqrtd.im h)
+    have heval (n : ℕ) :
+        (MvPolynomial.C c *
+          (MvPolynomial.C a * MvPolynomial.X (0 : Fin 2) +
+           MvPolynomial.C b * MvPolynomial.X (1 : Fin 2)) ^ m).eval
+          ![(x n).re, (x n).im] = q := by
+      simp only [x, MvPolynomial.eval_mul, MvPolynomial.eval_C,
+        MvPolynomial.eval_pow, MvPolynomial.eval_add, MvPolynomial.eval_X,
+        Matrix.cons_val_zero, Matrix.cons_val_one]
+      change c * (a * (a + b * (n : ℤ)) + b * (b - a * (n : ℤ))) ^ m = q
+      congr 2
+      ring
+    refine ⟨q.natAbs.primeFactors.card, a^2 + b^2 + 1, fun N => ⟨x, hx, ?_⟩⟩
+    intro n _
+    constructor
+    · unfold FewPrimeFactors
+      rw [heval]
+      exact ⟨hq0, le_rfl⟩
+    · intro _
+      have he : (x (n + 1) - x n).norm = a^2 + b^2 := by
+        simp only [x, Zsqrtd.norm, Zsqrtd.re_sub, Zsqrtd.im_sub,
+          Nat.cast_add, Nat.cast_one]
+        ring
+      rw [he]
+      omega
+
+end BinaryFormMoatClassification
+
+#print axioms BinaryFormMoatClassification.binary_form_moat_classification

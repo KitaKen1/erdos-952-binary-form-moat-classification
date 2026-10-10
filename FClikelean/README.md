@@ -4,9 +4,9 @@ Three related results, each with its own FC-style statement and complete Lean pr
 
 | Result | FC-style statement | Complete proof |
 |---|---|---|
-| OpenAI's uniform Gaussian moat variant | [OpenAIVariant.lean](FClikelean/OpenAIVariant.lean) | [OpenAIVariant.lean](lean/OpenAIVariant.lean) |
-| The generalized binary-form variant | [GeneralizedVariant.lean](FClikelean/GeneralizedVariant.lean) | [GeneralizedVariant.lean](lean/GeneralizedVariant.lean) |
-| The independent all-degree binary-form classification | [BinaryFormMoatClassification.lean](FClikelean/BinaryFormMoatClassification.lean) | [BinaryFormMoatClassification.lean](lean/BinaryFormMoatClassification.lean) |
+| OpenAI's uniform Gaussian moat variant | [OpenAIVariant.lean](OpenAIVariant.lean) | [OpenAIVariant.lean](../lean/OpenAIVariant.lean) |
+| The generalized binary-form variant | [GeneralizedVariant.lean](GeneralizedVariant.lean) | [GeneralizedVariant.lean](../lean/GeneralizedVariant.lean) |
+| The independent all-degree binary-form classification | [BinaryFormMoatClassification.lean](BinaryFormMoatClassification.lean) | [BinaryFormMoatClassification.lean](../lean/BinaryFormMoatClassification.lean) |
 
 The uniform Gaussian moat variant asks whether one fixed step bound supports
 arbitrarily long finite injective Gaussian-prime walks. Its negative answer
@@ -28,17 +28,21 @@ proof entries have complete proofs and each ends with `#print axioms` for its ta
 The three proof entries share one Lean **v4.35.0-rc3** project.
 
 ```bash
-cd lean
+cd ../lean
 lake exe cache get
 lake --wfail build
 ```
 
-[Entry-point verification](lean/evidence/entry-points.json).
-[Original core build and kernel-check records](lean/evidence/build_results.json).
+[Entry-point verification](../lean/evidence/entry-points.json).
+[Original core build and kernel-check records](../lean/evidence/build_results.json).
 
-[Lean4Web: complete component-bound proof in one file](https://live.lean-lang.org/#url=https%3A%2F%2Fraw.githubusercontent.com%2FKitaKen1%2Ferdos-952-binary-form-moat-classification%2Fmain%2Flean4web%2FBinaryFormMoatLean4Web.lean)
-uses Lean **v4.35.0-rc4**. The single-file version retains the uniform
-component-bound formulation; the modular entries above use finite injective sequences.
+[Lean4Web: complete proofs of the same FC targets in one file](https://live.lean-lang.org/#url=https%3A%2F%2Fraw.githubusercontent.com%2FKitaKen1%2Ferdos-952-binary-form-moat-classification%2Fmain%2Flean4web%2FBinaryFormMoatLean4Web.lean)
+uses Lean **v4.35.0-rc4**. The single-file and modular versions use the definitions
+and finite injective-sequence target statements from these FC files. Each final
+target theorem is followed by `#print axioms`. FC's `answer(False)` is written
+as `False` in the standalone proofs; FC catalogue attributes are omitted.
+The current single-file compilation was interrupted by a host restart and has
+not completed verification; see the [check status](../lean/evidence/direct-fc-browser-verification.json).
 
 ## Appendix: classification theorem
 
@@ -48,7 +52,7 @@ $`F=c(aX+bY)^m`$, where $`c\ne0`$, $`(a,b)\ne(0,0)`$, and $`m>0`$.
 Every other nonzero homogeneous form of positive degree has uniform finite
 component-size bounds at every fixed step bound and prime-factor budget.
 
-The independent [FC-style target](FClikelean/BinaryFormMoatClassification.lean) is:
+The independent [FC-style target](BinaryFormMoatClassification.lean) is:
 
 ```lean
 @[category research solved, AMS 5 11]
@@ -68,9 +72,9 @@ theorem binary_form_moat_classification :
 
 The complete proof is
 `BinaryFormMoatClassification.binary_form_moat_classification` in
-[lean/BinaryFormMoatClassification.lean](lean/BinaryFormMoatClassification.lean).
-Its underlying classification is in [Moat/Conjectures.lean](lean/Moat/Conjectures.lean).
-The [companion manuscript](PDF/binary-form-moat.pdf) gives the mathematical argument.
+[lean/BinaryFormMoatClassification.lean](../lean/BinaryFormMoatClassification.lean).
+Its underlying classification is in [Moat/Conjectures.lean](../lean/Moat/Conjectures.lean).
+The [companion manuscript](../PDF/binary-form-moat.pdf) gives the mathematical argument.
 
 ## AI usage disclosure
 

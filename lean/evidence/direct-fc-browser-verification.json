@@ -1,0 +1,55 @@
+{
+  "recorded_at": "2026-10-10T13:23:38.771336+00:00",
+  "fc_definitions_and_target_statements_match": {
+    "OpenAIVariant": {
+      "fc_path": "FClikelean/OpenAIVariant.lean",
+      "fc_source_sha256": "d6c5e9896e5507eeaa654425f20b99b23cba0d18f6d181cfd0757ad1f690c0fe",
+      "target": "Erdos952.erdos_952_openai",
+      "statement_sha256": "ef7eeda5c7b63455a5e3320eb73a4416fb68d7a555c331dd95856e55141b2c2a",
+      "definition_sha256": {},
+      "definitions_and_target_statement_match": true,
+      "answer_false_elaborated_as_false": true,
+      "final_target_axiom_print": true
+    },
+    "GeneralizedVariant": {
+      "fc_path": "FClikelean/GeneralizedVariant.lean",
+      "fc_source_sha256": "32c042dfe7e245dfc029af0bef66f40d584397ce762bd4fe9cd1ca064c2f0bd3",
+      "target": "Erdos952.erdos_952_openai_generalized_variant",
+      "statement_sha256": "8d92a89d800c7ece63b219c16966b1bd5b77cc71dadf91fcc89cc765ff91d11b",
+      "definition_sha256": {
+        "FewPrimeFactors": "8e571c5a5796741af8299b8b036930910600f7bedfcc1dd1ed4da0231d341c6c"
+      },
+      "definitions_and_target_statement_match": true,
+      "answer_false_elaborated_as_false": true,
+      "final_target_axiom_print": true
+    },
+    "BinaryFormMoatClassification": {
+      "fc_path": "FClikelean/BinaryFormMoatClassification.lean",
+      "fc_source_sha256": "41ddc90357d4de50cdf343faa2e1825a83c796510416129b75bdceb58e934f75",
+      "target": "BinaryFormMoatClassification.binary_form_moat_classification",
+      "statement_sha256": "37784ac119c67fe510cf64e4ad4d96dc6fa1c4cccc4b57969e17042c12b2f332",
+      "definition_sha256": {
+        "FewPrimeFactors": "8e571c5a5796741af8299b8b036930910600f7bedfcc1dd1ed4da0231d341c6c"
+      },
+      "definitions_and_target_statement_match": true,
+      "answer_false_elaborated_as_false": false,
+      "final_target_axiom_print": true
+    }
+  },
+  "independent_kernel_replay_performed": false,
+  "public_lean4web_server_checked": false,
+  "status": "interrupted_by_host_restart",
+  "lean": "4.35.0-rc4",
+  "mathlib_commit": "021ce68bf125a049beee22b3fc7664d78728e21d",
+  "source": "lean4web/BinaryFormMoatLean4Web.lean",
+  "source_sha256": "dccb16f725f5563387357dbe2341bfd06f70bd71130d3b0a28150bbcb1e20779",
+  "full_source_file_compiled": false,
+  "axiom_audit_completed": false,
+  "compilation_started_at": "2026-10-10T21:55:35+09:00",
+  "host_restarted_at": "2026-10-10T22:19:29+09:00",
+  "notes": [
+    "The full source compilation did not complete before the host restarted.",
+    "The generated definitions and target statements match the FC files.",
+    "This record does not certify compilation or axioms of the current single file."
+  ]
+}

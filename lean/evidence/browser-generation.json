@@ -599,7 +599,8 @@
       "Integrations.PaperFamilyAverageBudget435",
       "Integrations.PaperPrimeUnionWalkExit435",
       "Integrations.IrreducibleFiniteSieve435",
-      "Moat.Conjectures"
+      "Moat.Conjectures",
+      "Moat.Catalogue"
     ],
     "source_module_files": {
       "Moat.Basic": {
@@ -2997,23 +2998,76 @@
       "Moat.Conjectures": {
         "path": "Moat/Conjectures.lean",
         "sha256": "8ff13e8243bfdd4a2be7e9ec7a127ec20529ecfbec08e421fb894677d855b185"
+      },
+      "Moat.Catalogue": {
+        "path": "Moat/Catalogue.lean",
+        "sha256": "6b23d1f15415e9eb5d1c01a6e7ffb61b21b35f080ea5c428b73255fcd2287ae7"
       }
     },
-    "fc_target_entry_point": {
-      "path": "BinaryFormMoatProof.lean",
-      "sha256": "e75d89a20d3d03b1e15d3cc690d0bc234fdce946f5c01525acba02cde64fce18"
+    "fc_target_entry_points": {
+      "OpenAIVariant": {
+        "path": "OpenAIVariant.lean",
+        "sha256": "1389d56eb4b94648108428a4f22846655b20d52fd976e7ef213409fd0a7f806b",
+        "target": "Erdos952.erdos_952_openai"
+      },
+      "GeneralizedVariant": {
+        "path": "GeneralizedVariant.lean",
+        "sha256": "e6ddb65aa54d7556e34b5062e66d88750b4f901fb0bfed4b46c92fb0fb343f95",
+        "target": "Erdos952.erdos_952_openai_generalized_variant"
+      },
+      "BinaryFormMoatClassification": {
+        "path": "BinaryFormMoatClassification.lean",
+        "sha256": "ae9c9729ea37cbd1ed760deb69f470992f92bc661c75c14efa4efe3ed7f5b6de",
+        "target": "BinaryFormMoatClassification.binary_form_moat_classification"
+      }
+    },
+    "fc_statement_checks": {
+      "OpenAIVariant": {
+        "fc_path": "FClikelean/OpenAIVariant.lean",
+        "fc_source_sha256": "d6c5e9896e5507eeaa654425f20b99b23cba0d18f6d181cfd0757ad1f690c0fe",
+        "target": "Erdos952.erdos_952_openai",
+        "statement_sha256": "ef7eeda5c7b63455a5e3320eb73a4416fb68d7a555c331dd95856e55141b2c2a",
+        "definition_sha256": {},
+        "definitions_and_target_statement_match": true,
+        "answer_false_elaborated_as_false": true,
+        "final_target_axiom_print": true
+      },
+      "GeneralizedVariant": {
+        "fc_path": "FClikelean/GeneralizedVariant.lean",
+        "fc_source_sha256": "32c042dfe7e245dfc029af0bef66f40d584397ce762bd4fe9cd1ca064c2f0bd3",
+        "target": "Erdos952.erdos_952_openai_generalized_variant",
+        "statement_sha256": "8d92a89d800c7ece63b219c16966b1bd5b77cc71dadf91fcc89cc765ff91d11b",
+        "definition_sha256": {
+          "FewPrimeFactors": "8e571c5a5796741af8299b8b036930910600f7bedfcc1dd1ed4da0231d341c6c"
+        },
+        "definitions_and_target_statement_match": true,
+        "answer_false_elaborated_as_false": true,
+        "final_target_axiom_print": true
+      },
+      "BinaryFormMoatClassification": {
+        "fc_path": "FClikelean/BinaryFormMoatClassification.lean",
+        "fc_source_sha256": "41ddc90357d4de50cdf343faa2e1825a83c796510416129b75bdceb58e934f75",
+        "target": "BinaryFormMoatClassification.binary_form_moat_classification",
+        "statement_sha256": "37784ac119c67fe510cf64e4ad4d96dc6fa1c4cccc4b57969e17042c12b2f332",
+        "definition_sha256": {
+          "FewPrimeFactors": "8e571c5a5796741af8299b8b036930910600f7bedfcc1dd1ed4da0231d341c6c"
+        },
+        "definitions_and_target_statement_match": true,
+        "answer_false_elaborated_as_false": false,
+        "final_target_axiom_print": true
+      }
     },
     "fc_targets": [
-      "BinaryFormMoatCatalogue.gaussian_moat",
-      "BinaryFormMoatCatalogue.gaussian_moat.generalizedvariant",
-      "BinaryFormMoatCatalogue.binary_form_moat_classification"
+      "Erdos952.erdos_952_openai",
+      "Erdos952.erdos_952_openai_generalized_variant",
+      "BinaryFormMoatClassification.binary_form_moat_classification"
     ],
-    "generated_sha256": "0e33c03b256f859a20cedaa778d64dc2e7273a2c5984485ee5e964868def787b",
-    "lines": 105126,
+    "generated_sha256": "dccb16f725f5563387357dbe2341bfd06f70bd71130d3b0a28150bbcb1e20779",
+    "lines": 105305,
     "targets": [
-      "BinaryFormMoatCatalogue.gaussian_moat",
-      "BinaryFormMoatCatalogue.gaussian_moat.generalizedvariant",
-      "BinaryFormMoatCatalogue.binary_form_moat_classification"
+      "Erdos952.erdos_952_openai",
+      "Erdos952.erdos_952_openai_generalized_variant",
+      "BinaryFormMoatClassification.binary_form_moat_classification"
     ],
     "core_targets": [
       "BinaryFormMoat.irreducible_homogenization_uniformMoat",

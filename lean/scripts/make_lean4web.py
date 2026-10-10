@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Flatten the complete classification and its custom dependency closure."""
+"""Flatten the three FC-matching proof entries and their dependency closure."""
 import argparse
 import hashlib
 import json
@@ -18,6 +18,52 @@ seen = set()
 ordered = []
 external = {}
 dependencies = {}
+entry_targets = {
+    'OpenAIVariant': 'Erdos952.erdos_952_openai',
+    'GeneralizedVariant': 'Erdos952.erdos_952_openai_generalized_variant',
+    'BinaryFormMoatClassification':
+        'BinaryFormMoatClassification.binary_form_moat_classification',
+}
+entry_sources = {}
+fc_checks = {}
+
+def normalized(text):
+    # FC's solved-answer notation elaborates to False in these two targets.
+    return re.sub(r'\s+', '', text.replace('answer(False)', 'False'))
+
+def target_statement(text, name):
+    match = re.search(r'^theorem ' + re.escape(name) + r'\s*(:.*?)\s*:= by', text, re.M | re.S)
+    assert match, 'Missing target theorem: ' + name
+    return normalized(match[1])
+
+for module, target in entry_targets.items():
+    entry_path = source_root / (module + '.lean')
+    fc_path = root / 'FClikelean' / (module + '.lean')
+    entry_text = entry_path.read_text()
+    fc_text = fc_path.read_text()
+    name = target.rsplit('.', 1)[1]
+    namespace = target.rsplit('.', 1)[0]
+    assert 'namespace ' + namespace in entry_text and 'namespace ' + namespace in fc_text
+    statement = target_statement(fc_text, name)
+    assert target_statement(entry_text, name) == statement, module + ': FC statement mismatch'
+    definitions = {}
+    for definition in ['FewPrimeFactors']:
+        pattern = r'^def ' + definition + r'\b[^\n]*\n(?:[^\n]+\n)*'
+        fc_definition = re.search(pattern, fc_text, re.M)
+        proof_definition = re.search(pattern, entry_text, re.M)
+        assert bool(fc_definition) == bool(proof_definition), module + ': missing FC definition'
+        if fc_definition:
+            assert normalized(fc_definition[0]) == normalized(proof_definition[0]), module + ': FC definition mismatch'
+            definitions[definition] = hashlib.sha256(normalized(fc_definition[0]).encode()).hexdigest()
+    assert entry_text.rstrip().endswith('#print axioms ' + target), module + ': missing final axiom audit'
+    assert not re.search(r'\b(?:sorry|admit|axiom)\b', entry_text), module + ': incomplete proof'
+    entry_sources[module] = (entry_path, entry_text)
+    fc_checks[module] = dict(
+        fc_path=str(fc_path.relative_to(root)), fc_source_sha256=hashlib.sha256(fc_text.encode()).hexdigest(),
+        target=target, statement_sha256=hashlib.sha256(statement.encode()).hexdigest(),
+        definition_sha256=definitions, definitions_and_target_statement_match=True,
+        answer_false_elaborated_as_false='answer(False)' in fc_text,
+        final_target_axiom_print=True)
 
 def close_file_scopes(text):
     """Close scopes normally ended by EOF in each original source file."""
@@ -83,18 +129,10 @@ def visit(module):
     ordered.append((module,path,text))
 
 visit('Moat.Conjectures')
-assert len(ordered) == 599
-assert len(external) == 400
-entry_path = source_root/'BinaryFormMoatProof.lean'
-entry_text = entry_path.read_text()
-for full, dependency in import_line.findall(entry_text):
-    if dependency == 'Moat.Conjectures':
-        continue
-    assert dependency.startswith('Mathlib.'), dependency
-    external.setdefault(dependency, False)
-    if full:
-        external[dependency] = True
-selected = ordered if args.limit is None else ordered[:args.limit]
+for module in entry_targets:
+    visit(module)
+support = [(m, p, t) for m, p, t in ordered if m not in entry_targets]
+selected = support if args.limit is None else support[:args.limit]
 pair_module = 'PFR.ForMathlib.Pair'
 pair_dependents = {}
 def uses_pair(module):
@@ -103,7 +141,8 @@ def uses_pair(module):
     return pair_dependents[module]
 header = 'module\n\n' + '\n'.join('public import '+m for m in sorted(external))
 header += '\n' + '\n'.join('import all '+m for m in sorted(external) if external[m])
-header += '''\n\n/-! Complete all-degree binary homogeneous form moat classification.
+header += '''\n\n/-! Complete proofs of the three targets stated in FClikelean.
+The final targets use the FC definitions and finite injective-sequence statements.
 The custom proof dependencies are embedded below; only pinned Mathlib is imported.
 Generated from the modular proof by lean/scripts/make_lean4web.py.
 -/
@@ -180,9 +219,7 @@ for i,(module,path,text) in enumerate(selected):
 result = header + '\n'.join(bodies)
 core_targets = ['BinaryFormMoat.irreducible_homogenization_uniformMoat',
            'BinaryFormMoat.uniformMoat_of_not_isLinearPower','BinaryFormMoat.classification']
-fc_targets = ['BinaryFormMoatCatalogue.gaussian_moat',
-              'BinaryFormMoatCatalogue.gaussian_moat.generalizedvariant',
-              'BinaryFormMoatCatalogue.binary_form_moat_classification']
+fc_targets = list(entry_targets.values())
 if args.limit is None:
     result += '''\n-- The original all-degree target, with all original hypotheses.
 example (F : BinaryFormMoat.Form) (d : ℕ) (hF : F ≠ 0)
@@ -190,10 +227,11 @@ example (F : BinaryFormMoat.Form) (d : ℕ) (hF : F ≠ 0)
     BinaryFormMoat.UniformMoat F ↔ ¬ BinaryFormMoat.IsLinearPower F :=
   BinaryFormMoat.classification F d hF hd hhom
 \n'''
-    entry_body = import_line.sub('', entry_text).replace('/-!', '/-')
-    entry_body = re.sub(r'\bprivate (?=(?:noncomputable )?(?:theorem|lemma|def|abbrev|instance|structure|inductive|class)\b)',
-                        '', entry_body)
-    result += '\n-- Source: BinaryFormMoatProof (FC targets and their proofs)\n' + entry_body.strip() + '\n'
+    for module, (entry_path, entry_text) in entry_sources.items():
+        entry_body = import_line.sub('', entry_text).replace('/-!', '/-')
+        entry_body = re.sub(r'\bprivate (?=(?:noncomputable )?(?:theorem|lemma|def|abbrev|instance|structure|inductive|class)\b)',
+                            '', entry_body)
+        result += '\n-- Source: ' + module + ' (FC target and complete proof)\n' + entry_body.strip() + '\n'
     assert re.findall(r'^#print axioms (.+)$', result, flags=re.M) == fc_targets
 args.output_dir.mkdir(parents=True,exist_ok=True)
 output = args.output_dir/'BinaryFormMoatLean4Web.lean'
@@ -201,8 +239,10 @@ output.write_text(result)
 args.report.parent.mkdir(parents=True,exist_ok=True)
 args.report.write_text(json.dumps({'BinaryFormMoatLean4Web':dict(
     source_modules=[m for m,p,t in selected],source_module_files=module_data,
-    fc_target_entry_point=dict(path='BinaryFormMoatProof.lean',
-                              sha256=hashlib.sha256(entry_text.encode()).hexdigest()),
+    fc_target_entry_points={module:dict(path=str(path.relative_to(source_root)),
+        sha256=hashlib.sha256(text.encode()).hexdigest(),target=entry_targets[module])
+        for module,(path,text) in entry_sources.items()},
+    fc_statement_checks=fc_checks,
     fc_targets=fc_targets if args.limit is None else [],
     generated_sha256=hashlib.sha256(result.encode()).hexdigest(),lines=len(result.splitlines()),
     targets=fc_targets if args.limit is None else [],core_targets=core_targets,
@@ -222,4 +262,5 @@ args.report.write_text(json.dumps({'BinaryFormMoatLean4Web':dict(
                 'RayClass definitional congruence drops already-discharged subgoals',
                 'TaggedFixedField map homomorphisms made explicit'],
     mathematical_definitions_and_main_hypotheses_retained=True)},indent=2)+'\n')
-print('Generated',output,'from',len(selected),'modules;',len(result.splitlines()),'lines')
+print('Generated',output,'from',len(selected),'support modules and',len(entry_sources),
+      'FC-matching proof entries;',len(result.splitlines()),'lines')
